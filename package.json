@@ -1,17 +1,12 @@
 {
-  "name": "my-project",
+  "name": "babyplace",
   "version": "0.0.1",
   "private": true,
   "description": "",
-  "homepage": "https://github.com/WildCodeSchool/my-project#readme",
-  "bugs": {
-    "url": "https://github.com/WildCodeSchool/my-project/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WildCodeSchool/my-project.git"
-  },
-  "workspaces": ["client", "server"],
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "postinstall": "husky install || true",
     "db:migrate": "npm run db:migrate --workspace=server",
