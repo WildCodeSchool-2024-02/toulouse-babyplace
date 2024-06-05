@@ -5,5 +5,5 @@ module.exports = {
    * The '() => true' function disable commitlint by default:
    * remove/change it to re-enable commitlint
    */
-  ignores: [(/* commit */) => true],
+  ignores: [(/* commit */) => false],
 };
