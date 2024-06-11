@@ -49,7 +49,7 @@ function App() {
         </div>
       </div>
 
-      <div id="gestion">
+      <div id="managment">
         <div id="logiciel">
           <h3>
             Equipez vous du logiciel de gestion de place d’accueil de jeunes
@@ -59,7 +59,7 @@ function App() {
         </div>
         <div id="case-middle">
           <div id="case-grid">
-            <div id="agenda" className="case">
+            <div id="diary" className="case">
               <h4>Agenda en ligne</h4>
               <p>
                 Consultez en temps reel votre agenda et modifiez le en quelques
@@ -70,7 +70,7 @@ function App() {
                 Learn more <span>&#10140;</span>
               </button>
             </div>
-            <div id="alerte" className="case">
+            <div id="alert" className="case">
               <h4>Soyez alertee</h4>
               <p>
                 Choisissez le mode de notifications afin d’etre informe au plus
@@ -80,7 +80,7 @@ function App() {
                 Learn more <span>&#10140;</span>
               </button>
             </div>
-            <div id="activité" className="case">
+            <div id="activity" className="case">
               <h4>Marketing de votre activité</h4>
               <p>
                 Optimisez votre page profil pour vous rendre plus visible et
