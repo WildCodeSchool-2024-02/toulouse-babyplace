@@ -1,5 +1,10 @@
 // Import the repository modules responsible for handling data operations on the tables
-const ItemRepository = require("./models/ItemRepository");
+
+const ChildcareCenter = require("./models/childcare_centerRepository");
+const ChildrenRepository = require("./models/childrenRepository");
+const CustomerRepository = require("./models/customerRepository");
+const ExpTrainingRepository = require("./models/exp_trainingRepository");
+const FilingRepository = require("./models/filingRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
@@ -9,8 +14,12 @@ const tables = {};
 /* ************************************************************************* */
 
 // Register each repository as data access point for its table
-tables.item = new ItemRepository();
 
+tables.childcare_center = new ChildcareCenter();
+tables.children = new ChildrenRepository();
+tables.customer = new CustomerRepository();
+tables.exp_training = new ExpTrainingRepository();
+tables.filing = new FilingRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table
