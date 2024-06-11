@@ -1,59 +1,59 @@
 const AbstractRepository = require("./AbstractRepository");
 
-class ItemRepository extends AbstractRepository {
+class CustomerRepository extends AbstractRepository {
   constructor() {
     // Call the constructor of the parent class (AbstractRepository)
     // and pass the table name "item" as configuration
-    super({ table: "item" });
+    super({ table: "customer" });
   }
 
   // The C of CRUD - Create operation
 
-  async create(item) {
-    // Execute the SQL INSERT query to add a new item to the "item" table
+  async create(Customer) {
+    // Execute the SQL INSERT query to add a new Customer to the "Customer" table
     const [result] = await this.database.query(
       `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [item.title, item.user_id]
+      [Customer.title, Customer.user_id]
     );
 
-    // Return the ID of the newly inserted item
+    // Return the ID of the newly inserted Customer
     return result.insertId;
   }
 
   // The Rs of CRUD - Read operations
 
   async read(id) {
-    // Execute the SQL SELECT query to retrieve a specific item by its ID
+    // Execute the SQL SELECT query to retrieve a specific Customer by its ID
     const [rows] = await this.database.query(
       `select * from ${this.table} where id = ?`,
       [id]
     );
 
-    // Return the first row of the result, which represents the item
+    // Return the first row of the result, which represents the Customer
     return rows[0];
   }
 
   async readAll() {
-    // Execute the SQL SELECT query to retrieve all items from the "item" table
+    // Execute the SQL SELECT query to retrieve all Customers from the "Customer" table
     const [rows] = await this.database.query(`select * from ${this.table}`);
 
-    // Return the array of items
+    // Return the array of Customers
     return rows;
   }
 
   // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing item
+  // TODO: Implement the update operation to modify an existing Customer
 
-  // async update(item) {
+  // async update(Customer) {
   //   ...
   // }
 
   // The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an item by its ID
+  // TODO: Implement the delete operation to remove an Customer by its ID
 
   // async delete(id) {
   //   ...
   // }
 }
 
-module.exports = ItemRepository;
+module.exports = CustomerRepository;
