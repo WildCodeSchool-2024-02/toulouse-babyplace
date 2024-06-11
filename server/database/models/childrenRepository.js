@@ -1,59 +1,59 @@
 const AbstractRepository = require("./AbstractRepository");
 
-class childrenRepository extends AbstractRepository {
+class ChildrenRepository extends AbstractRepository {
   constructor() {
     // Call the constructor of the parent class (AbstractRepository)
-    // and pass the table name "children" as configuration
+    // and pass the table name "item" as configuration
     super({ table: "children" });
   }
 
   // The C of CRUD - Create operation
 
-  async create(children) {
-    // Execute the SQL INSERT query to add a new children to the "children" table
+  async create(Children) {
+    // Execute the SQL INSERT query to add a new Children to the "Children" table
     const [result] = await this.database.query(
       `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [children.title, children.user_id]
+      [Children.title, Children.user_id]
     );
 
-    // Return the ID of the newly inserted children
+    // Return the ID of the newly inserted Children
     return result.insertId;
   }
 
   // The Rs of CRUD - Read operations
 
   async read(id) {
-    // Execute the SQL SELECT query to retrieve a specific children by its ID
+    // Execute the SQL SELECT query to retrieve a specific Children by its ID
     const [rows] = await this.database.query(
       `select * from ${this.table} where id = ?`,
       [id]
     );
 
-    // Return the first row of the result, which represents the children
+    // Return the first row of the result, which represents the Children
     return rows[0];
   }
 
   async readAll() {
-    // Execute the SQL SELECT query to retrieve all items from the "children" table
+    // Execute the SQL SELECT query to retrieve all Childrens from the "Children" table
     const [rows] = await this.database.query(`select * from ${this.table}`);
 
-    // Return the array of items
+    // Return the array of Childrens
     return rows;
   }
 
   // The U of CRUD - Update operation
-  // TODO: Implement the update operation to modify an existing children
+  // TODO: Implement the update operation to modify an existing Children
 
-  // async update(children) {
+  // async update(Children) {
   //   ...
   // }
 
   // The D of CRUD - Delete operation
-  // TODO: Implement the delete operation to remove an children by its ID
+  // TODO: Implement the delete operation to remove an Children by its ID
 
   // async delete(id) {
   //   ...
   // }
 }
 
-module.exports = childrenRepository;
+module.exports = ChildrenRepository;
