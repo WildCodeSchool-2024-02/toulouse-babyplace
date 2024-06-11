@@ -1,0 +1,188 @@
+:root {
+  --main-color: #7e72f2;
+  --secondary-color: #f063a7;
+  --darker-color: #000;
+  --grey-color: #4b5d68;
+  --lighter-color: #fff;
+
+  --font-family: "Adamina", serif;
+}
+
+* {
+  margin: 0;
+  font-family: var(--font-family);
+}
+
+#app {
+  img {
+    width: 300px;
+  }
+
+  #intro-flex {
+    display: flex;
+    flex-direction: column;
+
+    #intro {
+      display: flex;
+      margin: 1rem;
+      flex-direction: column;
+      max-width: 60rem;
+
+      button {
+        background-color: var(--main-color);
+        color: var(--lighter-color);
+        border: var(--main-color) 1px solid;
+        border-radius: 50px;
+        padding-inline: 1rem;
+        padding-block: 0.6rem;
+        margin-block: 1rem;
+        max-width: 140px;
+      }
+
+      button:hover {
+        background-color: var(--lighter-color);
+        color: var(--main-color);
+        border: var(--main-color) 1px solid;
+      }
+
+      #img-intro {
+        width: 7.5rem;
+        margin: 0 auto;
+      }
+
+      #lumen-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem;
+        width: 100%;
+      }
+    }
+  }
+
+  span {
+    color: var(--main-color);
+  }
+
+  p {
+    margin-block: 1rem;
+    color: var(--grey-color);
+  }
+
+  #lumen {
+    max-width: 70dvw;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    color: var(--grey-color);
+  }
+
+  #easy-life-flex {
+    display: flex;
+    justify-content: center;
+
+    #easy-life {
+      display: flex;
+      background-color: rgba(240, 99, 184, 0.15);
+      margin: 1rem;
+      padding: 1rem;
+      border-radius: 40px;
+      max-width: 730px;
+      flex-direction: column-reverse;
+    }
+
+    #reservation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 1rem;
+    }
+
+    img {
+      width: 12.5rem;
+      margin: 0 auto;
+    }
+  }
+
+  #case-grid {
+    margin: 0 auto;
+  }
+
+  #managment {
+    #logiciel {
+      text-align: center;
+      padding-block: 2rem;
+    }
+
+    h3 {
+      margin: 1rem;
+    }
+
+    p {
+      margin: 1rem;
+    }
+
+    .case {
+      padding: 1.5rem;
+      margin: 1rem;
+      border-radius: 30px;
+      max-width: 300px;
+    }
+
+    #case-grid {
+      display: flex;
+      justify-items: center;
+      max-width: 1000px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      button {
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+
+    #diary {
+      background-color: rgba(45, 205, 122, 0.15);
+    }
+
+    #alert {
+      background-color: rgba(126, 114, 242, 0.15);
+    }
+
+    #activity {
+      background-color: rgba(240, 99, 184, 0.15);
+    }
+
+    #communication {
+      background-color: rgba(45, 156, 219, 0.15);
+    }
+  }
+}
+
+@media screen and (min-width: 725px) {
+  #app {
+    #intro-flex {
+      #intro {
+        flex-direction: row;
+        margin: 3rem;
+
+        #img-intro {
+          width: 9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 585px) {
+  #app {
+    #easy-life-flex {
+      #easy-life {
+        flex-direction: row;
+      }
+    }
+  }
+}
