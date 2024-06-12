@@ -1,10 +1,10 @@
 // Import the repository modules responsible for handling data operations on the tables
 
-const ChildcareCenter = require("./models/childcare_centerRepository");
-const ChildrenRepository = require("./models/childrenRepository");
-const CustomerRepository = require("./models/customerRepository");
-const ExpTrainingRepository = require("./models/exp_trainingRepository");
-const FilingRepository = require("./models/filingRepository");
+const ChildcareCenter = require("./models/ChildcareCenterRepository");
+const ChildrenRepository = require("./models/ChildrenRepository");
+const CustomerRepository = require("./models/CustomerRepository");
+const ExpTrainingRepository = require("./models/ExpTrainingRepository");
+const FilingRepository = require("./models/FilingRepository");
 
 // Create an empty object to hold data repositories for different tables
 const tables = {};
