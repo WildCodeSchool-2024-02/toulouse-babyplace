@@ -24,18 +24,18 @@ const app = express();
 // 3. Uncomment the section `app.use(cors({ origin: [...] }))`
 // 4. Be sure to only have URLs in the array with domains from which you want to allow requests.
 // For example: ["http://mysite.com", "http://another-domain.com"]
-// eslint-disable-next-line import/no-unresolved
-const cors = require("cors");
+// // eslint-disable-next-line import/no-unresolved
+// const cors = require("cors");
 
-app.use(
-  cors({
-    origin: [
-      process.env.CLIENT_URL, // keep this one, after checking the value in `server/.env`
-      "http://mysite.com",
-      "http://another-domain.com",
-    ],
-  })
-);
+// app.use(
+//   cors({
+//     origin: [
+//       process.env.CLIENT_URL, keep this one, after checking the value in `server/.env`
+//       "http://mysite.com",
+//       "http://another-domain.com",
+//     ],
+//   })
+// );
 
 /* ************************************************************************* */
 
