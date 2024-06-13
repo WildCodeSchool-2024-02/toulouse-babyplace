@@ -32,14 +32,28 @@
   }
   #btn-more {
     background-color: var(--secondary-color);
-    border: none;
+    border: var(--secondary-color) 1px solid;
     color: var(--lighter-color);
+  }
+
+  #btn-more:hover {
+    background-color: var(--lighter-color);
+    color: var(--secondary-color);
+    border: var(--secondary-color) 1px solid;
   }
 
   #btn-demo {
     background-color: var(--lighter-color);
     border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  #btn-demo:hover {
+    background-color: var(--main-color);
+    color: var(--lighter-color);
+    span {
+      color: var(--lighter-color);
+    }
   }
 
   h2 {

@@ -15,9 +15,6 @@ function NavBar() {
           <Link to="/">
             <li>Lumen Pro</li>
           </Link>
-          <Link to="/">
-            <li>S'inscrire</li>
-          </Link>
         </ul>
         <Link to="/">
           <p>Se connecter</p>
