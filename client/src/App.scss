@@ -21,6 +21,7 @@
   #intro-flex {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     #intro {
       display: flex;
@@ -36,7 +37,8 @@
         padding-inline: 1rem;
         padding-block: 0.6rem;
         margin-block: 1rem;
-        max-width: 140px;
+        max-width: 9rem;
+        font-size: 1rem;
       }
 
       button:hover {
