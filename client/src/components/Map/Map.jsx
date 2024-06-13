@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import "../../services/tools/markerCoordinates.json";
 
 function Map() {
   return (
