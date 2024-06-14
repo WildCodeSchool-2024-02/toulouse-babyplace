@@ -1,0 +1,36 @@
+.inscriptions {
+  background-color: red;
+  display: grid;
+  height: 1000px;
+  width: 800px;
+  align-items: center;
+  vertical-align: middle;
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+  .genre {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .formulaire {
+    display: grid;
+    gap: 2rem;
+    width: 200px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .btnReg {
+    background-color: var(--main-color);
+    color: var(--lighter-color);
+    border: var(--main-color) 1px solid;
+    border-radius: 50px;
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    margin-block: 1rem;
+    max-width: 9rem;
+    font-size: 1rem;
+  }
+}
