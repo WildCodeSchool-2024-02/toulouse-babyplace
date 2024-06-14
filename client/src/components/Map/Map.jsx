@@ -2,10 +2,11 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import markers from "../../services/tools/markerCoordinates.json";
+import iconMarker from "../../public/images/iconMarker.png";
 
 function Map() {
   const icon = new Icon({
-    iconUrl: "./src/public/images/iconMarker.png",
+    iconUrl: iconMarker,
     iconSize: [38, 38],
   });
 
