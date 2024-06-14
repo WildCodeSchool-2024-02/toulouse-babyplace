@@ -1,4 +1,6 @@
 import "./App.scss";
+import intro from "./public/images/intro.svg";
+import easyLife from "./public/images/easy-life.svg";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 
@@ -17,22 +19,22 @@ function App() {
                 opportunites autour de chez vous.{" "}
               </p>
               <ul>
-                <li>Souscription au logiciel Lumen sans engament.</li>
+                <li>Souscription au logiciel Lumen sans engagement.</li>
                 <li>
-                  Logiciel facile à utiliser pour vous permettre d’optimiser vos
-                  rdv.
+                  Logiciel facile à utiliser pour vous permettre
+                  d&apos;optimiser vos rdv.
                 </li>
                 <li>Communication directe et simplifiée avec les parents.</li>
               </ul>
             </div>
             <button type="button">En savoir plus</button>
           </div>
-          <img src="./src/assets/images/intro.svg" alt="" id="img-intro" />
+          <img src={intro} alt="intro img" id="img-intro" />
         </div>
       </div>
       <div id="easy-life-flex">
         <div id="easy-life">
-          <img src="./src/assets/images/easy-life.svg" alt="" />
+          <img src={easyLife} alt="easy-life images" />
           <div id="reservation">
             <h3>
               Simplifiez vous la vie en choisissant un systeme de reservation
@@ -52,10 +54,10 @@ function App() {
       <div id="managment">
         <div id="logiciel">
           <h3>
-            Equipez vous du logiciel de gestion de place d’accueil de jeunes
-            enfants le plus complet
+            Equipez vous du logiciel de gestion de place d&apos;accueil de
+            jeunes enfants le plus complet
           </h3>
-          <p>Cliquez sur l’une de nos solutions pour en savoir plus</p>
+          <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus</p>
         </div>
         <div id="case-middle">
           <div id="case-grid">
@@ -63,7 +65,7 @@ function App() {
               <h4>Agenda en ligne</h4>
               <p>
                 Consultez en temps reel votre agenda et modifiez le en quelques
-                cliques afin d’optimiser votre temps et votre rentabilite.
+                cliques afin d&apos;optimiser votre temps et votre rentabilite.
                 Accessible de puis votre Smarktphone, tabelle ou Telephone
               </p>
               <button type="button">
@@ -73,8 +75,8 @@ function App() {
             <div id="alert" className="case">
               <h4>Soyez alertee</h4>
               <p>
-                Choisissez le mode de notifications afin d’etre informe au plus
-                vote des annulations et des demandes de reservation.
+                Choisissez le mode de notifications afin d&apos;etre informe au
+                plus vote des annulations et des demandes de reservation.
               </p>
               <button type="button">
                 Learn more <span>&#10140;</span>
@@ -85,7 +87,7 @@ function App() {
               <p>
                 Optimisez votre page profil pour vous rendre plus visible et
                 vous permettre de vous decouvrir par les parents de votre
-                quartier.{" "}
+                quartier.
               </p>
               <button type="button">
                 Learn more <span>&#10140;</span>
