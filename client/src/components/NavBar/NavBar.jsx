@@ -15,6 +15,9 @@ function NavBar() {
           <Link to="/">
             <li>Lumen Pro</li>
           </Link>
+          <Link to="/map">
+            <li>Carte</li>
+          </Link>
         </ul>
         <Link to="/">
           <p>Se connecter</p>
