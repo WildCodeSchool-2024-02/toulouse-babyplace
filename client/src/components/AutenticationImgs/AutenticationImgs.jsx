@@ -10,7 +10,8 @@ function AutenticationImgs() {
         </div>
         <p className="second-line">Gérer votre agenda</p>
         <p>24h/24 7jours/7</p>
-      </div>
+      </div>{" "}
+      <img className="img" src="../src/assets/images/img_login.svg" alt="" />
     </div>
   );
 }

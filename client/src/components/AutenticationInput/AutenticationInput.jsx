@@ -6,12 +6,14 @@ function AutenticationInput() {
     <div className="autentication-input">
       <div className="sign">
         <span>Vous n’avez pas de compte ? </span>
-        <Link to="/">S’inscrire</Link>
+        <Link to="/SignUpPro">S’inscrire</Link>
       </div>
+      <img src="../src/assets/images/img_login.svg" alt="" />
       <div className="form">
-        <h1>Je me connecte sur Lumen</h1>
+        <h2>Je me connecte sur Lumen</h2>
         <input type="text" placeholder="Nom d'utilisateur" />
         <input type="password" placeholder="Mot de passe" />
+        <br />
         <button type="submit">Se connecter</button>
       </div>
     </div>

@@ -5,7 +5,8 @@ import AutenticationInput from "../../components/AutenticationInput/Autenticatio
 function Login() {
   return (
     <div className="login">
-      <AutenticationImgs /> <AutenticationInput />
+      <AutenticationImgs />
+      <AutenticationInput />
     </div>
   );
 }
