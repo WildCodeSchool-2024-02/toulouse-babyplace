@@ -12,11 +12,11 @@ function NavBar() {
           <Link to="/">
             <li>Aide</li>
           </Link>
-          <Link to="/login-Pro">
+          <Link to="/signinpro">
             <li>Lumen Pro</li>
           </Link>
         </ul>
-        <Link to="/">
+        <Link to="/signin">
           <p>Se connecter</p>
         </Link>
       </nav>

@@ -1,7 +1,4 @@
-import "./SignUpPro.scss";
-
 function SignUpPro() {
-  return <h1>SignUpPro</h1>;
+  return <h1>signuppro</h1>;
 }
-
 export default SignUpPro;

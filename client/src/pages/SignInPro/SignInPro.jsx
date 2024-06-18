@@ -1,14 +1,14 @@
-import "./Login.scss";
+import "./SignInPro.scss";
 import AutenticationImgs from "../../components/AutenticationImgs/AutenticationImgs";
 import AutenticationInput from "../../components/AutenticationInput/AutenticationInput";
 
-function Login() {
+function SignInPro() {
   return (
-    <div className="login">
+    <div className="signup">
       <AutenticationImgs />
       <AutenticationInput />
     </div>
   );
 }
 
-export default Login;
+export default SignInPro;

@@ -6,7 +6,7 @@ function AutenticationInput() {
     <div className="autentication-input">
       <div className="sign">
         <span>Vous n’avez pas de compte ? </span>
-        <Link to="/SignUpPro">S’inscrire</Link>
+        <Link to="/signuppro">S’inscrire</Link>
       </div>
       <img src="../src/assets/images/img_login.svg" alt="" />
       <div className="form">
