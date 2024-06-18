@@ -1,3 +1,8 @@
+$primary-color: #474fff;
+$secondary-color: #e37acc;
+$darker-color: #000;
+$lighter-color: #fff;
+
 @mixin médiaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -15,7 +20,11 @@
   }
 
   @include médiaQ(768px) {
-    background: linear-gradient(to bottom right, #474fff, #e37acc);
+    background: linear-gradient(
+      to bottom right,
+      $primary-color,
+      $secondary-color
+    );
     display: flex;
     flex-direction: column;
     background-size: cover;
@@ -25,14 +34,14 @@
     width: 50vw;
     .autentication-text {
       margin: 5rem;
-      color: white;
+      color: $lighter-color;
     }
   }
 }
 
 .first-line {
   h1 {
-    color: white;
+    color: $lighter-color;
   }
   @include médiaQ(768px) {
     display: flex;
@@ -46,6 +55,14 @@
       padding-block: 0.6rem;
     }
   }
+  p {
+    display: none;
+
+    @include médiaQ(768px) {
+      display: flex;
+      text-align: start;
+    }
+  }
 }
 
 .second-line {
@@ -54,16 +71,8 @@
     width: fit-content;
     margin-top: 3rem;
     border: solid;
-    border-color: white;
-    background-color: white;
-    color: black;
-  }
-}
-
-p {
-  display: none;
-
-  @include médiaQ(768px) {
-    display: flex;
+    border-color: $lighter-color;
+    background-color: $lighter-color;
+    color: $darker-color;
   }
 }

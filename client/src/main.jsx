@@ -21,7 +21,10 @@ const router = createBrowserRouter([
     path: "/login-Pro",
     element: <Login />,
   },
-  { path: "/SignUpPro", element: <SignUpPro /> },
+  {
+    path: "/SignUpPro",
+    element: <SignUpPro />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

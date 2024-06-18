@@ -7,7 +7,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .login {
@@ -16,7 +15,6 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  text-align: center;
   background: linear-gradient(to bottom right, #474fff, #e37acc);
   height: 100vh;
 
@@ -24,5 +22,12 @@
     flex-direction: row;
     background: none;
     padding: 0;
+  }
+
+  p {
+    display: none;
+    @include médiaQ(768px) {
+      display: block;
+    }
   }
 }
