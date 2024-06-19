@@ -15,7 +15,7 @@ $lighter-color: #fff;
 
     @include mediaQ(768px) {
       display: block;
-      width: 80%;
+      width: 400px;
     }
   }
 
@@ -76,4 +76,11 @@ $lighter-color: #fff;
     background-color: $lighter-color;
     color: $darker-color;
   }
+}
+
+.container-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
