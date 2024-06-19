@@ -15,14 +15,15 @@ function Map() {
 
   const getUserLocation = () => {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
+      navigator.geolocation.watchPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
           setUserLocation({ latitude, longitude });
         },
         (error) => {
           console.error("Error getting user location: ", error);
-        }
+        },
+        { enableHighAccuracy: true, maximumAge: 10000, timeout: 0 }
       );
     } else {
       console.error("Geolocation is not supported by this browser.");
@@ -34,7 +35,7 @@ function Map() {
       <MapContainer
         center={[43.605856, 1.443761]}
         zoom={14}
-        style={{ height: "90dvh" }}
+        style={{ height: "50dvh", width: "90dvw" }}
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png" />
         {markers.map((marker) => (
