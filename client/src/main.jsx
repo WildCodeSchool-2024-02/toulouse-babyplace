@@ -6,6 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Map from "./components/Map/Map";
 import SignUp from "./pages/SignUp/SignUp";
+import SignIn from "./pages/SignIn/SignIn";
+import SignInPro from "./pages/SignInPro/SignInPro";
+import SignUpPro from "./pages/SignUpPro/SignUpPro";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +20,19 @@ const router = createBrowserRouter([
     element: <Map />,
   },
   {
-    path: "/signup",
+    path: "/sign-in",
+    element: <SignIn />,
+  },
+  {
+    path: "/sign-in-pro",
+    element: <SignInPro />,
+  },
+  {
+    path: "/sign-up-pro",
+    element: <SignUpPro />,
+  },
+  {
+    path: "/sign-up",
     element: <SignUp />,
   },
 ]);
