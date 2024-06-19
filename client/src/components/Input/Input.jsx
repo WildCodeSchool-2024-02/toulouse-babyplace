@@ -1,11 +1,11 @@
 import "./Input.scss";
 import PropTypes from "prop-types";
 
-function Input({ title, type, description, placeholder, required }) {
+function Input({ title, type, description, placeholder }) {
   return (
     <div className="sign-up-pro-input">
       <h4>{title}</h4>
-      <input type={type} placeholder={placeholder} required={required} />
+      <input type={type} placeholder={placeholder} required />
       <p>{description}</p>
     </div>
   );
@@ -16,13 +16,11 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   description: PropTypes.string,
   placeholder: PropTypes.string,
-  required: PropTypes.bool,
 };
 
 Input.defaultProps = {
   description: "",
   placeholder: "",
-  required: false,
 };
 
 export default Input;

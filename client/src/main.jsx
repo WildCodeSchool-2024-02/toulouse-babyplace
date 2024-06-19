@@ -11,6 +11,8 @@ import SignInPro from "./pages/SignInPro/SignInPro";
 import ChildcareCenterStructure from "./pages/SignUpPro/ChildcareCenterStructure/ChildcareCenterStructure";
 import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
+import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
+import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +44,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-up-pro",
-    element: <ChildcareCenterStructure />,
+    element: <LayoutSignUpPro />,
+    children: [
+      {
+        path: "/sign-up-pro/structure",
+        element: <ChildcareCenterStructure />,
+      },
+      {
+        path: "/sign-up-pro/login",
+        element: <SignUpProLogin />,
+      },
+    ],
   },
   {
     path: "/sign-up",
