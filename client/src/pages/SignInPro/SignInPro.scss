@@ -1,4 +1,4 @@
-@mixin médiaQ($breakpoint: 768px) {
+@mixin mediaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
   }
@@ -13,7 +13,7 @@
   background: linear-gradient(to bottom right, #474fff, #e37acc);
   height: 100vh;
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     flex-direction: row;
     background: none;
     padding: 0;
@@ -21,7 +21,7 @@
 
   p {
     display: none;
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       display: block;
     }
   }

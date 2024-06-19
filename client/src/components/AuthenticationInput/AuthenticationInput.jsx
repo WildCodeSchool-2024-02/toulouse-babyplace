@@ -11,7 +11,7 @@ function AuthenticationInput() {
       <img src="../src/assets/images/img_login.svg" alt="" />
       <div className="form">
         <h2>Je me connecte sur Lumen</h2>
-        <input type="text" placeholder="Nom d'utilisateur" />
+        <input type="text" placeholder="email" />
         <input type="password" placeholder="Mot de passe" />
         <br />
         <button type="submit">Se connecter</button>

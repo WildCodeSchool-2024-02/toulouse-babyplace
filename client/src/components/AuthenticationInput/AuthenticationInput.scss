@@ -3,14 +3,14 @@ $secondary-color: #e37acc;
 $darker-color: #000;
 $lighter-color: #fff;
 
-@mixin médiaQ($breakpoint: 768px) {
+@mixin mediaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
 .sign {
   color: $lighter-color;
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     color: $darker-color;
     display: flex;
     justify-content: end;
@@ -26,14 +26,14 @@ $lighter-color: #fff;
   justify-content: center;
   align-items: center;
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     display: flex;
     flex-direction: column;
     gap: 35rem;
     width: 50%;
   }
   img {
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       display: none;
     }
   }
@@ -41,7 +41,7 @@ $lighter-color: #fff;
     font-size: 1.5rem;
     color: $lighter-color;
 
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       color: $darker-color;
       font-size: 2.5rem;
       padding: 2rem;
@@ -55,7 +55,7 @@ $lighter-color: #fff;
   align-items: center;
   gap: 1rem;
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     display: flex;
     flex-direction: column;
     align-items: center;

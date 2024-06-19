@@ -3,7 +3,7 @@ $secondary-color: #e37acc;
 $darker-color: #000;
 $lighter-color: #fff;
 
-@mixin médiaQ($breakpoint: 768px) {
+@mixin mediaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
   }
@@ -13,13 +13,13 @@ $lighter-color: #fff;
   .img {
     display: none;
 
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       display: block;
       width: 100%;
     }
   }
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     background: linear-gradient(
       to bottom right,
       $primary-color,
@@ -43,7 +43,7 @@ $lighter-color: #fff;
   h1 {
     color: $lighter-color;
   }
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -58,7 +58,7 @@ $lighter-color: #fff;
   p {
     display: none;
 
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       display: flex;
       text-align: start;
     }
@@ -66,7 +66,7 @@ $lighter-color: #fff;
 }
 
 .second-line {
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     padding: 0 1rem 0 1rem;
     width: fit-content;
     margin-top: 3rem;
