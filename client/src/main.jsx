@@ -7,7 +7,7 @@ import App from "./App";
 import Map from "./components/Map/Map";
 import SignIn from "./pages/SignIn/SignIn";
 import SignInPro from "./pages/SignInPro/SignInPro";
-import SignUpPro from "./pages/SignUpPro/SignUpPro";
+import ChildcareCenterStructure from "./pages/SignUpPro/ChildcareCenterStructure/ChildcareCenterStructure";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-up-pro",
-    element: <SignUpPro />,
+    element: <ChildcareCenterStructure />,
   },
 ]);
 
