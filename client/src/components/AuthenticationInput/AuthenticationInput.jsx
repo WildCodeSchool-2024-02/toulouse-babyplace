@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./AuthenticationInput.scss";
 
 function AuthenticationInput() {
+  const location = useLocation();
+  const path = location.pathname;
+
   return (
     <div className="authentication-input">
       <div className="sign">
         <span>Vous n’avez pas de compte ? </span>
-        <Link to="/sign-up-pro">S’inscrire</Link>
+        {path === "/sign-in" ? (
+          <Link to="/sign-up">S’inscrire</Link>
+        ) : (
+          <Link to="/sign-up-pro">S’inscrire</Link>
+        )}
       </div>
       <img src="../src/assets/images/img_login.svg" alt="" />
       <div className="form">

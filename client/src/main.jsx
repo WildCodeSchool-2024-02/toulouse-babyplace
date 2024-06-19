@@ -8,6 +8,7 @@ import Map from "./components/Map/Map";
 import SignIn from "./pages/SignIn/SignIn";
 import SignInPro from "./pages/SignInPro/SignInPro";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
+import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/sign-up-pro",
     element: <SignUpPro />,
+  },
+  {
+    path: "/sign-up",
+    element: <SignUp />,
   },
   {
     path: "/help",
