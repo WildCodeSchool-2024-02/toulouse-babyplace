@@ -8,9 +8,13 @@ import Layout from "./components/Layout/Layout";
 import Map from "./components/Map/Map";
 import SignIn from "./pages/SignIn/SignIn";
 import SignInPro from "./pages/SignInPro/SignInPro";
-import SignUpPro from "./pages/SignUpPro/SignUpPro";
+import ChildcareCenterStructure from "./pages/SignUpPro/ChildcareCenterStructure/ChildcareCenterStructure";
 import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
+import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
+import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
+import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
+import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +46,25 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-up-pro",
-    element: <SignUpPro />,
+    element: <LayoutSignUpPro />,
+    children: [
+      {
+        path: "/sign-up-pro/structure",
+        element: <ChildcareCenterStructure />,
+      },
+      {
+        path: "/sign-up-pro/login",
+        element: <SignUpProLogin />,
+      },
+      {
+        path: "/sign-up-pro/localisation",
+        element: <SignUpProLocalisation />,
+      },
+      {
+        path: "/sign-up-pro/images",
+        element: <SignUpProImages />,
+      },
+    ],
   },
   {
     path: "/sign-up",
