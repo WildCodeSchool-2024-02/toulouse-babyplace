@@ -1,3 +1,4 @@
+
 import "./SignUp.scss";
 
 function SignUp() {
@@ -81,6 +82,4 @@ function SignUp() {
       </form>
     </div>
   );
-}
-
 export default SignUp;
