@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./NavBar.scss";
 
 function NavBar() {
@@ -23,7 +23,6 @@ function NavBar() {
           <p>Se connecter</p>
         </Link>
       </nav>
-      <Outlet />
     </div>
   );
 }
