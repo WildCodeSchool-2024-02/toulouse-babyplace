@@ -1,6 +1,6 @@
-import "./AutenticationImgs.scss";
+import "./AuthenticationImgs.scss";
 
-function AutenticationImgs() {
+function AuthenticationImgs() {
   return (
     <div className="autentication-imgs">
       <div className="autentication-text">
@@ -16,4 +16,4 @@ function AutenticationImgs() {
   );
 }
 
-export default AutenticationImgs;
+export default AuthenticationImgs;

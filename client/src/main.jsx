@@ -19,15 +19,15 @@ const router = createBrowserRouter([
     element: <Map />,
   },
   {
-    path: "/signin",
+    path: "/sign-in",
     element: <SignIn />,
   },
   {
-    path: "/signinpro",
+    path: "/sign-in-pro",
     element: <SignInPro />,
   },
   {
-    path: "/signuppro",
+    path: "/sign-up-pro",
     element: <SignUpPro />,
   },
 ]);

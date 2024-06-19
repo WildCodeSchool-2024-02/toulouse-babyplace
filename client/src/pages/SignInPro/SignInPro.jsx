@@ -1,12 +1,12 @@
 import "./SignInPro.scss";
-import AutenticationImgs from "../../components/AutenticationImgs/AutenticationImgs";
-import AutenticationInput from "../../components/AutenticationInput/AutenticationInput";
+import AuthenticationImgs from "../../components/AuthenticationImgs/AuthenticationImgs";
+import AuthenticationInput from "../../components/AuthenticationInput/AuthenticationInput";
 
 function SignInPro() {
   return (
-    <div className="signup">
-      <AutenticationImgs />
-      <AutenticationInput />
+    <div className="sign-up">
+      <AuthenticationImgs />
+      <AuthenticationInput />
     </div>
   );
 }
