@@ -12,7 +12,7 @@ function NavBar() {
           <Link to="/">
             <li>Aide</li>
           </Link>
-          <Link to="/">
+          <Link to="/login-Pro">
             <li>Lumen Pro</li>
           </Link>
           <Link to="/map">

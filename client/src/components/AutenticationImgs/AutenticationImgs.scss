@@ -1,0 +1,69 @@
+@mixin médiaQ($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.autentication-imgs {
+  .img {
+    display: none;
+
+    @include médiaQ(768px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @include médiaQ(768px) {
+    background: linear-gradient(to bottom right, #474fff, #e37acc);
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 50vw;
+    .autentication-text {
+      margin: 5rem;
+      color: white;
+    }
+  }
+}
+
+.first-line {
+  h1 {
+    color: white;
+  }
+  @include médiaQ(768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    p {
+      border: solid;
+      border-radius: 50px;
+      padding-inline: 1rem;
+      padding-block: 0.6rem;
+    }
+  }
+}
+
+.second-line {
+  @include médiaQ(768px) {
+    padding: 0 1rem 0 1rem;
+    width: fit-content;
+    margin-top: 3rem;
+    border: solid;
+    border-color: white;
+    background-color: white;
+    color: black;
+  }
+}
+
+p {
+  display: none;
+
+  @include médiaQ(768px) {
+    display: flex;
+  }
+}

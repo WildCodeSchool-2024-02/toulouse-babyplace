@@ -3,43 +3,81 @@ import "./ClientsRegistration.scss";
 function ClientsRegistration() {
   return (
     <div className="inscriptions">
-      <h2>Création de Compte</h2>
-      <div className="genre">
-        <legend>Genre</legend>
-        <input type="radio" id="femme" name="sexe" value="femme" />
-        <label for="femme">Femme</label>
-        <input type="radio" id="Homme" name="sexe" value="Homme" />
-        <label for="Homme">Homme</label>
-        <br />
-      </div>
       <form
         className="formulaire"
         action="fichierDeLiaisonVersLaBDD"
         method="post"
       >
-        <input type="text" placeholder="Nom" />
-        <input type="text" placeholder="Prénom" name="prenom" />
-        <input type="email" placeholder="Email" name="email" id="" />
+        <h2>Création de Compte</h2>
+        <div className="genre">
+          <legend>Genre</legend>
+          <input type="radio" id="femme" name="sexe" value="femme" />
+          <label htmlFor="femme">Femme</label>
+          <input type="radio" id="homme" name="sexe" value="homme" />
+          <label htmlFor="homme">Homme</label>
+          <br />
+        </div>
+
+        <label htmlFor="nom">Nom</label>
+        <input className="champ" type="text" placeholder="Nom" id="nom" />
+        <label htmlFor="prenom">Prénom</label>
         <input
+          className="champ"
+          type="text"
+          placeholder="Prénom"
+          name="prenom"
+          id="prenom"
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          className="champ"
+          type="email"
+          placeholder="Email"
+          name="email"
+          id="email"
+        />
+        <label htmlFor="phone-number">Numero de Telephone</label>
+        <input
+          className="champ"
           type="tel"
           placeholder="Numero de Telephone"
           name="phone-number"
-          id=""
+          id="phone-number"
         />
-        {/* <input type="password" placeholder="Mot de Passe" /> */}
+
+        <label htmlFor="password">Mot de Passe</label>
         <input
+          className="champ"
+          type="password"
+          placeholder="Mot de Passe"
+          id="password"
+        />
+        <label htmlFor="confirm-password">Confirmer votre mot de Passe</label>
+        <input
+          className="champ"
+          type="password"
+          placeholder="Confirmer votre mot de Passe"
+          id="confirm-password"
+        />
+        <label htmlFor="dateofbirth">Date de naissance</label>
+        <input
+          className="champ"
           type="date"
           placeholder="Date de naissance"
           name="dateofbirth"
-          id=""
+          id="dateofbirth"
         />
+        <label htmlFor="adresse">Adresse, CP, Ville</label>
         <input
+          className="champ"
           type="text"
           id="adresse"
           placeholder="Adresse, CP, Ville"
           name="adresse"
         />
-        <button className="btnReg">Créer un compte</button>
+        <button className="btnReg" type="button">
+          Créer un compte
+        </button>
       </form>
     </div>
   );
