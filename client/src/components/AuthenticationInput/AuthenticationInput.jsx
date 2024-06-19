@@ -15,11 +15,7 @@ function AuthenticationInput() {
           <Link to="/sign-up-pro/login">S’inscrire</Link>
         )}
       </div>
-      <img
-        className="img-login"
-        src="../src/assets/images/img_login.svg"
-        alt=""
-      />
+      <img src="../src/assets/images/img_login.svg" alt="" />
       <div className="form">
         <h2>Je me connecte sur Lumen</h2>
         <input type="text" placeholder="email" />

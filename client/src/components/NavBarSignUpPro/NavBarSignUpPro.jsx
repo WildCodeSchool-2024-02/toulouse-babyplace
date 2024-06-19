@@ -1,7 +1,13 @@
+import "./NavBarSignUpPro.scss";
+
 function NavBarSignUpPro() {
   return (
-    <div>
-      <p>Bonjour</p>
+    <div id="nav-bar-sign-up-pro">
+      <div id="nav-bar-sign-up-pro-title">
+        <h1>Lumen</h1>
+        <p>Structure d'accueil</p>
+      </div>
+      <button type="button">Enregistrer et continuer</button>
     </div>
   );
 }

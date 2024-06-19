@@ -5,6 +5,7 @@ import "./SignUpProLogin.scss";
 function SignUpProLogin() {
   return (
     <div>
+      <progress max="100" value="0" />
       <Input
         title="Veuillez indiquez votre email"
         type="email"
@@ -14,10 +15,10 @@ function SignUpProLogin() {
       <Input
         title="Veuillez indiquez un mot de passe"
         type="password"
-        description="Ce mot de passe vous permettra de vous connecter"
+        description=""
         placeholder="Mot de passe"
       />
-      <Input placeholder="Confirmer votre mot de passe">
+      <Input type="password" placeholder="Confirmer votre mot de passe">
         Veuillez confirmer votre mot de passe
       </Input>
       <Button path="/sign-up-pro/structure" label="Suivant" />

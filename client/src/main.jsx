@@ -13,6 +13,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
 import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
 import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
+import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
+import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "/sign-up-pro/login",
         element: <SignUpProLogin />,
+      },
+      {
+        path: "/sign-up-pro/localisation",
+        element: <SignUpProLocalisation />,
+      },
+      {
+        path: "/sign-up-pro/images",
+        element: <SignUpProImages />,
       },
     ],
   },

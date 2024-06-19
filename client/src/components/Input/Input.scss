@@ -6,4 +6,16 @@
   * {
     margin: 0.2rem;
   }
+
+  input {
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: $grey-color 1px solid;
+    width: 80dvw;
+    max-width: 18rem;
+  }
+
+  p {
+    color: $grey-color;
+  }
 }

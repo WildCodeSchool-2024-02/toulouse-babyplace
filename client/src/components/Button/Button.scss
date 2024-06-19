@@ -4,4 +4,18 @@
   display: flex;
   margin: 1rem;
   justify-content: flex-end;
+
+  button {
+    color: $lighter-color;
+    padding: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    border: $main-color 1px solid;
+  }
+
+  button:hover {
+    color: $main-color;
+    background-color: $lighter-color;
+    border: $main-color 1px solid;
+  }
 }
