@@ -5,10 +5,18 @@ class ChildcareCenterRepository extends AbstractRepository {
     super({ table: "childcare_center" });
   }
 
-  async create(ChildcareCenter) {
+  async create(childcareCenter) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [ChildcareCenter.title, ChildcareCenter.user_id]
+      `insert into ${this.table} (name, description, phone, address, mail, url, types) values (?, ?, ?, ?, ?, ?, ?)`,
+      [
+        childcareCenter.name,
+        childcareCenter.description,
+        childcareCenter.phone,
+        childcareCenter.address,
+        childcareCenter.mail,
+        childcareCenter.url,
+        childcareCenter.types,
+      ]
     );
 
     return result.insertId;

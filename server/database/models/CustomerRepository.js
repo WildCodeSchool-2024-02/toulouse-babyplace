@@ -5,11 +5,17 @@ class CustomerRepository extends AbstractRepository {
     super({ table: "customer" });
   }
 
-  async create(Customer) {
-    // Execute the SQL INSERT query to add a new Customer to the "Customer" table
+  async create(customer) {
+    // Execute the SQL INSERT query to add a new customer to the "customer" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [Customer.title, Customer.user_id]
+      `insert into ${this.table} (name, first_name, mail, adress, phone) values (?, ?, ?, ?, ?)`,
+      [
+        customer.name,
+        customer.first_name,
+        customer.mail,
+        customer.adress,
+        customer.phone,
+      ]
     );
 
     return result.insertId;
