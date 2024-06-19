@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Map from "./components/Map/Map";
-import ClientsRegistration from "./pages/ClientsRegistration";
+import SignUp from "./pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
     element: <Map />,
   },
   {
-    path: "/registration",
-    element: <ClientsRegistration />,
+    path: "/signup",
+    element: <SignUp />,
   },
 ]);
 
