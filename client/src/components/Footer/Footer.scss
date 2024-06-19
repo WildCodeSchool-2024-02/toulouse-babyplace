@@ -15,6 +15,10 @@
     text-align: center;
     margin: 1rem;
   }
+
+  li {
+    list-style: none;
+  }
   #footer-top {
     display: flex;
     justify-content: space-between;
