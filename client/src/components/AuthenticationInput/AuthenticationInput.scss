@@ -1,12 +1,17 @@
-@mixin médiaQ($breakpoint: 768px) {
+$primary-color: #474fff;
+$secondary-color: #e37acc;
+$darker-color: #000;
+$lighter-color: #fff;
+
+@mixin mediaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
   }
 }
 .sign {
-  color: white;
-  @include médiaQ(768px) {
-    color: black;
+  color: $lighter-color;
+  @include mediaQ(768px) {
+    color: $darker-color;
     display: flex;
     justify-content: end;
     align-items: end;
@@ -14,31 +19,30 @@
     width: 90%;
   }
 }
-.autentication-input {
+.authentication-input {
   display: flex;
   flex-direction: column;
-
   gap: 5rem;
   justify-content: center;
   align-items: center;
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     display: flex;
     flex-direction: column;
     gap: 35rem;
     width: 50%;
   }
   img {
-    @include médiaQ(768px) {
+    @include mediaQ(768px) {
       display: none;
     }
   }
   h2 {
     font-size: 1.5rem;
-    color: white;
+    color: $lighter-color;
 
-    @include médiaQ(768px) {
-      color: black;
+    @include mediaQ(768px) {
+      color: $darker-color;
       font-size: 2.5rem;
       padding: 2rem;
     }
@@ -51,7 +55,7 @@
   align-items: center;
   gap: 1rem;
 
-  @include médiaQ(768px) {
+  @include mediaQ(768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +64,15 @@
     width: 100%;
     padding: 1rem;
   }
+  button {
+    cursor: pointer;
+    border-radius: 50px;
+    padding-inline: 1rem;
+  }
+
   input {
+    text-align: center;
+    border-radius: 50px;
     width: 50%;
   }
 }

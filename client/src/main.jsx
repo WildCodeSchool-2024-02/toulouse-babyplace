@@ -5,7 +5,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Map from "./components/Map/Map";
-import Login from "./pages/Login/Login";
+import SignIn from "./pages/SignIn/SignIn";
+import SignInPro from "./pages/SignInPro/SignInPro";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
 
 const router = createBrowserRouter([
@@ -18,10 +19,17 @@ const router = createBrowserRouter([
     element: <Map />,
   },
   {
-    path: "/login-Pro",
-    element: <Login />,
+    path: "/sign-in",
+    element: <SignIn />,
   },
-  { path: "/SignUpPro", element: <SignUpPro /> },
+  {
+    path: "/sign-in-pro",
+    element: <SignInPro />,
+  },
+  {
+    path: "/sign-up-pro",
+    element: <SignUpPro />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
