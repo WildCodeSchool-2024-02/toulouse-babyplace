@@ -1,3 +1,5 @@
+import "./SignUp.scss";
+
 function SignUp() {
   return <h1>signup</h1>;
 }
