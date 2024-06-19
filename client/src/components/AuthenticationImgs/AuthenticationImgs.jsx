@@ -6,7 +6,7 @@ function AuthenticationImgs() {
   const path = location.pathname;
 
   return (
-    <div className="autentication-imgs">
+    <div className="authentication-imgs">
       <div className="autentication-text">
         <div className="first-line">
           <h1>Lumen</h1>
