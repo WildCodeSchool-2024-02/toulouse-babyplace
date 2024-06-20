@@ -16,6 +16,7 @@ import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
 import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
 import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
 import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
+import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         element: <Help />,
       },
     ],
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
   {
     path: "/reservation",
