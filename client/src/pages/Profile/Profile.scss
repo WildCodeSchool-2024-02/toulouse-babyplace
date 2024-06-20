@@ -1,0 +1,162 @@
+$grey-color: #878787;
+$primary-color: #474fff;
+$secondary-color: #e37acc;
+$darker-color: #000;
+$lighter-color: #fff;
+
+@mixin mediaQ($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.profile {
+  background: linear-gradient(
+    to bottom right,
+    $primary-color,
+    $secondary-color
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  min-height: 100vh;
+
+  .profile-card {
+    color: $lighter-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include mediaQ(768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2rem;
+      height: 260px;
+    }
+    input {
+      display: none;
+      @include mediaQ(768px) {
+        display: flex;
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: $grey-color 1px solid;
+        width: 80dvw;
+        max-width: 18rem;
+        color: $grey-color;
+      }
+    }
+    .profile-input {
+      display: none;
+      @include mediaQ(768px) {
+        display: flex;
+        gap: 2rem;
+        height: 100%;
+        div {
+          font-size: 30px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+    p {
+      display: flex;
+      justify-content: center;
+      @include mediaQ(768px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  img {
+    border: solid;
+    border-color: $lighter-color;
+    margin: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    @include mediaQ(768px) {
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  .profile-text {
+    color: $lighter-color;
+    margin: 1rem;
+    text-align: center;
+    @include mediaQ(768px) {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+}
+
+.documents {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include mediaQ(768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .dossier-enfant {
+    color: $lighter-color;
+    background-color: #00f2fe;
+    border-radius: 30px;
+    height: 6vh;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    @include mediaQ(768px) {
+      min-width: 600px;
+      font-size: 1.3rem;
+    }
+  }
+  .dossier-parent {
+    background-color: #8ddad5;
+    color: $lighter-color;
+    border-radius: 30px;
+    height: 6vh;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    @include mediaQ(768px) {
+      min-width: 600px;
+      font-size: 1.3rem;
+    }
+  }
+  .dossier-inscription {
+    background-color: #ffafbd;
+    color: $lighter-color;
+    border-radius: 30px;
+    height: 6vh;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    @include mediaQ(768px) {
+      min-width: 600px;
+      font-size: 1.3rem;
+    }
+  }
+}
