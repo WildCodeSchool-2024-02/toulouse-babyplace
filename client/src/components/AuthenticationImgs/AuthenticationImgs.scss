@@ -9,13 +9,13 @@ $lighter-color: #fff;
   }
 }
 
-.autentication-imgs {
+.authentication-imgs {
   .img {
     display: none;
 
     @include mediaQ(768px) {
       display: block;
-      width: 100%;
+      width: 300px;
     }
   }
 
@@ -25,13 +25,14 @@ $lighter-color: #fff;
       $primary-color,
       $secondary-color
     );
+
     display: flex;
     flex-direction: column;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 50vw;
+    width: 50%;
     .autentication-text {
       margin: 5rem;
       color: $lighter-color;
@@ -75,4 +76,11 @@ $lighter-color: #fff;
     background-color: $lighter-color;
     color: $darker-color;
   }
+}
+
+.container-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

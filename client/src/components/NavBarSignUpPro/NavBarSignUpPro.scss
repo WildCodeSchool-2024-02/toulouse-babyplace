@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+#nav-bar-sign-up-pro {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+
+  #nav-bar-sign-up-pro-title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    color: $main-color;
+    background-color: $lighter-color;
+    border: none;
+  }
+
+  button:hover {
+    color: $secondary-color;
+  }
+
+  p {
+    color: $grey-color;
+  }
+}
