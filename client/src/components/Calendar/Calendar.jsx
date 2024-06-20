@@ -25,9 +25,9 @@ function Calendar() {
 
   return (
     <ScheduleMeeting
-      eventDurationInMinutes={240}
-      eventStartTimeSpreadInMinutes={90}
-      availableTimeslots={availableTimeslots}
+      eventDurationInMinutes={240} // ici on va mettre les données backende des horaires des crehess donc a modifier plus tard
+      eventStartTimeSpreadInMinutes={90} // pareil que au dessus
+      availableTimeslots={availableTimeslots} // pareil
     />
   );
 }
