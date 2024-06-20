@@ -21,6 +21,11 @@ tables.customer = new CustomerRepository();
 tables.exp_training = new ExpTrainingRepository();
 tables.filing = new FilingRepository();
 
+tables.childcare_center = new ChildcareCenter();
+tables.children = new ChildrenRepository();
+tables.customer = new CustomerRepository();
+tables.exp_training = new ExpTrainingRepository();
+tables.filing = new FilingRepository();
 /* ************************************************************************* */
 
 // Use a Proxy to customize error messages when trying to access a non-existing table
