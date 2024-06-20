@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.block-help {
+  background: linear-gradient(45deg, $main-color, $secondary-color);
+  padding: 6rem 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  > p {
+    width: 50%;
+  }
+}
+
+.block-help-center {
+  max-width: 60rem;
+}
+
+.infos-link-help {
+  display: flex;
+  gap: 2rem;
+}
+
+.block-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 6rem 6rem;
+}
+
+.block-max-width {
+  max-width: 60rem;
+}

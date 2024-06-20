@@ -5,11 +5,11 @@ class FilingRepository extends AbstractRepository {
     super({ table: "filing" });
   }
 
-  async create(Filing) {
+  async create(filing) {
     // Execute the SQL INSERT query to add a new Filing to the "Filing" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [Filing.title, Filing.user_id]
+      `insert into ${this.table} (filing) values (?)`,
+      [filing.filing]
     );
 
     return result.insertId;

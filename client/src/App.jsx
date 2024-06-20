@@ -1,13 +1,10 @@
 import "./App.scss";
 import intro from "./public/images/intro.svg";
 import easyLife from "./public/images/easy-life.svg";
-import Footer from "./components/Footer/Footer";
-import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div id="app">
-      <NavBar />
       <div id="intro-flex">
         <div id="intro">
           <div id="lumen-grid">
@@ -108,7 +105,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

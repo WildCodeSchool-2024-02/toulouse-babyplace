@@ -9,17 +9,17 @@ function NavBar() {
           <Link to="/">
             <li>Accueil</li>
           </Link>
-          <Link to="/">
+          <Link to="/help">
             <li>Aide</li>
           </Link>
-          <Link to="/">
+          <Link to="/sign-in-pro">
             <li>Lumen Pro</li>
           </Link>
           <Link to="/map">
             <li>Carte</li>
           </Link>
         </ul>
-        <Link to="/">
+        <Link to="/sign-in">
           <p>Se connecter</p>
         </Link>
       </nav>
