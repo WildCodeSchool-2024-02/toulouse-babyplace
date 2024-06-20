@@ -1,0 +1,14 @@
+#sign-up-pro-fieldset {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+  justify-content: flex-end;
+
+  div {
+    margin: 0.5rem;
+  }
+
+  input {
+    margin-inline: 0.5rem;
+  }
+}

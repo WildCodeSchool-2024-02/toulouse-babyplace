@@ -1,3 +1,24 @@
+@import "../../../variables.scss";
+
 #childcare-center-structure {
   display: flex;
+  max-width: 50dvw;
+
+  button {
+    background-color: $lighter-grey-color;
+    border: $grey-color 1px solid;
+    border-radius: 10px;
+    padding-inline: 0.6rem;
+    padding-block: 0.4rem;
+    margin-inline: 0.5rem;
+    margin-block: 0.2rem;
+    font-family: $font-family;
+  }
+
+  #structure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.5rem;
+  }
 }

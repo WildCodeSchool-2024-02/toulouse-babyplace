@@ -6,7 +6,10 @@ function SignUpProImages() {
     <form>
       <progress max="100" value="20" />
       <Input />
-      <Button />
+      <Button
+        nextPath="/sign-up-pro/rules"
+        previousPath="/sign-up-pro/localisation"
+      />
     </form>
   );
 }

@@ -15,6 +15,7 @@ import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
 import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
 import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
 import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
+import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-up-pro/structure",
         element: <ChildcareCenterStructure />,
+        // loader: async () => {
+        //   const response = await myAxios.post("/api/childcareCenter");
+        //   return response.data;
+        // },
       },
       {
         path: "/sign-up-pro/login",
@@ -63,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-up-pro/images",
         element: <SignUpProImages />,
+      },
+      {
+        path: "/sign-up-pro/rules",
+        element: <SignUpProRules />,
       },
     ],
   },
