@@ -5,11 +5,16 @@ class ExpTrainingRepository extends AbstractRepository {
     super({ table: "exp_training" });
   }
 
-  async create(ExpTraining) {
-    // Execute the SQL INSERT query to add a new ExpTraining to the "ExpTraining" table
+  async create(expTraining) {
+    // Execute the SQL INSERT query to add a new expTraining to the "expTraining" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (title, user_id) values (?, ?)`,
-      [ExpTraining.title, ExpTraining.user_id]
+      `insert into ${this.table} (training, activity, diplome, number_years_exp) values (?, ?, ?, ?)`,
+      [
+        expTraining.training,
+        expTraining.activity,
+        expTraining.diplome,
+        expTraining.number_years_exp,
+      ]
     );
 
     return result.insertId;

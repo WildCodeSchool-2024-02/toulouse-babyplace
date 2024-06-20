@@ -1,0 +1,86 @@
+$primary-color: #474fff;
+$secondary-color: #e37acc;
+$darker-color: #000;
+$lighter-color: #fff;
+
+@mixin mediaQ($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.authentication-imgs {
+  .img {
+    display: none;
+
+    @include mediaQ(768px) {
+      display: block;
+      width: 300px;
+    }
+  }
+
+  @include mediaQ(768px) {
+    background: linear-gradient(
+      to bottom right,
+      $primary-color,
+      $secondary-color
+    );
+
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 50%;
+    .autentication-text {
+      margin: 5rem;
+      color: $lighter-color;
+    }
+  }
+}
+
+.first-line {
+  h1 {
+    color: $lighter-color;
+  }
+  @include mediaQ(768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    p {
+      border: solid;
+      border-radius: 50px;
+      padding-inline: 1rem;
+      padding-block: 0.6rem;
+    }
+  }
+  p {
+    display: none;
+
+    @include mediaQ(768px) {
+      display: flex;
+      text-align: start;
+    }
+  }
+}
+
+.second-line {
+  @include mediaQ(768px) {
+    padding: 0 1rem 0 1rem;
+    width: fit-content;
+    margin-top: 3rem;
+    border: solid;
+    border-color: $lighter-color;
+    background-color: $lighter-color;
+    color: $darker-color;
+  }
+}
+
+.container-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

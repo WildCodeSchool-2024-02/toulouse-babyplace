@@ -1,0 +1,28 @@
+@mixin mediaQ($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(to bottom right, #474fff, #e37acc);
+  height: 100vh;
+
+  @include mediaQ(768px) {
+    flex-direction: row;
+    background: none;
+    padding: 0;
+  }
+
+  p {
+    display: none;
+    @include mediaQ(768px) {
+      display: block;
+    }
+  }
+}
