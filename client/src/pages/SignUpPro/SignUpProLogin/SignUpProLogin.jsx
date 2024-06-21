@@ -21,7 +21,11 @@ function SignUpProLogin() {
       <Input type="password" placeholder="Confirmer votre mot de passe">
         Veuillez confirmer votre mot de passe
       </Input>
-      <Button path="/sign-up-pro/structure" label="Suivant" />
+      <Button
+        nextPath="/sign-up-pro/structure"
+        previousPath="/sign-in-pro"
+        label="Suivant"
+      />
     </div>
   );
 }
