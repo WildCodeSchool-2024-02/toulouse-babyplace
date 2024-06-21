@@ -32,6 +32,18 @@ progress::-ms-fill {
   border: none;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: 35dvw;
+  margin-top: 2rem;
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
 #app {
   img {
     display: none;

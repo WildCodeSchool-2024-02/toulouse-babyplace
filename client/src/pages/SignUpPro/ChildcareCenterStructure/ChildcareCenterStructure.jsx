@@ -9,8 +9,8 @@ function ChildcareCenterStructure() {
 
   return (
     <div id="childcare-center-structure">
+      <progress max="100" value="10" />
       <form>
-        <progress max="100" value="5" />
         <div id="structure">
           <h4>Quel type d’accueil proposez-vous ?</h4>
           <div>
