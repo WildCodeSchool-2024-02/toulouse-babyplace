@@ -3,11 +3,16 @@ import Input from "../../../components/Input/Input";
 
 function SignUpProImages() {
   return (
-    <form>
-      <progress max="100" value="20" />
-      <Input />
-      <Button />
-    </form>
+    <div>
+      <progress max="100" value="30" />
+      <form>
+        <Input />
+        <Button
+          nextPath="/sign-up-pro/rules"
+          previousPath="/sign-up-pro/localisation"
+        />
+      </form>
+    </div>
   );
 }
 
