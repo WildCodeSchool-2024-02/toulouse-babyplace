@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  color: white;
   > p {
     width: 50%;
   }
@@ -15,6 +16,9 @@
 
 .block-help-center {
   max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .infos-link-help {
@@ -27,9 +31,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 6rem 6rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 .block-max-width {
   max-width: 60rem;
+}
+
+.category-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.flex-category-block {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.block-all-questions {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }

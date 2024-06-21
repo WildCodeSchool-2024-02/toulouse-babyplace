@@ -12,8 +12,8 @@ function Accordion({ question, answer }) {
         className="accordion-title"
         onClick={() => setIsActive(!isActive)}
       >
-        <div>{question}</div>
-        <div>{isActive ? "-" : "+"}</div>
+        <h3>{question}</h3>
+        <div>{isActive ? <span>&#8600;</span> : <span>&#8599;</span>}</div>
       </button>
       {isActive && <div className="accordion-content">{answer}</div>}
     </div>
