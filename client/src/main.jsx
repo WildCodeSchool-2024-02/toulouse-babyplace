@@ -63,10 +63,6 @@ const router = createBrowserRouter([
       {
         path: "/sign-up-pro/structure",
         element: <ChildcareCenterStructure />,
-        // loader: async () => {
-        //   const response = await myAxios.post("/api/childcareCenter");
-        //   return response.data;
-        // },
       },
       {
         path: "/sign-up-pro/login",
