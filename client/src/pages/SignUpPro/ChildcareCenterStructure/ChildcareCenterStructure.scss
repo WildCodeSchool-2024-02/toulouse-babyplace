@@ -2,7 +2,7 @@
 
 #childcare-center-structure {
   display: flex;
-  max-width: 50dvw;
+  flex-direction: column;
 
   button {
     background-color: $lighter-grey-color;
