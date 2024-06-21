@@ -3,9 +3,11 @@
 .sign-up-pro-button {
   display: flex;
   margin: 1rem;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 330px;
 
-  button {
+  #next-button {
     color: $lighter-color;
     padding: 0.5rem;
     background-color: $main-color;
@@ -13,9 +15,20 @@
     border: $main-color 1px solid;
   }
 
-  button:hover {
+  #next-button:hover {
     color: $main-color;
     background-color: $lighter-color;
     border: $main-color 1px solid;
+  }
+
+  #previous-button {
+    color: $main-color;
+    padding: 0.5rem;
+    background-color: $lighter-color;
+    border: $lighter-color 1px solid;
+  }
+
+  #previous-button:hover {
+    color: $grey-color;
   }
 }

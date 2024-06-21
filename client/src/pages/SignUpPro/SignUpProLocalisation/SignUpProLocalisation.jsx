@@ -13,7 +13,11 @@ function SignUpProLocalisation() {
       />
       <Input type="text" title="Code postal" placeholder="Code Postal" />
       <Input type="text" title="Ville" placeholder="Ville" />
-      <Button label="Suivant" path="/sign-up-pro/images" />
+      <Button
+        label="Suivant"
+        nextPath="/sign-up-pro/images"
+        previousPath="/sign-up-pro/structure"
+      />
     </form>
   );
 }

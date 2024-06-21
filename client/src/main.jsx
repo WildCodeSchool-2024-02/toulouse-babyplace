@@ -15,6 +15,7 @@ import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
 import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
 import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
 import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
+import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
       {
         path: "/sign-up-pro/images",
         element: <SignUpProImages />,
+      },
+      {
+        path: "/sign-up-pro/rules",
+        element: <SignUpProRules />,
       },
     ],
   },
