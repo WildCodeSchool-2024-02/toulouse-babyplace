@@ -24,12 +24,14 @@ const read = async (req, res, next) => {
   }
 };
 
+
+
 const add = async (req, res, next) => {
   const customers = req.body;
 
   try {
     const insertId = await tables.customer.create(customers);
-
+    
     res.status(201).json({ insertId });
   } catch (err) {
     next(err);

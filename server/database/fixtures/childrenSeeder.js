@@ -1,5 +1,5 @@
 const AbstractSeeder = require("./AbstractSeeder");
-const CustomerSeeder = require("./CustomerSeeder");
+const ParentSeeder = require("./ParentSeeder");
 const ChildcareCenterSeeder = require("./ChildcareCenterSeeder");
 
 class ChildrenSeeder extends AbstractSeeder {
@@ -7,7 +7,7 @@ class ChildrenSeeder extends AbstractSeeder {
     super({
       table: "children",
       truncate: true,
-      dependencies: [CustomerSeeder, ChildcareCenterSeeder],
+      dependencies: [ParentSeeder, ChildcareCenterSeeder],
     });
   }
 
