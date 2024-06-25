@@ -21,23 +21,23 @@ function Help() {
           </div>
         </div>
       </div>
-      <div className="block-max-width">
-        <div className="block-questions">
-          <h3>Comment pouvons nous vous aider ?</h3>
-        </div>
-        {FaqData.map((element) => (
-          <h3 key={element.id}>{element.category}</h3>
-        ))}
-        {FaqData.map((element) => (
-          <div key={element.id}>
-            {element.questions.map((sentence) => (
-              <div key={element.id}>
-                <Accordion
-                  question={sentence.question}
-                  answer={sentence.answer}
-                />
-              </div>
-            ))}
+      <div className="block-questions">
+        <h2>Comment pouvons nous vous aider ?</h2>
+      </div>
+      <div className="block-all-questions">
+        {FaqData.map((category) => (
+          <div key={category.id} className="category-block">
+            <h3>{category.category}</h3>
+            <div className="flex-category-block">
+              {category.questions.map((question) => (
+                <div key={question.id}>
+                  <Accordion
+                    question={question.question}
+                    answer={question.answer}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .accordion {
   max-width: 600px;
   margin: 2rem auto;
@@ -8,20 +10,30 @@
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
-  background-color: #21aeca;
+  background-color: $main-color;
+  color: white;
+  border-radius: 1rem;
+  border: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .accordion-title:hover {
-  background-color: #3ab4cc;
+  transform: scale(1.03);
 }
 
 .accordion-title,
 .accordion-content {
   padding: 1rem;
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .accordion-content {
-  background-color: #39b9d2;
+  background-color: $main-color;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -32,4 +44,11 @@
   .accordion {
     width: 90%;
   }
+}
+
+.rafter-up {
+  transform: rotate(90);
+}
+.rafter-up {
+  transform: rotate(0);
 }
