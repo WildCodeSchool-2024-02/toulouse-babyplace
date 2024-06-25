@@ -1,3 +1,4 @@
+import { fr } from "date-fns/locale";
 import { ScheduleMeeting } from "react-schedule-meeting";
 
 function Calendar() {
@@ -28,6 +29,8 @@ function Calendar() {
       eventDurationInMinutes={240} // ici on va mettre les données backende des horaires des crehess donc a modifier plus tard
       eventStartTimeSpreadInMinutes={90} // pareil que au dessus
       availableTimeslots={availableTimeslots} // pareil
+      format_selectedDateDayTitleFormatString=" cccc do LLLL"
+      locale={fr}
     />
   );
 }
