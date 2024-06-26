@@ -30,7 +30,7 @@ const add = async (req, res, next) => {
   const center = req.body;
 
   try {
-    const insertId = await childcareCenter.create(center);
+    const insertId = await tables.childcare_center.create(center);
 
     res.status(201).json({ insertId });
   } catch (err) {
