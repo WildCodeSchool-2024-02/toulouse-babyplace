@@ -19,7 +19,7 @@ class ChildcareCenterSeeder extends AbstractSeeder {
         city: this.faker.location.city(),
         mail: this.faker.internet.email(),
         password: this.faker.internet.password(),
-        url: Buffer.from(this.faker.internet.url()),
+        url: this.faker.internet.url({ protocol: "http" }),
         types: this.faker.lorem.word(),
         refName: `childcare_center_${i}`,
       };

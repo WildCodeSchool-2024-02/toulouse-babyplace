@@ -14,6 +14,7 @@ const hashPassword = async (req, res, next) => {
   try {
     const hashedPassword = await argon2.hash(password, hashingOptions);
     user.password = hashedPassword;
+    next();
   } catch (error) {
     next(error);
   }
