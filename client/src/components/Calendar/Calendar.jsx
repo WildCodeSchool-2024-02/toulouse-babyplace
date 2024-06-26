@@ -28,7 +28,7 @@ function Calendar() {
   return (
     <ScheduleMeeting
       className="custom-schedule-meeting"
-      eventDurationInMinutes={240} // ici on va mettre les données backende des horaires des crehess donc a modifier plus tard
+      eventDurationInMinutes={240} // ici on va mettre les données backend des horaires des creches c'est donc a modifier plus tard
       eventStartTimeSpreadInMinutes={90} // pareil que au dessus
       availableTimeslots={availableTimeslots} // pareil
       format_selectedDateDayTitleFormatString=" cccc do LLLL"
