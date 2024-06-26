@@ -11,11 +11,11 @@ class ExpTrainingSeeder extends AbstractSeeder {
   run() {
     for (let i = 0; i < 5; i += 1) {
       const fakeExpTraining = {
-        training: this.faker.name.jobTitle(),
-        activity: this.faker.name.jobType(),
+        training: this.faker.person.jobTitle(),
+        activity: this.faker.person.jobType(),
         diplome: this.faker.lorem.words(2),
-        number_years_exp: this.faker.random
-          .number({ min: 1, max: 20 })
+        number_years_exp: this.faker.number
+          .bigInt({ min: 1, max: 20 })
           .toString(),
       };
 
