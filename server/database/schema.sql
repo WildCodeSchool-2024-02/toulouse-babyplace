@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center` (
   `zip_code` VARCHAR(20) NOT NULL,
   `city` VARCHAR(100) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
-  `password` VARCHAR(80) NOT NULL,
-  `url` BLOB NOT NULL,
+  `password` TEXT NOT NULL,
+  `url` TEXT NOT NULL,
   `types` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idprofessional_UNIQUE` (`id` ASC) VISIBLE)
