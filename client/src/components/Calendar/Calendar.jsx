@@ -30,6 +30,7 @@ function Calendar() {
       eventStartTimeSpreadInMinutes={90} // pareil que au dessus
       availableTimeslots={availableTimeslots} // pareil
       format_selectedDateDayTitleFormatString=" cccc do LLLL"
+      format_startTimeFormatString="HH:mm"
       locale={fr}
     />
   );

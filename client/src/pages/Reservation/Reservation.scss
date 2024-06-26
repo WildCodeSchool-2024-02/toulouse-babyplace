@@ -1,5 +1,12 @@
 @import "../../variables.scss";
 
+.reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
 button {
   color: $lighter-color;
   padding: 0.5rem;
