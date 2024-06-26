@@ -1,5 +1,6 @@
 import { fr } from "date-fns/locale";
 import { ScheduleMeeting } from "react-schedule-meeting";
+import "./Calendar.scss";
 
 function Calendar() {
   const availableTimeslots = Array.from({ length: 365 }, (_, i) => i)
@@ -26,6 +27,7 @@ function Calendar() {
 
   return (
     <ScheduleMeeting
+      className="custom-schedule-meeting"
       eventDurationInMinutes={240} // ici on va mettre les données backende des horaires des crehess donc a modifier plus tard
       eventStartTimeSpreadInMinutes={90} // pareil que au dessus
       availableTimeslots={availableTimeslots} // pareil
