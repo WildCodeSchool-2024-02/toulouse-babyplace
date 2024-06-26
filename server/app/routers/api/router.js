@@ -8,7 +8,7 @@ const router = express.Router();
 
 const childcareCenterRouter = require("./childcareCenter/router");
 
-router.use("/childcareCenter", childcareCenterRouter);
+router.use("/childcare-center", childcareCenterRouter);
 
 const childrenRouter = require("./children/router");
 
@@ -20,7 +20,7 @@ router.use("/customer", customerRouter);
 
 const expTrainingRouter = require("./expTraining/router");
 
-router.use("/expTraining", expTrainingRouter);
+router.use("/exp-training", expTrainingRouter);
 
 const filingRouter = require("./filing/router");
 
