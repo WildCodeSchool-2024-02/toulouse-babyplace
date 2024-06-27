@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const tables = require("../../database/tables");
 
 const browse = async (req, res, next) => {
@@ -36,7 +37,23 @@ const add = async (req, res, next) => {
   }
 };
 
+const signIn = async (req, res, next) => {
+  try {
+    const user = req.body;
+
+    const payload = { email: user.email };
+    const token = jwt.sign(payload, process.env.APP_SECRET, {
+      expiresIn: "1h",
+    });
+
+    res.json({ token });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
+  signIn,
   browse,
   read,
   // edit,
