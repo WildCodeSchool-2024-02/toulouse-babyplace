@@ -20,6 +20,15 @@ class CustomerRepository extends AbstractRepository {
 
     return result.insertId;
   }
+
+  async readByEmail(email) {
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where mail = ?`,
+      [email]
+    );
+
+    return rows[0];
+  }
 }
 
 module.exports = CustomerRepository;
