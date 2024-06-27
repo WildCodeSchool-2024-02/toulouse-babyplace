@@ -12,6 +12,9 @@ const {
   read,
   add,
 } = require("../../../controllers/childcareCenterActions");
+const {
+  hashPassword,
+} = require("../../../middlewares/hashPassword.middleware");
 
 // Route to get a list of items
 router.get("/", browse);
@@ -20,7 +23,7 @@ router.get("/", browse);
 router.get("/:id", read);
 
 // Route to add a new item
-router.post("/", add);
+router.post("/add", hashPassword, add);
 
 /* ************************************************************************* */
 
