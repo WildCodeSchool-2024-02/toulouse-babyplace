@@ -1,5 +1,5 @@
 const AbstractSeeder = require("./AbstractSeeder");
-const CustomerSeeder = require("./CustomerSeeder");
+const CustomerSeeder = require("./HenrySeeder");
 const ChildcareCenterSeeder = require("./ChildcareCenterSeeder");
 
 class ChildrenSeeder extends AbstractSeeder {
