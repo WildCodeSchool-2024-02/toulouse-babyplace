@@ -41,7 +41,7 @@ function SignUp() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.APP_SECRET}/api/customers`,
+        `${import.meta.env.VITE_API_URL}/api/customers`,
         {
           method: "post",
           headers: { "content-type": "application/json" },
