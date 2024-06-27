@@ -7,43 +7,6 @@
   margin: 0;
 }
 
-progress {
-  width: 100dvw;
-  height: 0.8rem;
-  border-radius: 0px;
-  background-color: $main-color;
-  overflow: hidden;
-}
-
-progress::-webkit-progress-bar {
-  background-color: $lighter-grey-color;
-}
-
-progress::-webkit-progress-value {
-  background-color: $main-color;
-}
-
-progress::-moz-progress-bar {
-  background-color: $main-color;
-}
-
-progress::-ms-fill {
-  background-color: $main-color;
-  border: none;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-inline: 35dvw;
-  margin-top: 2rem;
-
-  p {
-    font-size: 0.8rem;
-  }
-}
-
 #app {
   img {
     display: none;
