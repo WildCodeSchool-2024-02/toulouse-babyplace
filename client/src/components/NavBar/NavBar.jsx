@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
 
 function NavBar() {
@@ -6,22 +6,28 @@ function NavBar() {
     <div id="nav-bar">
       <nav>
         <ul>
-          <Link to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
             <li>Accueil</li>
-          </Link>
-          <Link to="/help">
+          </NavLink>
+          <NavLink
+            to="/help"
+            className={({ isActive }) => (isActive ? "active-link" : "")}
+          >
             <li>Aide</li>
-          </Link>
-          <Link to="/sign-in-pro">
+          </NavLink>
+          <NavLink to="/sign-in-pro">
             <li>Lumen Pro</li>
-          </Link>
-          <Link to="/map">
+          </NavLink>
+          <NavLink to="/map">
             <li>Carte</li>
-          </Link>
+          </NavLink>
         </ul>
-        <Link to="/sign-in">
+        <NavLink to="/sign-in">
           <p>Se connecter</p>
-        </Link>
+        </NavLink>
       </nav>
     </div>
   );
