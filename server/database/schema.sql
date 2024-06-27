@@ -42,6 +42,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lumen`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `hashed_password` VARCHAR(255) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `first_name` VARCHAR(100) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
