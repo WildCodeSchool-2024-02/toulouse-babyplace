@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+
+.childcare-center-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0% 0;
+  background: linear-gradient(135deg, $main-color, $secondary-color);
+  .creche-img {
+    width: 20rem;
+    height: 20rem;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  }
+  .profile-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: color var(--lighter-color);
+  }
+}
