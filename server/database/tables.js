@@ -1,6 +1,7 @@
 // Import the repository modules responsible for handling data operations on the tables
 
 const ChildcareCenter = require("./models/ChildcareCenterRepository");
+const ChildcareCenterRepositoryStructure = require("./models/ChildcareCenterRepositoryStructure");
 const ChildrenRepository = require("./models/ChildrenRepository");
 const CustomerRepository = require("./models/CustomerRepository");
 const ExpTrainingRepository = require("./models/ExpTrainingRepository");
@@ -20,6 +21,7 @@ tables.children = new ChildrenRepository();
 tables.customer = new CustomerRepository();
 tables.exp_training = new ExpTrainingRepository();
 tables.filing = new FilingRepository();
+tables.childcare_center_structure = new ChildcareCenterRepositoryStructure();
 
 /* ************************************************************************* */
 

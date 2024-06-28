@@ -7,24 +7,18 @@ const router = express.Router();
 /* ************************************************************************* */
 
 const childcareCenterRouter = require("./childcareCenter/router");
+const childrenRouter = require("./children/router");
+const customerRouter = require("./customer/router");
+const expTrainingRouter = require("./expTraining/router");
+const filingRouter = require("./filing/router");
+const ChildcareCenterStructure = require("./childcareCenterStructure/router");
 
 router.use("/childcare-center", childcareCenterRouter);
-
-const childrenRouter = require("./children/router");
-
 router.use("/children", childrenRouter);
-
-const customerRouter = require("./customer/router");
-
 router.use("/customer", customerRouter);
-
-const expTrainingRouter = require("./expTraining/router");
-
 router.use("/exp-training", expTrainingRouter);
-
-const filingRouter = require("./filing/router");
-
 router.use("/filing", filingRouter);
+router.use("/childcare-center-structure", ChildcareCenterStructure);
 
 /* ************************************************************************* */
 

@@ -7,19 +7,8 @@ class ChildcareCenterRepository extends AbstractRepository {
 
   async create(childcareCenter) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (name, description, phone, street_address, zip_code, city, mail, password, url, types) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [
-        childcareCenter.name,
-        childcareCenter.description,
-        childcareCenter.phone,
-        childcareCenter.street_address,
-        childcareCenter.zip_code,
-        childcareCenter.city,
-        childcareCenter.mail,
-        childcareCenter.password,
-        childcareCenter.url,
-        childcareCenter.types,
-      ]
+      `insert into ${this.table} (mail, password) values (?, ?)`,
+      [childcareCenter.mail, childcareCenter.password]
     );
 
     return result.insertId;
