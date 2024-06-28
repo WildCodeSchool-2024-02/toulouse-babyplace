@@ -25,9 +25,12 @@ CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center` (
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(200) NOT NULL,
   `phone` VARCHAR(100) NOT NULL,
-  `adress` VARCHAR(100) NOT NULL,
+  `street_address` VARCHAR(100) NOT NULL,
+  `zip_code` VARCHAR(20) NOT NULL,
+  `city` VARCHAR(100) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
-  `url` BLOB NOT NULL,
+  `password` TEXT NOT NULL,
+  `url` TEXT NOT NULL,
   `types` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idprofessional_UNIQUE` (`id` ASC) VISIBLE)
@@ -39,6 +42,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lumen`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
+  `hashed_password` VARCHAR(255) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `first_name` VARCHAR(100) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
