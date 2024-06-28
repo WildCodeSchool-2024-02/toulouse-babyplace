@@ -43,7 +43,7 @@ const signUp = async (req, res) => {
     if (result.affectedRows === 0) {
       res.status(400).send("Bad request");
     } else {
-      res.status(204).send("User created");
+      res.sendStatus(201);
     }
   } catch (error) {
     console.error(error);

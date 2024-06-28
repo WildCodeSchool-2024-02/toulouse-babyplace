@@ -93,10 +93,9 @@ const router = createBrowserRouter([
     element: <SignUp />,
   },
   {
-    path:"/sign-up-done",
-    element: <SignUpDone />
-  }
-  
+    path: "/sign-up-done",
+    element: <SignUpDone />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

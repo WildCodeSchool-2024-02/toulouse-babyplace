@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const emailRef = useRef();
+
   const [userPassword, setUserPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
