@@ -1,25 +1,31 @@
 import Input from "../../../components/Input/Input";
-import Button from "../../../components/Button/Button";
+import "../SignUpPro.scss";
 import "./SignUpProLocalisation.scss";
 
 function SignUpProLocalisation() {
   return (
-    <div>
+    <div className="sign-up-pro">
       <progress max="100" value="20" />
-      <form>
-        <Input
-          type="text"
-          title="Adresse postale"
-          placeholder="N° et nom de rue"
-        />
-        <Input type="text" title="Code postal" placeholder="Code Postal" />
-        <Input type="text" title="Ville" placeholder="Ville" />
-        <Button
-          label="Suivant"
-          nextPath="/sign-up-pro/images"
-          previousPath="/sign-up-pro/structure"
-        />
-      </form>
+      <div className="form-flex">
+        <form>
+          <Input
+            type="text"
+            title="Adresse postale"
+            placeholder="N° et nom de rue"
+          />
+          <Input type="text" title="Code postal" placeholder="Code Postal" />
+          <Input type="text" title="Ville" placeholder="Ville" />
+
+          <div className="sign-up-pro-button">
+            <button type="submit" id="previous-button">
+              Retour
+            </button>
+            <button type="submit" id="next-button">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

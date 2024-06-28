@@ -1,0 +1,129 @@
+@import "../../variables.scss";
+
+.sign-up-pro {
+  h4 {
+    margin-block: 0.5rem;
+  }
+
+  .structure-types {
+    display: flex;
+    flex-wrap: wrap;
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + label {
+        background-color: $main-color;
+        color: $lighter-color;
+      }
+    }
+
+    label {
+      background-color: $lighter-grey-color;
+      border: $grey-color 1px solid;
+      border-radius: 10px;
+      padding-inline: 0.6rem;
+      padding-block: 0.4rem;
+      margin-inline: 0.5rem;
+      margin-block: 0.2rem;
+      font-family: $font-family;
+      font-size: 0.8rem;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 37.5rem;
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .input-sign-up-pro {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+  }
+
+  progress {
+    width: 100dvw;
+    height: 0.8rem;
+    border-radius: 0px;
+    background-color: $main-color;
+    overflow: hidden;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: $lighter-grey-color;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: $main-color;
+  }
+
+  progress::-moz-progress-bar {
+    background-color: $main-color;
+  }
+
+  progress::-ms-fill {
+    background-color: $main-color;
+    border: none;
+  }
+
+  .sign-up-pro-button {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    gap: 3rem;
+
+    #next-button {
+      color: $lighter-color;
+      padding: 0.5rem;
+      background-color: $main-color;
+      border-radius: 20px;
+      border: $main-color 1px solid;
+    }
+
+    #next-button:hover {
+      color: $main-color;
+      background-color: $lighter-color;
+      border: $main-color 1px solid;
+    }
+
+    #previous-button {
+      color: $main-color;
+      padding: 0.5rem;
+      background-color: $lighter-color;
+      border: $lighter-color 1px solid;
+    }
+
+    #previous-button:hover {
+      color: $grey-color;
+    }
+  }
+
+  input {
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: $grey-color 1px solid;
+    width: 90%;
+  }
+
+  p {
+    color: $grey-color;
+  }
+
+  .form-flex {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 368px) {
+  form {
+    margin-top: 2rem;
+  }
+}
