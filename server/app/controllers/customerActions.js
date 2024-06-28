@@ -37,6 +37,20 @@ const add = async (req, res, next) => {
   }
 };
 
+const signUp = async (req, res) => {
+  try {
+    const result = await tables.customer.create(req.user);
+    if (result.affectedRows === 0) {
+      res.status(400).send("Bad request");
+    } else {
+      res.status(204).send("User created");
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error retrieving data from database");
+  }
+};
+
 const signIn = async (req, res, next) => {
   try {
     const user = req.body;
@@ -54,6 +68,7 @@ const signIn = async (req, res, next) => {
 
 module.exports = {
   signIn,
+  signUp,
   browse,
   read,
   // edit,

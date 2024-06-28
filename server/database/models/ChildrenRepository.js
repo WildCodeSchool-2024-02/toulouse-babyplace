@@ -8,10 +8,10 @@ class ChildrenRepository extends AbstractRepository {
   async create(children) {
     // Execute the SQL INSERT query to add a new children to the "children" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (name, first_name, allergies, vaccinated, customer_id, childcare_center_id) values (?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (name, firstname, allergies, vaccinated, customer_id, childcare_center_id) values (?, ?, ?, ?, ?, ?)`,
       [
         children.name,
-        children.first_name,
+        children.firstname,
         children.allergies,
         children.vaccinated,
         children.customer_id,
