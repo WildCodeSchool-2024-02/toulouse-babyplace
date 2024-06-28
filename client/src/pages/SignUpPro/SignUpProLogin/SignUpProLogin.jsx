@@ -1,9 +1,11 @@
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../SignUpPro.scss";
 import "./SignUpProLogin.scss";
 
 function SignUpProLogin() {
   const emailRef = useRef();
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -31,7 +33,7 @@ function SignUpProLogin() {
         }
       );
       if (response.status === 201) {
-        // navigate("/sign-up-pro/structure");
+        navigate("/sign-up-pro/structure");
       } else {
         console.info(response);
       }
@@ -78,7 +80,7 @@ function SignUpProLogin() {
             <p>{password === confirmPassword ? "✅" : "❌"}</p>
           </div>
           <div className="sign-up-pro-button">
-            <button type="submit" id="previous-button">
+            <button type="button" id="previous-button">
               Retour
             </button>
             <button type="submit" id="next-button">

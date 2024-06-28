@@ -59,45 +59,54 @@ function App() {
         <div id="case-middle">
           <div id="case-grid">
             <div id="diary" className="case">
-              <h4>Agenda en ligne</h4>
-              <p>
-                Consultez en temps reel votre agenda et modifiez le en quelques
-                cliques afin d&apos;optimiser votre temps et votre rentabilite.
-                Accessible de puis votre Smarktphone, tabelle ou Telephone
-              </p>
+              <div>
+                <h4>Agenda en ligne</h4>
+                <p>
+                  Consultez en temps reel votre agenda et modifiez le en
+                  quelques cliques afin d&apos;optimiser votre temps et votre
+                  rentabilite. Accessible de puis votre Smarktphone, tabelle ou
+                  Telephone
+                </p>
+              </div>
               <button type="button">
-                Learn more <span>&#10140;</span>
+                Learn more <span> &#10140;</span>
               </button>
             </div>
             <div id="alert" className="case">
-              <h4>Soyez alertee</h4>
-              <p>
-                Choisissez le mode de notifications afin d&apos;etre informe au
-                plus vote des annulations et des demandes de reservation.
-              </p>
+              <div>
+                <h4>Soyez alertee</h4>
+                <p>
+                  Choisissez le mode de notifications afin d&apos;etre informe
+                  au plus vote des annulations et des demandes de reservation.
+                </p>
+              </div>
               <button type="button">
                 Learn more <span>&#10140;</span>
               </button>
             </div>
             <div id="activity" className="case">
-              <h4>Marketing de votre activité</h4>
-              <p>
-                Optimisez votre page profil pour vous rendre plus visible et
-                vous permettre de vous decouvrir par les parents de votre
-                quartier.
-              </p>
+              <div>
+                <h4>Marketing de votre activité</h4>
+                <p>
+                  Optimisez votre page profil pour vous rendre plus visible et
+                  vous permettre de vous decouvrir par les parents de votre
+                  quartier.
+                </p>
+              </div>
               <button type="button">
                 Learn more <span>&#10140;</span>
               </button>
             </div>
             <div id="communication" className="case">
-              <h4>Communiquez avec les parents</h4>
-              <p>
-                Les parents doivent avoir prerempliss leur liste de documents
-                pour pouvoir faire des reservations. Les parents peuvent vous
-                soumettre les contrats deja valide par les equipes legales de
-                Babyplabce
-              </p>
+              <div>
+                <h4>Communiquez avec les parents</h4>
+                <p>
+                  Les parents doivent avoir prerempliss leur liste de documents
+                  pour pouvoir faire des reservations. Les parents peuvent vous
+                  soumettre les contrats deja valide par les equipes legales de
+                  Babyplabce
+                </p>
+              </div>
               <button type="button">
                 Learn more <span>&#10140;</span>
               </button>

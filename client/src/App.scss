@@ -126,6 +126,18 @@
       margin: 1rem;
       border-radius: 30px;
       max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      button {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      button:hover {
+        color: $main-color;
+      }
     }
 
     #case-grid {
