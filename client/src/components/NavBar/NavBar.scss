@@ -8,7 +8,6 @@
 
   a {
     text-decoration: none;
-    color: $darker-color;
   }
 
   a:hover {
@@ -43,12 +42,20 @@
     max-height: 3.75rem;
     max-width: 7.25rem;
     text-decoration: none;
+    transition:
+      0.5s ease,
+      transform 0.5s ease;
   }
 
   p:hover {
     background-color: $main-color;
     color: $lighter-color;
   }
+}
+
+.active-link {
+  color: $main-color;
+  border-bottom: solid 1px $main-color;
 }
 
 @media screen and (min-width: 500px) {
