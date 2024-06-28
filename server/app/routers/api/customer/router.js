@@ -13,6 +13,7 @@ const {
   add,
   signIn,
 } = require("../../../controllers/customerActions");
+const verifyPassword = require("../../../middlewares/verifyPassword.middleware");
 
 // Route to get a list of items
 router.get("/", browse);
@@ -24,7 +25,7 @@ router.get("/:id", read);
 router.post("/", add);
 
 // Route to verify password
-router.post("/signin", /* verifyPassword */ signIn);
+router.post("/sign-in", verifyPassword, signIn);
 
 /* ************************************************************************* */
 

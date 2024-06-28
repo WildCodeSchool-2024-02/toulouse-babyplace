@@ -12,6 +12,7 @@ class CustomerSeeder extends AbstractSeeder {
     for (let i = 0; i < 5; i += 1) {
       const fakeCustomer = {
         name: this.faker.person.lastName(),
+        hashed_password: this.faker.internet.password(),
         first_name: this.faker.person.firstName(),
         mail: this.faker.internet.email(),
         adress: this.faker.location.city(),
