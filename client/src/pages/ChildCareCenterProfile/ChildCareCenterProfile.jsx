@@ -8,19 +8,17 @@ function ChildCareCenterProfile() {
         Bienvenue le profile de la creche:{" "}
         {/* on va recuperer le nom de la creche ici */}
       </h1>
-
       <p>
         Nous somme une creche qui garde les enfant sage et sensible de x heure a
         y heure{" "}
         {/* on va recuperer les données des infos du profils de la creche ici */}
       </p>
-
-      {/* <img
+      <img
         src="../src/assets/images/enfant-joyeux.jpeg"
         alt="creche-img"
         className="creche-img"
-      /> */}
-
+      />{" "}
+      *
       <div className="profile-line">
         <h2>Conditions d'accueil </h2>
         {/* on va recuperer les Conditions de la creche ici */}
