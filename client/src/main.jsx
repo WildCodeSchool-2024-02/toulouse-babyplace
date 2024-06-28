@@ -19,6 +19,7 @@ import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterProfile from "./pages/ChildCareCenterProfile/ChildCareCenterProfile";
+import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
   {
     path: "/sign-up",
     element: <SignUp />,
+  },
+  {
+    path: "/sign-up-done",
+    element: <SignUpDone />,
   },
 ]);
 

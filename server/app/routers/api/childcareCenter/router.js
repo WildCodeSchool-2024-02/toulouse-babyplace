@@ -23,7 +23,7 @@ router.get("/", browse);
 router.get("/:id", read);
 
 // Route to add a new item
-router.post("/add", hashPassword, add);
+router.post("/", hashPassword, add);
 
 /* ************************************************************************* */
 

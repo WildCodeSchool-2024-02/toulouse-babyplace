@@ -12,7 +12,11 @@ const {
   read,
   add,
   signIn,
+  signUp,
 } = require("../../../controllers/customerActions");
+const {
+  hashPassword,
+} = require("../../../middlewares/hashPassword.middleware");
 
 // Route to get a list of items
 router.get("/", browse);
@@ -24,7 +28,10 @@ router.get("/:id", read);
 router.post("/", add);
 
 // Route to verify password
-router.post("/signin", /* verifyPassword */ signIn);
+router.post("/sign-in", /* verifyPassword */ signIn);
+
+// route to register a new user
+router.post("/sign-up", hashPassword, signUp);
 
 /* ************************************************************************* */
 
