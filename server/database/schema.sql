@@ -22,16 +22,16 @@ USE `lumen` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(100) NOT NULL,
-  `description` VARCHAR(200) NOT NULL,
-  `phone` VARCHAR(100) NOT NULL,
-  `street_address` VARCHAR(100) NOT NULL,
-  `zip_code` VARCHAR(20) NOT NULL,
-  `city` VARCHAR(100) NOT NULL,
-  `mail` VARCHAR(100) NOT NULL,
-  `password` TEXT NOT NULL,
-  `url` TEXT NOT NULL,
-  `types` VARCHAR(100) NOT NULL,
+  `name` VARCHAR(100),
+  `description` VARCHAR(200),
+  `phone` VARCHAR(100),
+  `street_address` VARCHAR(100),
+  `zip_code` VARCHAR(20),
+  `city` VARCHAR(100),
+  `mail` VARCHAR(100),
+  `password` TEXT,
+  `url` TEXT,
+  `types` VARCHAR(100),
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idprofessional_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB;

@@ -31,7 +31,6 @@ const add = async (req, res, next) => {
 
   try {
     const insertId = await tables.childcare_center.create(center);
-
     res.status(201).json({ insertId });
   } catch (err) {
     next(err);

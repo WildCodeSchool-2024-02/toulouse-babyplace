@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../SignUpPro.scss";
 import "./SignUpProLogin.scss";
 
 function SignUpProLogin() {
-  const emailRef = useRef();
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleConfirmPasswordChange = (event) => {
     setConfirmPassword(event.target.value);
@@ -17,18 +17,23 @@ function SignUpProLogin() {
     setPassword(event.target.value);
   };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/users`,
+        `${import.meta.env.VITE_API_URL}/api/childcare-center`,
         {
           method: "post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            email: emailRef.current.value,
+            mail: email,
             password,
+            confirmPassword,
           }),
         }
       );
@@ -49,7 +54,13 @@ function SignUpProLogin() {
         <form onSubmit={handleSubmit}>
           <div className="input-sign-up-pro">
             <label htmlFor="email">Veuillez indiquer un email</label>{" "}
-            <input ref={emailRef} type="email" id="email" placeholder="Email" />
+            <input
+              value={email}
+              onChange={handleEmailChange}
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
             <p>Cet email vous servira pour vous connecter</p>
           </div>
           <div className="input-sign-up-pro">

@@ -26,6 +26,7 @@ function ChildcareCenterStructure() {
                 {typesChildcareCenter.map((type) => (
                   <>
                     <input
+                      key={type.id}
                       type="radio"
                       id={type.id}
                       name="type"
