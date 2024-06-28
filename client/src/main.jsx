@@ -18,6 +18,7 @@ import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
 import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
+import ChildCareCenterProfile from "./pages/ChildCareCenterProfile/ChildCareCenterProfile";
 import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/reservation",
     element: <Reservation />,
+  },
+  {
+    path: "/childcare-center-profile",
+    element: <ChildCareCenterProfile />,
   },
 
   {

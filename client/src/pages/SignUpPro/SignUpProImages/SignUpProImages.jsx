@@ -1,17 +1,24 @@
-import Button from "../../../components/Button/Button";
 import Input from "../../../components/Input/Input";
+import "../SignUpPro.scss";
 
 function SignUpProImages() {
   return (
-    <div>
+    <div className="sign-up-pro">
       <progress max="100" value="30" />
-      <form>
-        <Input />
-        <Button
-          nextPath="/sign-up-pro/rules"
-          previousPath="/sign-up-pro/localisation"
-        />
-      </form>
+      <div className="form-flex">
+        <form>
+          <Input />
+
+          <div className="sign-up-pro-button">
+            <button type="submit" id="previous-button">
+              Retour
+            </button>
+            <button type="submit" id="next-button">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
