@@ -8,6 +8,13 @@
   background: linear-gradient(135deg, $main-color, $secondary-color);
   padding: 1rem 6rem;
   min-height: 100vh;
+  button {
+    color: $lighter-color;
+    padding: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    border: $main-color 1px solid;
+  }
 }
 
 .calendar-info {
@@ -17,13 +24,6 @@
   justify-content: center;
   gap: 0.5rem;
   color: $lighter-color;
-}
-button {
-  color: $lighter-color;
-  padding: 0.5rem;
-  background-color: $main-color;
-  border-radius: 20px;
-  border: $main-color 1px solid;
 }
 
 button:hover {
