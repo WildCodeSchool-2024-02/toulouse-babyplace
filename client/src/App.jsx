@@ -69,7 +69,7 @@ function App() {
                 </p>
               </div>
               <button type="button">
-                Learn more <span> &#10140;</span>
+                En savoir plus <span> &#10140;</span>
               </button>
             </div>
             <div id="alert" className="case">
@@ -81,7 +81,7 @@ function App() {
                 </p>
               </div>
               <button type="button">
-                Learn more <span>&#10140;</span>
+                En savoir plus <span>&#10140;</span>
               </button>
             </div>
             <div id="activity" className="case">
@@ -94,7 +94,7 @@ function App() {
                 </p>
               </div>
               <button type="button">
-                Learn more <span>&#10140;</span>
+                En savoir plus <span>&#10140;</span>
               </button>
             </div>
             <div id="communication" className="case">
@@ -108,7 +108,7 @@ function App() {
                 </p>
               </div>
               <button type="button">
-                Learn more <span>&#10140;</span>
+                En savoir plus <span>&#10140;</span>
               </button>
             </div>
           </div>
