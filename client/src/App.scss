@@ -22,7 +22,7 @@
       display: flex;
       margin: 1rem;
       flex-direction: column;
-      max-width: 60rem;
+      max-width: 45rem;
 
       button {
         background-color: $main-color;
@@ -87,7 +87,7 @@
       margin: 1rem;
       padding: 1rem;
       border-radius: 40px;
-      max-width: 730px;
+      max-width: 45rem;
       flex-direction: column-reverse;
     }
 
@@ -177,7 +177,6 @@
     #intro-flex {
       #intro {
         flex-direction: row;
-        margin: 3rem;
 
         #img-intro {
           display: block;
