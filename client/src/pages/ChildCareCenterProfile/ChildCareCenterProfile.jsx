@@ -14,11 +14,13 @@ function ChildCareCenterProfile() {
         y heure{" "}
         {/* on va recuperer les données des infos du profils de la creche ici */}
       </p>
-      <img
+
+      {/* <img
         src="../src/assets/images/enfant-joyeux.jpeg"
         alt="creche-img"
         className="creche-img"
-      />
+      /> */}
+
       <div className="profile-line">
         <h2>Conditions d'accueil </h2>
         {/* on va recuperer les Conditions de la creche ici */}
