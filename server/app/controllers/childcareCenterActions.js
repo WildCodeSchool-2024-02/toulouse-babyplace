@@ -26,7 +26,7 @@ const read = async (req, res, next) => {
   }
 };
 
-const addLogin = async (req, res, next) => {
+const add = async (req, res, next) => {
   const center = req.body;
 
   try {
@@ -37,20 +37,8 @@ const addLogin = async (req, res, next) => {
   }
 };
 
-const addStructure = async (req, res, next) => {
-  const center = req.body;
-
-  try {
-    const insertId = await tables.childcare_center.createStructure(center);
-    res.status(201).json({ insertId });
-  } catch (err) {
-    next(err);
-  }
-};
-
 module.exports = {
   browse,
   read,
-  addLogin,
-  addStructure,
+  add,
 };
