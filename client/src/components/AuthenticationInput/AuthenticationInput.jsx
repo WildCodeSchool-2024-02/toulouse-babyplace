@@ -35,9 +35,7 @@ function AuthenticationInput() {
         console.error("Unexpected response status:", response.status);
       }
     } catch (error) {
-      // Handle errors
-      // console.error("Error during sign-in:", error);
-      // alert("Failed to sign in. Please check your credentials and try again.");
+      console.info("Error during sign-in:", error);
     }
   };
 
