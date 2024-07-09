@@ -18,8 +18,7 @@ import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
 import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
-import ChildCareCenterProfile from "./pages/ChildCareCenterProfile/ChildCareCenterProfile";
-import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
+import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
 
 const router = createBrowserRouter([
   {
@@ -46,8 +45,8 @@ const router = createBrowserRouter([
     element: <Reservation />,
   },
   {
-    path: "/childcare-center-profile",
-    element: <ChildCareCenterProfile />,
+    path: "/childcare-center-page",
+    element: <ChildCareCenterPage />,
   },
 
   {
@@ -91,10 +90,6 @@ const router = createBrowserRouter([
   {
     path: "/sign-up",
     element: <SignUp />,
-  },
-  {
-    path: "/sign-up-done",
-    element: <SignUpDone />,
   },
 ]);
 
