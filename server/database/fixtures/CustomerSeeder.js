@@ -8,19 +8,20 @@ class CustomerSeeder extends AbstractSeeder {
     });
   }
 
-  run() {
+  async run() {
     for (let i = 0; i < 5; i += 1) {
       const fakeCustomer = {
         name: this.faker.person.lastName(),
-        hashed_password: this.faker.internet.password(),
-        first_name: this.faker.person.firstName(),
+        firstname: this.faker.person.firstName(),
         mail: this.faker.internet.email(),
-        adress: this.faker.location.city(),
+        address: this.faker.location.city(),
         phone: this.faker.phone.number(),
+        hashed_password:
+          "$argon2id$v=19$m=19,t=2,p=1$dzVmZ3NtYjY4cDAwMDAwMA$3ZDIPrtHaKrV4g",
         refName: `customer_${i}`,
       };
 
-      this.insert(fakeCustomer); // insert into childcare_center(name, description, phone, address, mail, url, types) values (?, ?, ?, ?, ?, ?, ?)
+      this.insert(fakeCustomer);
     }
   }
 }
