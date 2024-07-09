@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavBarProfile from "../../components/NavBarProfile/NavBarProfile";
 import "./Profile.scss";
 
@@ -13,7 +14,9 @@ function Profile() {
         <input type="text" placeholder="Recherche" />
         <div className="profile-input">
           <div>🔔</div>
-          <div>📆</div>
+          <Link to="/reservation">
+            <div>📆</div>
+          </Link>
         </div>
       </div>
       <p className="profile-text">

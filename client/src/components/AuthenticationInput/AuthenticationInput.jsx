@@ -57,7 +57,8 @@ function AuthenticationInput() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
+          />{" "}
+          <br />
           <input
             type="password"
             placeholder="Mot de passe"
