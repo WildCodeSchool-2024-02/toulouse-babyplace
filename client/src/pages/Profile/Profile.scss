@@ -53,6 +53,15 @@ $lighter-color: #fff;
         display: flex;
         gap: 2rem;
         height: 100%;
+        a {
+          font-size: 30px;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+          }
+        }
         div {
           font-size: 30px;
           transition: transform 0.3s ease;

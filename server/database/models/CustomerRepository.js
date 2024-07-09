@@ -8,7 +8,7 @@ class CustomerRepository extends AbstractRepository {
   async create(customer) {
     // Execute the SQL INSERT query to add a new customer to the "customer" table
     const [result] = await this.database.query(
-      `insert into ${this.table} (hashed_password, name, firstname, email, address, phone) values (?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (hashed_password, name, firstname, mail, address, phone) values (?, ?, ?, ?, ?, ?)`,
       [
         customer.hashed_password,
         customer.name,
