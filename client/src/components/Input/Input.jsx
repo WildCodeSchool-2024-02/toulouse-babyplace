@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Input({ title, type, description, placeholder }) {
   return (
     <div className="sign-up-pro-input">
-      <h4>{title}</h4>
+      <label>{title}</label>
       <input type={type} placeholder={placeholder} required />
       <p>{description}</p>
     </div>

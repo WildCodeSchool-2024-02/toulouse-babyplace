@@ -1,8 +1,13 @@
+@import "../../variables.scss";
+
 #sign-up-pro-fieldset {
   display: flex;
   gap: 1rem;
   margin: 1rem;
-  justify-content: flex-end;
+  padding: 1rem;
+  justify-content: space-between;
+  border: 1px solid $lighter-grey-color;
+  border-radius: 10px;
 
   div {
     margin: 0.5rem;
@@ -10,5 +15,14 @@
 
   input {
     margin-inline: 0.5rem;
+  }
+
+  #fieldset-radio {
+    display: flex;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
   }
 }

@@ -1,8 +1,27 @@
 @import "../../variables.scss";
 
-.sign-up-pro {
+#sign-up-pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   h4 {
     margin-block: 0.5rem;
+  }
+
+  #flex-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 45rem;
+
+    p {
+      font-size: 0.8rem;
+    }
   }
 
   .structure-types {
@@ -31,46 +50,10 @@
     }
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 37.5rem;
-
-    p {
-      font-size: 0.8rem;
-    }
-  }
-
   .input-sign-up-pro {
     display: flex;
     flex-direction: column;
     margin: 0.5rem;
-  }
-
-  progress {
-    width: 100dvw;
-    height: 0.8rem;
-    border-radius: 0px;
-    background-color: $main-color;
-    overflow: hidden;
-  }
-
-  progress::-webkit-progress-bar {
-    background-color: $lighter-grey-color;
-  }
-
-  progress::-webkit-progress-value {
-    background-color: $main-color;
-  }
-
-  progress::-moz-progress-bar {
-    background-color: $main-color;
-  }
-
-  progress::-ms-fill {
-    background-color: $main-color;
-    border: none;
   }
 
   .sign-up-pro-button {
@@ -114,11 +97,6 @@
 
   p {
     color: $grey-color;
-  }
-
-  .form-flex {
-    display: flex;
-    justify-content: center;
   }
 }
 

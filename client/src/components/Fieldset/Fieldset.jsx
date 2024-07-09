@@ -3,17 +3,19 @@ import "./Fieldset.scss";
 
 function Fieldset({ legend, name }) {
   return (
-    <fieldset id="sign-up-pro-fieldset">
+    <div id="sign-up-pro-fieldset">
       <legend>{legend}</legend>
-      <div>
-        <input type="radio" id="no" name={name} value="no" checked />
-        <label htmlFor="no">Non</label>
+      <div id="fieldset-radio">
+        <div className="radio">
+          <input type="radio" id="no" name={name} value="no" checked />
+          <label htmlFor="no">Non</label>
+        </div>
+        <div className="radio">
+          <input type="radio" id="yes" name={name} value="yes" />
+          <label htmlFor="yes">Oui</label>
+        </div>
       </div>
-      <div>
-        <input type="radio" id="yes" name={name} value="yes" />
-        <label htmlFor="yes">Oui</label>
-      </div>
-    </fieldset>
+    </div>
   );
 }
 
