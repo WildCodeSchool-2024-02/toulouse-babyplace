@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center` (
   `zip_code` VARCHAR(20) NOT NULL,
   `city` VARCHAR(100) NOT NULL,
   `mail` VARCHAR(100) NOT NULL,
-  `password` TEXT NOT NULL,
-  `url` TEXT NOT NULL,
+  `password` VARCHAR(80) NOT NULL,
+  `url` BLOB NOT NULL,
   `types` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idprofessional_UNIQUE` (`id` ASC) VISIBLE)
@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `lumen`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `hashed_password` VARCHAR(255) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
-  `first_name` VARCHAR(100) NOT NULL,
-  `mail` VARCHAR(100) NOT NULL,
-  `adress` VARCHAR(150) NOT NULL,
+  `firstname` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `address` VARCHAR(150) NOT NULL,
   `phone` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `idcustomer_UNIQUE` (`id` ASC) VISIBLE)
