@@ -8,6 +8,7 @@
   background: linear-gradient(135deg, $main-color, $secondary-color);
   padding: 1rem 6rem;
   min-height: 100vh;
+
   button {
     color: $lighter-color;
     padding: 0.5rem;
@@ -15,19 +16,19 @@
     border-radius: 20px;
     border: $main-color 1px solid;
   }
-}
 
-.calendar-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  color: $lighter-color;
-}
+  button:hover {
+    color: $main-color;
+    background-color: $lighter-color;
+    border: $main-color 1px solid;
+  }
 
-button:hover {
-  color: $main-color;
-  background-color: $lighter-color;
-  border: $main-color 1px solid;
+  .calendar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: $lighter-color;
+  }
 }
