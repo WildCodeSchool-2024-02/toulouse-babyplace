@@ -5,16 +5,17 @@ import SignUpProLogin from "./SignUpProLogin/SignUpProLogin";
 import ChildcareCenterStructure from "./ChildcareCenterStructure/ChildcareCenterStructure";
 import SignUpProLocalisation from "./SignUpProLocalisation/SignUpProLocalisation";
 import SignUpProImages from "./SignUpProImages/SignUpProImages";
-import SignUpProRules from "./SignUpProRules/SignUpProRules";
+import SignUpProDescription from "./SignUpProDescription/SignUpProDescription";
+import SignUpProSchedules from "./SignUpProSchedules/SignUpProSchedules";
+import SignUpProCapacity from "./SignUpProCapacity/SignUpProCapacity";
 
 function SignUpPro() {
   const navigate = useNavigate();
   // const [password, setPassword] = useState("");
-  // // const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
   // const [email, setEmail] = useState("");
   // const [name, setName] = useState("");
   // const [phoneNumber, setPhoneNumber] = useState("");
-  // const [typeValue, setTypeValue] = useState("parentale");
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -50,7 +51,10 @@ function SignUpPro() {
         <ChildcareCenterStructure />
         <SignUpProLocalisation />
         <SignUpProImages />
-        <SignUpProRules />
+        <SignUpProDescription />
+        <SignUpProSchedules />
+        <SignUpProCapacity />
+        <button type="submit">Créer mon compte</button>
       </form>
     </div>
   );

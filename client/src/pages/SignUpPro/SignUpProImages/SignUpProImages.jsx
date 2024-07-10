@@ -4,7 +4,11 @@ import "../SignUpPro.scss";
 function SignUpProImages() {
   return (
     <div className="form-flex">
-      <Input />
+      <Input
+        title="Ajoutez votre photo de profil"
+        type="file"
+        accept="image/png, image/jpeg, image/jpg"
+      />
     </div>
   );
 }

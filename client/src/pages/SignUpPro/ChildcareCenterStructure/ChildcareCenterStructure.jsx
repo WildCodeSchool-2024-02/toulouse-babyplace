@@ -2,16 +2,10 @@ import { useState } from "react";
 import Input from "../../../components/Input/Input";
 import "../SignUpPro.scss";
 import "./ChildcareCenterStructure.scss";
-import typesChildcareCenter from "../../../services/tools/typesChildcareCenter";
 
 function ChildcareCenterStructure() {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [typeValue, setTypeValue] = useState("parentale");
-
-  const handleTypeChange = (event) => {
-    setTypeValue(event.target.value);
-  };
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -25,26 +19,6 @@ function ChildcareCenterStructure() {
     <div className="sign-up-pro">
       <div id="childcare-center-structure">
         <div className="form-flex">
-          <div id="structure">
-            <h4>Quel type d’accueil proposez-vous ?</h4>
-            <div className="structure-types">
-              {typesChildcareCenter.map((type) => (
-                <>
-                  <input
-                    key={type.id}
-                    type="radio"
-                    id={type.id}
-                    name="type"
-                    value={type.value}
-                    checked={typeValue === type.value}
-                    onChange={(e) => handleTypeChange(e)}
-                  />
-                  <label htmlFor={type.htmlFor}>{`Crèche ${type.value}`}</label>
-                </>
-              ))}
-            </div>
-          </div>
-
           <Input
             title="Complétez et vérifiez vos informations"
             type="text"

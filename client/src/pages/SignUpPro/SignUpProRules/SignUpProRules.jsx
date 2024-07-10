@@ -1,4 +1,5 @@
 import Fieldset from "../../../components/Fieldset/Fieldset";
+import Input from "../../../components/Input/Input";
 import "../SignUpPro.scss";
 import "./SignUpProRules.scss";
 
@@ -35,10 +36,12 @@ function SignUpProRules() {
           legend="L’établissement est habilité à administrer les médicaments uniquement sur ordonnance ou protocole."
           name="medicine"
         />
-
-        <div>
-          <label htmlFor="more">Règles supplémentaires</label>
-          <input type="text" placeholder="Respect des horaires" />
+        <div id="more-rules">
+          <Input
+            title="Règles supplémentaires"
+            type="text"
+            placeholder="Respect des horaires"
+          />
           <button type="submit">Ajouter</button>
         </div>
       </div>

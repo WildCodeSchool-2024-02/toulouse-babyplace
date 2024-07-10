@@ -22,7 +22,7 @@ function SignUpProLogin() {
   return (
     <div className="sign-up-pro">
       <div className="form-flex">
-        <div className="input-sign-up-pro">
+        <div className="sign-up-pro-input">
           <label htmlFor="email">Veuillez indiquer un email</label>{" "}
           <input
             value={email}
@@ -33,7 +33,7 @@ function SignUpProLogin() {
           />
           <p>Cet email vous servira pour vous connecter</p>
         </div>
-        <div className="input-sign-up-pro">
+        <div className="sign-up-pro-input">
           <label htmlFor="password">Veuillez indiquer un mot de passe</label>{" "}
           <input
             type="password"
@@ -47,7 +47,7 @@ function SignUpProLogin() {
             {`longueur: ${password.length} >= 12`}
           </p>
         </div>
-        <div className="input-sign-up-pro">
+        <div className="sign-up-pro-input">
           <label htmlFor="confirm-password">
             Veuillez confirmer votre mot de passe
           </label>{" "}
