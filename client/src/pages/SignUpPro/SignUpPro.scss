@@ -31,6 +31,9 @@
     border-radius: 20px;
     border: $main-color 1px solid;
     margin: 1rem;
+    transition:
+      0.5s ease,
+      transform 0.5s ease;
   }
 
   button:hover {
