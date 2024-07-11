@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./SignUpPro.scss";
 import NavBarSignUpPro from "../../components/NavBarSignUpPro/NavBarSignUpPro";
-import SignUpProLogin from "./SignUpProLogin/SignUpProLogin";
-import ChildcareCenterStructure from "./ChildcareCenterStructure/ChildcareCenterStructure";
-import SignUpProLocalisation from "./SignUpProLocalisation/SignUpProLocalisation";
-import SignUpProImages from "./SignUpProImages/SignUpProImages";
-import SignUpProDescription from "./SignUpProDescription/SignUpProDescription";
-import SignUpProSchedules from "./SignUpProSchedules/SignUpProSchedules";
-import SignUpProCapacity from "./SignUpProCapacity/SignUpProCapacity";
+import SignUpProLogin from "../../components/SignUpPro/SignUpProLogin/SignUpProLogin";
+import ChildcareCenterStructure from "../../components/SignUpPro/ChildcareCenterStructure/ChildcareCenterStructure";
+import SignUpProLocalisation from "../../components/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
+import SignUpProImages from "../../components/SignUpPro/SignUpProImages/SignUpProImages";
+import SignUpProDescription from "../../components/SignUpPro/SignUpProDescription/SignUpProDescription";
+import SignUpProSchedules from "../../components/SignUpPro/SignUpProSchedules/SignUpProSchedules";
+import SignUpProCapacity from "../../components/SignUpPro/SignUpProCapacity/SignUpProCapacity";
 import { useSignUpPro } from "../../context/SignUpPro";
 
 function SignUpPro() {
@@ -33,7 +33,7 @@ function SignUpPro() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/childcare-center`,
+        `${import.meta.env.VITE_API_URL}/api/childcare-center/sign-up-pro`,
         {
           method: "post",
           headers: { "Content-Type": "application/json" },

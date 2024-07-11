@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../SignUpPro.scss";
+import "../../../pages/SignUpPro/SignUpPro.scss";
 import "./SignUpProLogin.scss";
 import { useSignUpPro } from "../../../context/SignUpPro";
 

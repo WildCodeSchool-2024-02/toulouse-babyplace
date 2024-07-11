@@ -1,5 +1,5 @@
-import Fieldset from "../../../components/Fieldset/Fieldset";
-import "../SignUpPro.scss";
+import Fieldset from "../../Fieldset/Fieldset";
+import "../../../pages/SignUpPro/SignUpPro.scss";
 import "./SignUpProRules.scss";
 
 function SignUpProRules() {

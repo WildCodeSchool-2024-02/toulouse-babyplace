@@ -1,5 +1,5 @@
 import { useSignUpPro } from "../../../context/SignUpPro";
-import "../SignUpPro.scss";
+import "../../../pages/SignUpPro/SignUpPro.scss";
 import "./SignUpProLocalisation.scss";
 
 function SignUpProLocalisation() {

@@ -1,5 +1,5 @@
 import { useSignUpPro } from "../../../context/SignUpPro";
-import "./SignUpProDescription.scss";
+import "../../../pages/SignUpPro/SignUpPro.scss";
 
 function SignUpProDescription() {
   const { description, setDescription } = useSignUpPro();

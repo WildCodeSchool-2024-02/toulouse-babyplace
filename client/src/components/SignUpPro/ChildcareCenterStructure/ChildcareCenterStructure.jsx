@@ -1,5 +1,4 @@
-import "../SignUpPro.scss";
-import "./ChildcareCenterStructure.scss";
+import "../../../pages/SignUpPro/SignUpPro.scss";
 import { useSignUpPro } from "../../../context/SignUpPro";
 
 function ChildcareCenterStructure() {
