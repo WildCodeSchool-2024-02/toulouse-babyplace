@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `lumen`.`customer` (
   `hashed_password` VARCHAR(255) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `firstname` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(100) NOT NULL,
+  `mail` VARCHAR(100) NOT NULL,
   `address` VARCHAR(150) NOT NULL,
   `phone` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),

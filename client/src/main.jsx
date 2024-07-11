@@ -12,7 +12,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
-import ChildCareCenterProfile from "./pages/ChildCareCenterProfile/ChildCareCenterProfile";
+import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
 import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 import { SignUpProProvider } from "./context/SignUpPro";
@@ -42,8 +42,8 @@ const router = createBrowserRouter([
     element: <Reservation />,
   },
   {
-    path: "/childcare-center-profile",
-    element: <ChildCareCenterProfile />,
+    path: "/childcare-center-page",
+    element: <ChildCareCenterPage />,
   },
 
   {

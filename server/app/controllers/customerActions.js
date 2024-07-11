@@ -60,6 +60,12 @@ const signIn = async (req, res, next) => {
       expiresIn: "1h",
     });
 
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.APP_SECRET,
+      maxAge: 3600000,
+    });
+
     res.json({ token });
   } catch (error) {
     next(error);
