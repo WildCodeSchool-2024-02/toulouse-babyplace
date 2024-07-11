@@ -54,7 +54,7 @@ function SignUpPro() {
         }
       );
       if (response.status === 201) {
-        navigate("/sign-up-pro/localisation");
+        navigate("/sign-in-pro");
       } else {
         console.info(response);
       }
