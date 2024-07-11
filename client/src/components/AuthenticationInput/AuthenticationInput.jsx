@@ -46,7 +46,7 @@ function AuthenticationInput() {
         {path === "/sign-in" ? (
           <Link to="/sign-up">S’inscrire</Link>
         ) : (
-          <Link to="/sign-up-pro/login">S’inscrire</Link>
+          <Link to="/sign-up-pro">S’inscrire</Link>
         )}
       </div>
       <img src="../src/assets/images/img_login.svg" alt="" />

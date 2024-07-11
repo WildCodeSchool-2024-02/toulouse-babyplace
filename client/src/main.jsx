@@ -8,18 +8,15 @@ import Layout from "./components/Layout/Layout";
 import Map from "./components/Map/Map";
 import SignIn from "./pages/SignIn/SignIn";
 import SignInPro from "./pages/SignInPro/SignInPro";
-import ChildcareCenterStructure from "./pages/SignUpPro/ChildcareCenterStructure/ChildcareCenterStructure";
 import SignUp from "./pages/SignUp/SignUp";
 import Help from "./pages/Help/Help";
-import SignUpProLogin from "./pages/SignUpPro/SignUpProLogin/SignUpProLogin";
-import LayoutSignUpPro from "./components/Layout/LayoutSignUpPro";
-import SignUpProLocalisation from "./pages/SignUpPro/SignUpProLocalisation/SignUpProLocalisation";
-import SignUpProImages from "./pages/SignUpPro/SignUpProImages/SignUpProImages";
-import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
+import SignUpPro from "./pages/SignUpPro/SignUpPro";
 import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
+import { SignUpProProvider } from "./context/SignUpPro";
+
 
 const router = createBrowserRouter([
   {
@@ -64,29 +61,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign-up-pro",
-    element: <LayoutSignUpPro />,
-    children: [
-      {
-        path: "/sign-up-pro/structure",
-        element: <ChildcareCenterStructure />,
-      },
-      {
-        path: "/sign-up-pro/login",
-        element: <SignUpProLogin />,
-      },
-      {
-        path: "/sign-up-pro/localisation",
-        element: <SignUpProLocalisation />,
-      },
-      {
-        path: "/sign-up-pro/images",
-        element: <SignUpProImages />,
-      },
-      {
-        path: "/sign-up-pro/rules",
-        element: <SignUpProRules />,
-      },
-    ],
+    element: <SignUpPro />,
   },
   {
     path: "/sign-up",
@@ -102,6 +77,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <SignUpProProvider>
+      <RouterProvider router={router} />
+    </SignUpProProvider>
   </React.StrictMode>
 );
