@@ -15,7 +15,7 @@ export function SignUpProProvider({ children }) {
   const [description, setDescription] = useState("");
   const [opening, setOpening] = useState("");
   const [closing, setClosing] = useState("");
-  const [capacity, setCapacity] = useState();
+  const [capacity, setCapacity] = useState("");
 
   const signUpProValue = useMemo(
     () => ({

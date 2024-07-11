@@ -66,7 +66,7 @@ function SignUpPro() {
   return (
     <div id="sign-up-pro">
       <NavBarSignUpPro />
-      <form action={handleSubmit} id="flex-form">
+      <form onSubmit={handleSubmit} id="flex-form">
         <SignUpProLogin />
         <ChildcareCenterStructure />
         <SignUpProLocalisation />

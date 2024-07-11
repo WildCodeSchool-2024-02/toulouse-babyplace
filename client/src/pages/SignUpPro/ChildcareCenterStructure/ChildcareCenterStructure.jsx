@@ -33,7 +33,6 @@ function ChildcareCenterStructure() {
             <input
               type="tel"
               placeholder="01 23 45 67 89"
-              pattern="^0[1-9]([ .-]?[0-9]{2}){4}$"
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
             />
