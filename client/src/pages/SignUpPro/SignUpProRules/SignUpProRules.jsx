@@ -1,5 +1,4 @@
 import Fieldset from "../../../components/Fieldset/Fieldset";
-import Input from "../../../components/Input/Input";
 import "../SignUpPro.scss";
 import "./SignUpProRules.scss";
 
@@ -37,11 +36,6 @@ function SignUpProRules() {
           name="medicine"
         />
         <div id="more-rules">
-          <Input
-            title="Règles supplémentaires"
-            type="text"
-            placeholder="Respect des horaires"
-          />
           <button type="submit">Ajouter</button>
         </div>
       </div>
