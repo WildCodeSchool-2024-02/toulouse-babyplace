@@ -1,6 +1,12 @@
+import { useSignUpPro } from "../../../context/SignUpPro";
 import "./SignUpProDescription.scss";
 
 function SignUpProDescription() {
+  const { description, setDescription } = useSignUpPro();
+
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
   return (
     <div id="sign-up-pro-description">
       <div className="sign-up-pro-input">
@@ -12,6 +18,8 @@ function SignUpProDescription() {
           cols="40"
           maxLength="500"
           placeholder="..."
+          value={description}
+          onChange={handleDescriptionChange}
         />
       </div>
     </div>

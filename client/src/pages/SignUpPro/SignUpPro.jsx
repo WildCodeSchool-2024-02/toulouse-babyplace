@@ -8,14 +8,26 @@ import SignUpProImages from "./SignUpProImages/SignUpProImages";
 import SignUpProDescription from "./SignUpProDescription/SignUpProDescription";
 import SignUpProSchedules from "./SignUpProSchedules/SignUpProSchedules";
 import SignUpProCapacity from "./SignUpProCapacity/SignUpProCapacity";
+import { useSignUpPro } from "../../context/SignUpPro";
 
 function SignUpPro() {
   const navigate = useNavigate();
-  // const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [name, setName] = useState("");
-  // const [phoneNumber, setPhoneNumber] = useState("");
+
+  const {
+    email,
+    password,
+    name,
+    phoneNumber,
+    street,
+    city,
+    zipCode,
+    avatar,
+    description,
+    opening,
+    closing,
+    capacity,
+  } = useSignUpPro();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -25,13 +37,20 @@ function SignUpPro() {
         {
           method: "post",
           headers: { "Content-Type": "application/json" },
-          // body: JSON.stringify({
-          //   typeValue,
-          //   name,
-          //   phoneNumber,
-          //   password,
-          //   email,
-          // }),
+          body: JSON.stringify({
+            name,
+            description,
+            phone: phoneNumber,
+            street_address: street,
+            zip_code: zipCode,
+            city,
+            mail: email,
+            password,
+            url: avatar,
+            opening,
+            closing,
+            capacity,
+          }),
         }
       );
       if (response.status === 201) {
@@ -43,6 +62,7 @@ function SignUpPro() {
       console.error(error);
     }
   };
+
   return (
     <div id="sign-up-pro">
       <NavBarSignUpPro />

@@ -20,6 +20,7 @@ import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterProfile from "./pages/ChildCareCenterProfile/ChildCareCenterProfile";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
 import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
+import { SignUpProProvider } from "./context/SignUpPro";
 
 const router = createBrowserRouter([
   {
@@ -102,6 +103,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <SignUpProProvider>
+      <RouterProvider router={router} />
+    </SignUpProProvider>
   </React.StrictMode>
 );

@@ -1,18 +1,53 @@
-import Input from "../../../components/Input/Input";
+import { useSignUpPro } from "../../../context/SignUpPro";
 import "../SignUpPro.scss";
 import "./SignUpProLocalisation.scss";
 
 function SignUpProLocalisation() {
+  const { street, setStreet, city, setCity, zipCode, setZipCode } =
+    useSignUpPro();
+
+  const handleStreetChange = (event) => {
+    setStreet(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleZipCodeChange = (event) => {
+    setZipCode(event.target.value);
+  };
+
   return (
     <div className="sign-up-pro">
       <div className="form-flex">
-        <Input
-          type="text"
-          title="Adresse postale"
-          placeholder="N° et nom de rue"
-        />
-        <Input type="text" title="Code postal" placeholder="Code Postal" />
-        <Input type="text" title="Ville" placeholder="Ville" />
+        <div className="sign-up-pro-input">
+          <label htmlFor="street">Adresse postale</label>
+          <input
+            type="text"
+            placeholder="N° et nom de rue"
+            value={street}
+            onChange={handleStreetChange}
+          />
+        </div>
+        <div className="sign-up-pro-input">
+          <label htmlFor="zipCode">Code postal</label>
+          <input
+            type="text"
+            placeholder="Code Postal"
+            value={city}
+            onChange={handleCityChange}
+          />
+        </div>
+        <div className="sign-up-pro-input">
+          <label htmlFor="city">Ville</label>
+          <input
+            type="text"
+            placeholder="Ville"
+            value={zipCode}
+            onChange={handleZipCodeChange}
+          />
+        </div>
       </div>
     </div>
   );

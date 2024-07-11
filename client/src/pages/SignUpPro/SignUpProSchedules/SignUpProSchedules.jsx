@@ -1,11 +1,26 @@
-import Input from "../../../components/Input/Input";
+import { useSignUpPro } from "../../../context/SignUpPro";
 
 function SignUpProSchedules() {
+  const { opening, setOpening, closing, setClosing } = useSignUpPro();
+
+  const handleOpeningChange = (event) => {
+    setOpening(event.target.value);
+  };
+
+  const handleClosingChange = (event) => {
+    setClosing(event.target.value);
+  };
   return (
     <div>
       <h4>Quels sont vos horaires d’ouverture</h4>
-      <Input title="De : " type="time" />
-      <Input title="A : " type="time" />
+      <div className="sign-up-pro-input">
+        <label htmlFor="opening">De : </label>
+        <input type="time" value={opening} onChange={handleOpeningChange} />
+      </div>
+      <div className="sign-up-pro-input">
+        <label htmlFor="closing">A : </label>
+        <input type="time" value={closing} onChange={handleClosingChange} />
+      </div>
     </div>
   );
 }

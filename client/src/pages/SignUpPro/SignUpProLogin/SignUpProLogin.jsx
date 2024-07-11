@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "../SignUpPro.scss";
 import "./SignUpProLogin.scss";
+import { useSignUpPro } from "../../../context/SignUpPro";
 
 function SignUpProLogin() {
-  const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const { email, setEmail, password, setPassword } = useSignUpPro();
 
   const handleConfirmPasswordChange = (event) => {
     setConfirmPassword(event.target.value);
