@@ -19,6 +19,7 @@ import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
+import PersonalPage from "./pages/PersonalPage/PersonalPage";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: "/personal-profile", element: <PersonalPage /> },
   {
     path: "/profile",
     element: <Profile />,
