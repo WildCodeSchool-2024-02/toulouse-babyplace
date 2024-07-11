@@ -19,6 +19,7 @@ import SignUpProRules from "./pages/SignUpPro/SignUpProRules/SignUpProRules";
 import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
+import Search from "./pages/Search/Search";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/help",
         element: <Help />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },
