@@ -1,5 +1,6 @@
 import { useSignUpPro } from "../../../context/SignUpPro";
 import "../../../pages/SignUpPro/SignUpPro.scss";
+import "./SignUpProDescription.scss";
 
 function SignUpProDescription() {
   const { description, setDescription } = useSignUpPro();
@@ -10,7 +11,7 @@ function SignUpProDescription() {
   return (
     <div id="sign-up-pro-description">
       <div className="sign-up-pro-input">
-        <p>Présentez vous auprès des parents</p>
+        <p id="title-description">Présentez vous auprès des parents</p>
         <textarea
           name="Description"
           id="description"
