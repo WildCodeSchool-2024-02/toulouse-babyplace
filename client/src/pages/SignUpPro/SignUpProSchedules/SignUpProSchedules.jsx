@@ -12,7 +12,7 @@ function SignUpProSchedules() {
   };
   return (
     <div>
-      <h4>Quels sont vos horaires d’ouverture</h4>
+      <h4>Quels sont vos horaires :</h4>
       <div className="sign-up-pro-input">
         <label htmlFor="opening">De : </label>
         <input type="time" value={opening} onChange={handleOpeningChange} />

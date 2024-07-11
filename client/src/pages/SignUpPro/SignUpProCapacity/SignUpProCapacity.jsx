@@ -7,10 +7,12 @@ function SignUpProCapacity() {
     setCapacity(event.target.value);
   };
   return (
-    <div className="sign-up-pro-input">
-      <label htmlFor="capacity">Nombre de place</label>
-      <input type="number" value={capacity} onChange={handleCapacityChange} />
-      <p>Au total, de combien d’aggrément disposez vous ?</p>
+    <div className="form-flex">
+      <h4>Définissez votre nombre de place :</h4>
+      <div className="sign-up-pro-input">
+        <label htmlFor="capacity">Capacité maximum</label>
+        <input type="number" value={capacity} onChange={handleCapacityChange} />
+      </div>
     </div>
   );
 }

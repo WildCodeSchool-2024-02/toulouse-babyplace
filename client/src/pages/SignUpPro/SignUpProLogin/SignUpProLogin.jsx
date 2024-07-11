@@ -22,6 +22,7 @@ function SignUpProLogin() {
   return (
     <div className="sign-up-pro">
       <div className="form-flex">
+        <h4>Informations de connexion : </h4>
         <div className="sign-up-pro-input">
           <label htmlFor="email">Veuillez indiquer un email</label>{" "}
           <input

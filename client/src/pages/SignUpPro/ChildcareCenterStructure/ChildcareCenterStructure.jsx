@@ -17,6 +17,7 @@ function ChildcareCenterStructure() {
     <div className="sign-up-pro">
       <div id="childcare-center-structure">
         <div className="form-flex">
+          <h4>Informations de l'établissement :</h4>
           <div className="sign-up-pro-input">
             <label htmlFor="name">Complétez et vérifiez vos informations</label>
             <input
