@@ -6,9 +6,8 @@ function NavBarSignUpPro() {
     <div id="nav-bar-sign-up-pro">
       <div id="nav-bar-sign-up-pro-title">
         <Link to="/">Lumen</Link>
-        <p>Structure d'accueil</p>
       </div>
-      <button type="button">Enregistrer et continuer</button>
+      <progress value={20} max={100} />
     </div>
   );
 }

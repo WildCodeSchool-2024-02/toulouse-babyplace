@@ -1,0 +1,15 @@
+@import "../../../variables.scss";
+
+#sign-up-pro-rules {
+  button {
+    background-color: $main-color;
+    border: none;
+    color: $lighter-color;
+    border-radius: 10px;
+    padding-inline: 0.6rem;
+    padding-block: 0.4rem;
+    margin-inline: 0.5rem;
+    margin-block: 0.2rem;
+    font-family: $font-family;
+  }
+}
