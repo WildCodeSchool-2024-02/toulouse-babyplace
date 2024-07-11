@@ -3,13 +3,16 @@ import NavBarProfile from "../../components/NavBarProfile/NavBarProfile";
 import "./Profile.scss";
 
 function Profile() {
+  const name = localStorage.getItem("name");
+  const lastname = localStorage.getItem("lastname");
+
   return (
     <div className="profile">
       <div className="profile-card">
         <div>
           <img src="../src/assets/images/2.jpg" alt="" />
-          <p>Mylène</p>
-          <p>farmer</p>
+          <p>{name}</p>
+          <p>{lastname}</p>
         </div>{" "}
         <input type="text" placeholder="Recherche" />
         <div className="profile-input">
