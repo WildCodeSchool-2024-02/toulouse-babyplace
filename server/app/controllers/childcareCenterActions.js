@@ -30,10 +30,24 @@ const add = async (req, res, next) => {
   const center = req.body;
 
   try {
-    const insertId = await tables.childcare_center.createLogin(center);
+    const insertId = await tables.childcare_center.create(center);
     res.status(201).json({ insertId });
   } catch (err) {
     next(err);
+  }
+};
+
+const signUp = async (req, res) => {
+  try {
+    const result = await tables.childcare_center.create(req.user);
+    if (result.affectedRows === 0) {
+      res.status(400).send("Bad request");
+    } else {
+      res.sendStatus(201);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error retrieving data from database");
   }
 };
 
@@ -41,4 +55,5 @@ module.exports = {
   browse,
   read,
   add,
+  signUp,
 };
