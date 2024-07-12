@@ -2,7 +2,7 @@ import "./SignUp.scss";
 
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar";
+import NavBarSignUpPro from "../../components/NavBarSignUpPro/NavBarSignUpPro";
 
 function SignUp() {
   const emailRef = useRef();
@@ -99,7 +99,7 @@ function SignUp() {
 
   return (
     <>
-      <NavBar />
+      <NavBarSignUpPro />
       <div className="inscriptions">
         <form
           className="formulaire"
