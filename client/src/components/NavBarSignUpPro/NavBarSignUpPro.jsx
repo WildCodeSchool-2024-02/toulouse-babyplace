@@ -7,7 +7,6 @@ function NavBarSignUpPro() {
       <div id="nav-bar-sign-up-pro-title">
         <Link to="/">Lumen</Link>
       </div>
-      <progress value={20} max={100} />
     </div>
   );
 }
