@@ -2,6 +2,7 @@ import "./SignUp.scss";
 
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import NavBarSignUpPro from "../../components/NavBarSignUpPro/NavBarSignUpPro";
 
 function SignUp() {
   const emailRef = useRef();
@@ -12,11 +13,33 @@ function SignUp() {
   const [firstname, setFirstname] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [passwordValid, setPasswordValid] = useState({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    digit: false,
+    specialChar: false,
+  });
 
   const navigate = useNavigate();
 
   const handlePasswordChange = (event) => {
-    setUserPassword(event.target.value);
+    const newPassword = event.target.value;
+
+    const isValidLength = newPassword.length >= 8;
+    const hasUppercase = /[A-Z]/.test(newPassword);
+    const hasLowercase = /[a-z]/.test(newPassword);
+    const hasDigit = /\d/.test(newPassword);
+    const hasSpecialChar = /[!@#$%^&*()_+={}:;<>,.?~]/.test(newPassword);
+
+    setPasswordValid({
+      length: isValidLength,
+      uppercase: hasUppercase,
+      lowercase: hasLowercase,
+      digit: hasDigit,
+      specialChar: hasSpecialChar,
+    });
+    setUserPassword(newPassword);
   };
 
   const handleConfirmPasswordChange = (event) => {
@@ -37,7 +60,7 @@ function SignUp() {
     }
 
     if (
-      /^(?=.*[a-z])(?:(?=.*[A-Z])|(?=.*[0-9])|(?=.*[^A-Za-z0-9])).*$/.test(
+      /^(!=.*[a-z])(?:(?=.*[A-Z])|(?=.*[0-9])|(?=.*[^A-Za-z0-9])).*$/.test(
         userPassword
       )
     ) {
@@ -75,84 +98,119 @@ function SignUp() {
   };
 
   return (
-    <div className="inscriptions">
-      <form
-        className="formulaire"
-        method="post"
-        onSubmit={handleSubmit}
-        action="/sign-up"
-      >
-        <h2>Création de Compte</h2>
-        <label htmlFor="nom">Nom</label>
-        <input
-          className="champ"
-          type="text"
-          placeholder="Nom"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label htmlFor="prenom">Prénom</label>
-        <input
-          className="champ"
-          type="text"
-          placeholder="Prénom"
-          name="prenom"
-          id="firstname"
-          value={firstname}
-          onChange={(e) => setFirstname(e.target.value)}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          className="champ"
-          type="email"
-          placeholder="Email"
-          ref={emailRef}
-          name="email"
-          id="email"
-        />
-        <label htmlFor="phone-number">Numero de Telephone</label>
-        <input
-          className="champ"
-          type="tel"
-          placeholder="Numero de Telephone"
-          name="phone"
-          id="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
+    <>
+      <NavBarSignUpPro />
+      <div className="inscriptions">
+        <form
+          className="formulaire"
+          method="post"
+          onSubmit={handleSubmit}
+          action="/sign-up"
+        >
+          <h2>Création de Compte</h2>
+          <label htmlFor="nom">Nom</label>
+          <input
+            className="champ"
+            type="text"
+            placeholder="Nom"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <label htmlFor="prenom">Prénom</label>
+          <input
+            className="champ"
+            type="text"
+            placeholder="Prénom"
+            name="prenom"
+            id="firstname"
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+          />
+          <label htmlFor="email">Email</label>
+          <input
+            className="champ"
+            type="email"
+            placeholder="Email"
+            ref={emailRef}
+            name="email"
+            id="email"
+          />
+          <label htmlFor="phone-number">Numero de Telephone</label>
+          <input
+            className="champ"
+            type="tel"
+            placeholder="Numero de Telephone"
+            name="phone"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
 
-        <label htmlFor="password">Mot de Passe</label>
-        <input
-          type="password"
-          id="password"
-          value={userPassword}
-          onChange={handlePasswordChange}
-        />
-        <label htmlFor="confirm-password">Confirmer votre mot de Passe</label>
-        <input
-          className="champ"
-          type="password"
-          placeholder="Confirmer votre mot de Passe"
-          value={confirmPassword}
-          onChange={handleConfirmPasswordChange}
-          id="confirm-password"
-        />
-        <label htmlFor="adresse">Adresse, CP, Ville</label>
-        <input
-          className="champ"
-          type="text"
-          id="address"
-          placeholder="Adresse, CP, Ville"
-          name="address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        />
-        <button className="btnReg" type="submit">
-          Créer un compte
-        </button>
-      </form>
-    </div>
+          <label htmlFor="password">Mot de Passe</label>
+          <input
+            className="champ"
+            type="password"
+            placeholder="Votre mot de Passe"
+            id="password"
+            value={userPassword}
+            onChange={handlePasswordChange}
+          />
+          <div className="password-conditions">
+            {passwordValid.length &&
+              passwordValid.uppercase &&
+              passwordValid.lowercase &&
+              passwordValid.digit &&
+              passwordValid.specialChar && (
+                <span className="checkmark-icon">&#10004;</span>
+              )}
+            8 Caractères
+            <br />
+            {passwordValid.uppercase && (
+              <span className="checkmark-icon">&#10004;</span>
+            )}
+            1 Majuscule
+            <br />
+            {passwordValid.lowercase && (
+              <span className="checkmark-icon">&#10004;</span>
+            )}
+            1 Minuscule
+            <br />
+            {passwordValid.digit && (
+              <span className="checkmark-icon">&#10004;</span>
+            )}
+            1 Chiffre
+            <br />
+            {passwordValid.specialChar && (
+              <span className="checkmark-icon">&#10004;</span>
+            )}
+            Caractère spécial
+          </div>
+          <label htmlFor="confirm-password">Confirmer votre mot de Passe</label>
+          <input
+            className="champ"
+            type="password"
+            placeholder="Confirmer votre mot de Passe"
+            value={confirmPassword}
+            onChange={handleConfirmPasswordChange}
+            id="confirm-password"
+          />
+          <label htmlFor="adresse">Adresse, CP, Ville</label>
+          <input
+            className="champ"
+            type="text"
+            id="address"
+            placeholder="Adresse, CP, Ville"
+            name="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+          <button className="btnReg" type="submit">
+            Créer un compte
+          </button>
+        </form>
+      </div>
+    </>
   );
 }
 
