@@ -2,9 +2,11 @@ const tables = require("../../database/tables");
 
 const { childcare_center: childcareCenter } = tables;
 
-const browse = async (_, res, next) => {
+const browse = async (req, res, next) => {
+  const { opening, closing } = req.query;
+
   try {
-    const centers = await childcareCenter.readAll();
+    const centers = await childcareCenter.readAll(opening, closing);
 
     res.json(centers);
   } catch (err) {

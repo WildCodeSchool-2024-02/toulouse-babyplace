@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    width: 200px;
+    width: 400pxpx;
     display: grid;
     h2 {
       display: flex;
@@ -14,14 +14,10 @@
       color: #1d0042;
       margin-top: 3rem;
     }
-    .genre {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
     input {
       border-radius: 8px;
       background-color: #dfdede;
+      width: 300px;
       height: 40px;
       opacity: 50%;
     }
@@ -46,7 +42,7 @@
       border: var(--main-color) 1px solid;
     }
     .champ {
-      min-width: 70%;
+      min-width: 80%;
       text-align: center;
     }
   }
@@ -54,7 +50,8 @@
 
 @media screen and (max-width: 585px) {
   .formulaire {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     justify-items: center;
   }
@@ -70,4 +67,9 @@
     color: var(--main-color);
     border: var(--main-color) 1px solid;
   }
+}
+
+.checkmark-icon {
+  font-size: 1.5rem;
+  color: green;
 }

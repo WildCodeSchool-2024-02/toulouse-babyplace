@@ -7,14 +7,14 @@ class ChildcareCenterRepository extends AbstractRepository {
 
   async create(childcareCenter) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (name, description, phone, street_address, zip_code, city, mail, password, url, opening, closing, capacity) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (name, description, phone, street_address, city, zip_code, mail, password, url, opening, closing, capacity) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         childcareCenter.name,
         childcareCenter.description,
         childcareCenter.phone,
         childcareCenter.street_address,
-        childcareCenter.zip_code,
         childcareCenter.city,
+        childcareCenter.zip_code,
         childcareCenter.mail,
         childcareCenter.hashed_password,
         childcareCenter.url,
@@ -25,6 +25,17 @@ class ChildcareCenterRepository extends AbstractRepository {
     );
 
     return result.insertId;
+  }
+
+  async readAll(opening, closing) {
+    // Execute the SQL SELECT query to retrieve all ChildcareCenters from the "ChildcareCenter" table
+    const [rows] = await this.database.query(
+      `select * from ${this.table} ${opening && closing ? "where opening < ? and closing > ?" : ""}`,
+      [opening, closing]
+    );
+
+    // Return the array of ChildcareCenters
+    return rows;
   }
 }
 
