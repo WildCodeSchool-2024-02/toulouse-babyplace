@@ -16,7 +16,7 @@ import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterP
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
 import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 import { SignUpProProvider } from "./context/SignUpPro";
-
+import Search from "./pages/Search/Search";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/help",
         element: <Help />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ],
   },

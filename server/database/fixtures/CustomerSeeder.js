@@ -16,7 +16,7 @@ class CustomerSeeder extends AbstractSeeder {
         email: this.faker.internet.email(),
         address: this.faker.location.city(),
         phone: this.faker.phone.number(),
-        hashedpassword:
+        hashed_password:
           "$argon2id$v=19$m=19,t=2,p=1$dzVmZ3NtYjY4cDAwMDAwMA$3ZDIPrtHaKrV4g",
         refName: `customer${i}`,
       };
