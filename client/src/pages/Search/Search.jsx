@@ -11,7 +11,10 @@ function Search() {
     };
 
     try {
-      fetch(`${import.meta.env.VITE_API_URL}/api/childcare_center`, options)
+      fetch(
+        `${import.meta.env.VITE_API_URL}/api/childcare_center?day=${"monday"}&time=${"hour"}`,
+        options
+      )
         .then((response) => response.json())
         .catch((error) => console.error(error));
     } catch (error) {
