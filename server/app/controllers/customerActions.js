@@ -37,6 +37,20 @@ const add = async (req, res, next) => {
   }
 };
 
+const signUp = async (req, res) => {
+  try {
+    const result = await tables.customer.create(req.user);
+    if (result.affectedRows === 0) {
+      res.status(400).send("Bad request");
+    } else {
+      res.sendStatus(201);
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error retrieving data from database");
+  }
+};
+
 const signIn = async (req, res, next) => {
   try {
     const user = req.body;
@@ -44,6 +58,12 @@ const signIn = async (req, res, next) => {
     const payload = { email: user.email };
     const token = jwt.sign(payload, process.env.APP_SECRET, {
       expiresIn: "1h",
+    });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.APP_SECRET,
+      maxAge: 3600000,
     });
 
     res.json({ token });
@@ -54,6 +74,7 @@ const signIn = async (req, res, next) => {
 
 module.exports = {
   signIn,
+  signUp,
   browse,
   read,
   // edit,

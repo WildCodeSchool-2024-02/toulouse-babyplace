@@ -2,13 +2,14 @@
 
 #nav-bar-sign-up-pro {
   display: flex;
-  justify-content: space-between;
-  margin: 1rem;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 0.5rem $main-color solid;
 
   #nav-bar-sign-up-pro-title {
     display: flex;
-    align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    margin: 1rem;
   }
 
   h1 {
