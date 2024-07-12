@@ -37,7 +37,9 @@ function SignUp() {
     }
 
     if (
-      !/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])/.test(userPassword)
+      /^(?=.*[a-z])(?:(?=.*[A-Z])|(?=.*[0-9])|(?=.*[^A-Za-z0-9])).*$/.test(
+        userPassword
+      )
     ) {
       console.error(
         "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial !"

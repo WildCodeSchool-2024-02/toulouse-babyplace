@@ -10,7 +10,7 @@ const router = express.Router();
 const {
   browse,
   read,
-  add,
+  signUp,
 } = require("../../../controllers/childcareCenterActions");
 const {
   hashPassword,
@@ -23,7 +23,7 @@ router.get("/", browse);
 router.get("/:id", read);
 
 // Route to add a new item
-router.post("/", hashPassword, add);
+router.post("/sign-up-pro", hashPassword, signUp);
 
 /* ************************************************************************* */
 
