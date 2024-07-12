@@ -16,7 +16,7 @@ const verifyPassword = async (req, res, next) => {
     if (!isPasswordValid) {
       throw new Error("Invalid password");
     }
-
+    req.user = user;
     next();
   } catch (err) {
     next(err);
