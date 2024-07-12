@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NavBarProfile.scss";
 
 function NavBarProfile() {
@@ -6,7 +7,9 @@ function NavBarProfile() {
       <div>🔍</div>
       <div>👨‍⚕️</div>
       <div>🔔</div>
-      <div>📆</div>
+      <Link to="/reservation">
+        <div>📆</div>
+      </Link>
     </div>
   );
 }
