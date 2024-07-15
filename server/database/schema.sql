@@ -3,15 +3,9 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema lumen
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `lumen` DEFAULT CHARACTER SET utf8 ;
-USE `lumen` ;
-
--- -----------------------------------------------------
 -- Table `lumen`.`childcare_center`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center` (
+CREATE TABLE childcare_center (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `description` VARCHAR(200) NOT NULL,
@@ -33,7 +27,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `lumen`.`customer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `lumen`.`customer` (
+CREATE TABLE customer (
   `id` INT NOT NULL AUTO_INCREMENT,
   `hashed_password` VARCHAR(255) NOT NULL,
   `name` VARCHAR(100) NOT NULL,
@@ -48,18 +42,18 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `lumen`.`childcare_center_customer`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `lumen`.`childcare_center_customer` (
+CREATE TABLE childcare_center_customer (
   `childcare_center_id` INT NOT NULL,
   `customer_id` INT NOT NULL,
-  PRIMARY KEY (`childcare_center_id`, `customer_id`), -- Composite primary key
-  INDEX `fk_childcare_center_idx` (`childcare_center_id` ASC) VISIBLE, -- Index for the foreign key
-  INDEX `fk_customer_idx` (`customer_id` ASC) VISIBLE, -- Index for the foreign key
-  CONSTRAINT `fk_childcare_center` -- Foreign key constraint
+  PRIMARY KEY (`childcare_center_id`, `customer_id`), 
+  INDEX `fk_childcare_center_idx` (`childcare_center_id` ASC) VISIBLE, 
+  INDEX `fk_customer_idx` (`customer_id` ASC) VISIBLE,
+  CONSTRAINT `fk_childcare_center` 
     FOREIGN KEY (`childcare_center_id`)
     REFERENCES `lumen`.`childcare_center` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_customer` -- Foreign key constraint
+  CONSTRAINT `fk_customer` 
     FOREIGN KEY (`customer_id`)
     REFERENCES `lumen`.`customer` (`id`)
     ON DELETE NO ACTION
