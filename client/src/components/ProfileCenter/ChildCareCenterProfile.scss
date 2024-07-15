@@ -1,24 +1,35 @@
 @import "../../variables.scss";
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
 .childcare-center-profile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0% 0;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 2rem 1rem;
   background: linear-gradient(135deg, $main-color, $secondary-color);
+  height: 100vh;
   .creche-img {
-    width: 20rem;
-    height: 20rem;
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid $lighter-color;
   }
-  .profile-line {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: color var(--lighter-color);
+  Button {
+    color: $lighter-color;
+    padding: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    border: $main-color 1px solid;
   }
 }
