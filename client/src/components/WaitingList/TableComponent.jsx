@@ -30,7 +30,7 @@ function TableComponent() {
       </thead>
       <tbody>
         {data.map((item) => (
-          <tr key={item.id}>
+          <tr key={item.name}>
             <td>{item.id}</td>
             <td>{item.status}</td>
             <td>{item.date}</td>

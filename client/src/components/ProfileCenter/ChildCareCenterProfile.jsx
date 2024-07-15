@@ -5,7 +5,7 @@ function ChildCareCenterProfile() {
   return (
     <div className="childcare-center-profile">
       <h1>
-        Bienvenue le profile de :{" "}
+        Bienvenue sur le profil de :{" "}
         {/* on va recuperer le nom de la creche ici */}
       </h1>
       <img
@@ -13,9 +13,9 @@ function ChildCareCenterProfile() {
         alt="creche-img"
         className="creche-img"
       />{" "}
-      *
+      {/* on va recuperer l'image de la creche ici */}
       <p>
-        Je suis une jeune fille gentil qui garde vos enfant{" "}
+        Je suis une jeune fille gentille qui garde vos enfants{" "}
         {/* on va recuperer les données des infos du profils de la creche ici */}
       </p>
       <div className="profile-line">
