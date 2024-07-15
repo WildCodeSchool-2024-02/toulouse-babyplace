@@ -1,15 +1,38 @@
+import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import NavBarProfile from "../../components/NavBarProfile/NavBarProfile";
 import "./Profile.scss";
 
 function Profile() {
+  const [user, setUser] = useState();
+
+  const token = localStorage.getItem("authToken");
+
+  const { userId } = jwtDecode(token);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/customer/${userId}`
+        );
+        const data = await response.json();
+        setUser(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchUser();
+  }, [userId]);
+
   return (
     <div className="profile">
       <div className="profile-card">
         <div>
           <img src="../src/assets/images/2.jpg" alt="" />
-          <p>Mylène</p>
-          <p>farmer</p>
+          <p>{user?.firstname}</p>
+          <p>{user?.name}</p>
         </div>{" "}
         <input type="text" placeholder="Recherche" />
         <div className="profile-input">

@@ -53,9 +53,9 @@ const signUp = async (req, res) => {
 
 const signIn = async (req, res, next) => {
   try {
-    const user = req.body;
+    const { email, id } = req.user;
 
-    const payload = { email: user.email };
+    const payload = { email, userId: id };
     const token = jwt.sign(payload, process.env.APP_SECRET, {
       expiresIn: "1h",
     });
