@@ -49,7 +49,7 @@ function ChildCareCenterProfile() {
               <h2>Localisation</h2>
               {user.street_address}
               <Button
-                nextPath="/Reservation"
+                nextPath="/reservation"
                 previousPath="/"
                 label="Reservez votre place"
               />

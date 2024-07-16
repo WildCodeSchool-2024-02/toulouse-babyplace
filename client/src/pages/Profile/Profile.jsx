@@ -51,13 +51,12 @@ function Profile() {
           Dossier <br />
           Enfants
         </div>
-        <div className="dossier-parent">
-          Dossier <br />
-          Parents
-        </div>
+
         <div className="dossier-inscription">
-          Dossier <br />
-          d'inscription
+          <Link to="/childcare-center-page">
+            {" "}
+            Voir les Assistantes Maternelle{" "}
+          </Link>
         </div>
       </div>
       <NavBarProfile />
