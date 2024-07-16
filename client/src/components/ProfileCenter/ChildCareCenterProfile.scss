@@ -1,9 +1,9 @@
 @import "../../variables.scss";
-* {
-  margin: 0;
-  padding: 0;
-  // box-sizing: border-box;
-  font-family: $font-family;
+
+.childcare-center-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .childcare-center-profile {
   position: relative;
@@ -15,7 +15,9 @@
   margin: 0;
   padding: 2rem 1rem;
   background: linear-gradient(135deg, $main-color, $secondary-color);
-  height: 100vh;
+  border-radius: 50px;
+  gap: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
   .creche-img {
     position: absolute;
     top: 2rem;
@@ -31,5 +33,10 @@
     background-color: $main-color;
     border-radius: 20px;
     border: $main-color 1px solid;
+  }
+  .profile-line {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
