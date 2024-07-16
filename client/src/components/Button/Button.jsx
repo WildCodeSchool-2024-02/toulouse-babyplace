@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import "./Button.scss";
 
 function Button({ previousPath, nextPath }) {
   return (
