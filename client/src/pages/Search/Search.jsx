@@ -7,20 +7,20 @@ function Search() {
   const [closing, setClosing] = useState("");
   const [results, setResults] = useState([]);
 
-  const fetchAllChildcare = () => {
-    const token = localStorage.getItem("authToken");
-    const { openingToken, closingToken } = jwtDecode(token);
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
 
-    const options = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+  const fetchSomeChildcare = () => {
+    const token = localStorage.getItem("authToken");
+    const { userId } = jwtDecode(token);
 
     try {
       fetch(
-        `${import.meta.env.VITE_API_URL}/api/childcare-center?opening=${openingToken}&closing=${closingToken}`,
+        `${import.meta.env.VITE_API_URL}/api/childcare-center?opening=${opening}&closing=${closing}/${userId}`,
         options
       )
         .then((response) => response.json())
@@ -31,16 +31,27 @@ function Search() {
     }
   };
 
+  const fetchAllChildcare = () => {
+    try {
+      fetch(`${import.meta.env.VITE_API_URL}/api/childcare-center`, options)
+        .then((response) => response.json())
+        .then((data) => setResults(data))
+        .catch((error) => console.error(error));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     fetchAllChildcare();
-  }, [opening, closing]);
+  }, [opening, closing, fetchAllChildcare]);
 
   return (
     <div className="general-block-search">
+      <h3>Je cherche ma future assistante maternelle : </h3>
       <div className="left-block-search">
-        <p>Je cherche ma future assistante maternelle:</p>
-        <div>
-          <label htmlFor="opening">Heure d'arrivée:</label>
+        <div className="input-search">
+          <label htmlFor="opening">Heure d'arrivée : </label>
           <input
             type="time"
             id="opening"
@@ -52,8 +63,8 @@ function Search() {
             required
           />
         </div>
-        <div>
-          <label htmlFor="closing">Heure de départ:</label>
+        <div className="input-search">
+          <label htmlFor="closing">Heure de départ : </label>
           <input
             type="time"
             id="closing"
@@ -65,12 +76,22 @@ function Search() {
             required
           />
         </div>
-        <button type="button" onClick={fetchAllChildcare}>
-          Rechercher
+        <button type="button" onClick={fetchSomeChildcare} aria-label="Search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.8em"
+            height="1.8em"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#fff"
+              d="M456.69 421.39L362.6 327.3a173.8 173.8 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.8 173.8 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3M97.92 222.72a124.8 124.8 0 1 1 124.8 124.8a124.95 124.95 0 0 1-124.8-124.8"
+            />
+          </svg>
         </button>
       </div>
+
       <div className="right-block-search">
-        <p>Results</p>
         {results.length > 0 ? (
           results.map((result) => (
             <div key={result?.id} className="result-card">

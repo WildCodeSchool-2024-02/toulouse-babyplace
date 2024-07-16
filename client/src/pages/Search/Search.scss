@@ -1,4 +1,63 @@
+@import "../../variables.scss";
+
 .general-block-search {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+
+  .left-block-search {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    max-width: 55rem;
+    width: 100%;
+    margin: 1rem;
+    padding-inline: 1rem;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid $lighter-grey-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+  }
+
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $main-color;
+    border: none;
+    margin: 1rem;
+  }
+
+  button:hover {
+    background-color: $secondary-color;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .input-search {
+    margin: 1rem;
+  }
+
+  input {
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: 1px solid $grey-color;
+  }
+
+  .prout {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .general-block-search {
+    .left-block-search {
+      flex-direction: row;
+    }
+  }
 }
