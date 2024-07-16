@@ -26,7 +26,7 @@ function ChildCareCenterProfile() {
   }
 
   return (
-    <div>
+    <div className="childcare-center-profile-container">
       {data.map((user) => (
         <div key={user.id}>
           <div className="childcare-center-profile">
