@@ -1,17 +1,11 @@
-import Calendar from "../../components/Calendar/Calendar";
 import TableComponent from "../../components/WaitingList/TableComponent";
+import Card from "../../components/Cards/Card";
 
 function PersonalPage() {
   return (
     <div>
       <TableComponent />
-      <div className="profile">
-        <p>
-          Samantha Doe
-          <Calendar />
-        </p>
-
-      </div>
+      <Card />
     </div>
   );
 }

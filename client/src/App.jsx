@@ -54,7 +54,7 @@ function App() {
             Équipez-vous du logiciel de gestion de place d&apos;accueil de
             jeunes enfants le plus complet
           </h3>
-          <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus</p>
+          <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus.</p>
         </div>
         <div id="case-middle">
           <div id="case-grid">
