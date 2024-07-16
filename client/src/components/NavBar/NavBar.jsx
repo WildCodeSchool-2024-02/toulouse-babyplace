@@ -21,9 +21,6 @@ function NavBar() {
           <NavLink to="/sign-in-pro">
             <li>Lumen Pro</li>
           </NavLink>
-          <NavLink to="/map">
-            <li>Carte</li>
-          </NavLink>
         </ul>
         <NavLink to="/sign-in">
           <p>Se connecter</p>

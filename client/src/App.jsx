@@ -42,7 +42,7 @@ function App() {
               pouvez consulter sur votre téléphone, ordinateur ou tablette.
               Soyez prévenu en temps réel des annulations vous permettant ainsi
               de remplacer les places vacantes. Remplacez facilement les
-              absences grâce aux “waiting list” des parents.
+              absences grâce aux “waiting lists” des parents.
             </p>
           </div>
         </div>
@@ -51,8 +51,8 @@ function App() {
       <div id="managment">
         <div id="logiciel">
           <h3>
-            Équipez-vous du logiciel de gestion de places d&apos;accueil de
-            jeunes enfants le plus complet.
+            Équipez-vous du logiciel de gestion de place d&apos;accueil de
+            jeunes enfants le plus complet
           </h3>
           <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus.</p>
         </div>
@@ -65,7 +65,7 @@ function App() {
                   Consultez en temps réel votre agenda et modifiez-le en
                   quelques clics afin d&apos;optimiser votre temps et votre
                   rentabilité. Accessible depuis votre smartphone, tablette ou
-                  ordinateur.
+                  téléphone.
                 </p>
               </div>
               <button type="button">
@@ -100,7 +100,7 @@ function App() {
               <div>
                 <h4>Communiquez avec les parents</h4>
                 <p>
-                  Les parents doivent avoir prérempli leur liste de documents
+                  Les parents doivent avoir pré-rempli leur liste de documents
                   pour pouvoir faire des réservations. Les parents peuvent vous
                   soumettre les contrats déjà validés par les équipes légales de
                   Babyplace.
