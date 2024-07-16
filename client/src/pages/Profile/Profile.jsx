@@ -30,7 +30,7 @@ function Profile() {
     <div className="profile">
       <div className="profile-card">
         <div>
-          <img src="../src/assets/images/2.jpg" alt="" />
+          <img src="../src/assets/images/2.png" alt="" />
           <p>{user?.firstname}</p>
           <p>{user?.name}</p>
         </div>{" "}
