@@ -48,7 +48,7 @@ function Search() {
 
   return (
     <div className="general-block-search">
-      <h3>Je cherche ma future assistante maternelle:</h3>
+      <h3>Je cherche ma future assistante maternelle : </h3>
       <div className="left-block-search">
         <div className="input-search">
           <label htmlFor="opening">Heure d'arrivée : </label>
