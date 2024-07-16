@@ -23,7 +23,7 @@ function Footer() {
           <li>S'inscrire</li>
         </ul>
       </div>
-      <p id="p">© | All rights reserved</p>
+      <p id="p">© 2024 | Tous droits réservés</p>
     </div>
   );
 }
