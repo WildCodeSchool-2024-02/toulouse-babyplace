@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 import "./ChildCareCenterProfile.scss";
 
 function ChildCareCenterProfile() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +26,7 @@ function ChildCareCenterProfile() {
   }
 
   return (
-    <div>
+    <div className="childcare-center-profile-container">
       {data.map((user) => (
         <div key={user.id}>
           <div className="childcare-center-profile">
@@ -34,27 +34,20 @@ function ChildCareCenterProfile() {
               Bienvenue sur le profil de :{user.name}
               {/* on va recuperer le nom de la creche ici */}
             </h1>
-            ,
+
             <img
               src="../src/assets/images/nounou.jpg"
               alt="creche-img"
               className="creche-img"
             />
-            ,{user.url}
-            <p>
-              Je, suis, une, jeune, fille, gentille, qui, garde, vos, enfants, ,
-              {user.description}
-            </p>
+            <p>{user.description}</p>
             <div className="profile-line">
               <h2>Conditions d'accueil </h2>
               {/* on va recuperer les Conditions de la creche ici */}
-
               <h2>Horaires</h2>
-              {/* on va recuperer les horaires de la creche ici */}
-
+              {user.opening} , {user.closing}
               <h2>Localisation</h2>
-              {/* on va recuperer les localisation de la creche ici */}
-
+              {user.street_address}
               <Button
                 nextPath="/Reservation"
                 previousPath="/"
