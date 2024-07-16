@@ -10,16 +10,16 @@ function App() {
           <div id="lumen-grid">
             <div id="lumen">
               <h1>Lumen</h1>
-              <p>Gagnez du temps en optimisant votre agenda au quotdien.</p>
+              <p>Gagnez du temps en optimisant votre agenda au quotidien.</p>
               <p>
                 Installez le logiciel Lumen maintenant pour saisir toutes les
-                opportunites autour de chez vous.{" "}
+                opportunités autour de chez vous.
               </p>
               <ul>
                 <li>Souscription au logiciel Lumen sans engagement.</li>
                 <li>
                   Logiciel facile à utiliser pour vous permettre
-                  d&apos;optimiser vos rdv.
+                  d&apos;optimiser vos rendez-vous.
                 </li>
                 <li>Communication directe et simplifiée avec les parents.</li>
               </ul>
@@ -34,15 +34,15 @@ function App() {
           <img src={easyLife} alt="easy-life images" />
           <div id="reservation">
             <h3>
-              Simplifiez vous la vie en choisissant un systeme de reservation
+              Simplifiez-vous la vie en choisissant un système de réservation
               moderne et efficace.
             </h3>
             <p>
-              Gerez vos reservations directement depuis votre agenda que vous
-              pouvez consulter sur votre telephone, ordinateur ou tablette Soyez
-              prevenu en temps reel des annulations vous permettant ainsi de
-              remplacer les places vacantes. Remplacez facilement les absences
-              grace aux “waiting list” des parents.
+              Gérez vos réservations directement depuis votre agenda que vous
+              pouvez consulter sur votre téléphone, ordinateur ou tablette.
+              Soyez prévenu en temps réel des annulations vous permettant ainsi
+              de remplacer les places vacantes. Remplacez facilement les
+              absences grâce aux “waiting lists” des parents.
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ function App() {
       <div id="managment">
         <div id="logiciel">
           <h3>
-            Equipez vous du logiciel de gestion de place d&apos;accueil de
+            Équipez-vous du logiciel de gestion de place d&apos;accueil de
             jeunes enfants le plus complet
           </h3>
           <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus</p>
@@ -62,10 +62,10 @@ function App() {
               <div>
                 <h4>Agenda en ligne</h4>
                 <p>
-                  Consultez en temps reel votre agenda et modifiez le en
-                  quelques cliques afin d&apos;optimiser votre temps et votre
-                  rentabilite. Accessible de puis votre Smarktphone, tabelle ou
-                  Telephone
+                  Consultez en temps réel votre agenda et modifiez-le en
+                  quelques clics afin d&apos;optimiser votre temps et votre
+                  rentabilité. Accessible depuis votre smartphone, tablette ou
+                  téléphone.
                 </p>
               </div>
               <button type="button">
@@ -74,10 +74,10 @@ function App() {
             </div>
             <div id="alert" className="case">
               <div>
-                <h4>Soyez alertee</h4>
+                <h4>Soyez alerté</h4>
                 <p>
-                  Choisissez le mode de notifications afin d&apos;etre informe
-                  au plus vote des annulations et des demandes de reservation.
+                  Choisissez le mode de notifications afin d&apos;être informé
+                  au plus vite des annulations et des demandes de réservation.
                 </p>
               </div>
               <button type="button">
@@ -89,8 +89,7 @@ function App() {
                 <h4>Marketing de votre activité</h4>
                 <p>
                   Optimisez votre page profil pour vous rendre plus visible et
-                  vous permettre de vous decouvrir par les parents de votre
-                  quartier.
+                  permettre aux parents de votre quartier de vous découvrir.
                 </p>
               </div>
               <button type="button">
@@ -101,10 +100,10 @@ function App() {
               <div>
                 <h4>Communiquez avec les parents</h4>
                 <p>
-                  Les parents doivent avoir prerempliss leur liste de documents
-                  pour pouvoir faire des reservations. Les parents peuvent vous
-                  soumettre les contrats deja valide par les equipes legales de
-                  Babyplabce
+                  Les parents doivent avoir pré-rempli leur liste de documents
+                  pour pouvoir faire des réservations. Les parents peuvent vous
+                  soumettre les contrats déjà validés par les équipes légales de
+                  Babyplace.
                 </p>
               </div>
               <button type="button">
