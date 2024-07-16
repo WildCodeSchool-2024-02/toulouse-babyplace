@@ -7,8 +7,10 @@ function TableComponent() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("URL_DE_VOTRE_API");
-        const fetchedData = await response.json();
+        const response = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/childcare-center`
+        );
+        const fetchedData = await response.json(response);
         setData(fetchedData);
       } catch (error) {
         console.error("Erreur lors de la récupération des données:", error);
