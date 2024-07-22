@@ -2,20 +2,13 @@ import { useState, useEffect } from "react";
 import "./TableComponent.scss";
 
 function TableComponent() {
-  const [data, setData] = useState([]);
-
+  const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("URL_DE_VOTRE_API");
-        const fetchedData = await response.json();
-        setData(fetchedData);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données:", error);
-      }
-    };
-
-    fetchData();
+    fetch("http://localhost:3310/api/childcare-center")
+      .then((response) => response.json())
+      .then((data) => {
+        setCardData(data);
+      });
   }, []);
 
   return (
@@ -29,12 +22,14 @@ function TableComponent() {
         </tr>
       </thead>
       <tbody>
-        {data.map((item) => (
+        {cardData.map((item) => (
           <tr key={item.name}>
-            <td>{item.id}</td>
-            <td>{item.status}</td>
-            <td>{item.date}</td>
-            <td>{item.timeSlot}</td>
+            <td>{item.city}</td>
+            <td>{item.street_adress}</td>
+            <td>{item.phone}</td>
+            <td>
+              {item.opening}/{item.closing}
+            </td>
           </tr>
         ))}
       </tbody>
