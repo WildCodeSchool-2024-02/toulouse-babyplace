@@ -5,6 +5,8 @@ import "./Profile.scss";
 
 function Profile() {
   const [user, setUser] = useState();
+  const [editingField, setEditingField] = useState(null);
+  const [newValue, setNewValue] = useState("");
   const token = localStorage.getItem("authToken");
   const { userId } = jwtDecode(token);
   const navigate = useNavigate();
@@ -33,11 +35,42 @@ function Profile() {
         const data = await response.json();
         setUser(data);
       } catch (error) {
-        console.error(error);
+        console.error("Error fetching user data:", error);
       }
     };
     fetchUser();
   }, [userId]);
+
+  const updateUserInfo = async (field) => {
+    try {
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/customer`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ id: userId, [field]: newValue }),
+        }
+      );
+      if (response.ok) {
+        const updatedUser = await response.json();
+        setUser(updatedUser);
+        setEditingField(null);
+      } else {
+        console.error("Failed to update user info:", response.status);
+      }
+    } catch (error) {
+      console.error("Error updating user info:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (editingField) {
+      updateUserInfo(editingField);
+    }
+  }, [editingField, updateUserInfo]);
 
   const deleteUser = async () => {
     try {
@@ -56,10 +89,19 @@ function Profile() {
         localStorage.removeItem("authToken");
         navigate("/");
       } else {
-        console.error("Failed to delete user");
+        console.error("Failed to delete user:", response.status);
       }
     } catch (error) {
       console.error("Error deleting user:", error);
+    }
+  };
+
+  const handleEditClick = (field) => {
+    const updatedValue = prompt(`Modifiez votre ${field}:`);
+    if (updatedValue) {
+      setNewValue(updatedValue);
+      setEditingField(field);
+      updateUserInfo(field);
     }
   };
 
@@ -69,11 +111,15 @@ function Profile() {
         <img src="../src/assets/images/2.png" alt="" />
         <div className="profile-name">
           <p>{user?.firstname}</p>
-          <button type="button">{modify}</button>
+          <button type="button" onClick={() => handleEditClick("firstname")}>
+            {modify}
+          </button>
         </div>
         <div className="profile-name">
           <p>{user?.name}</p>
-          <button type="button">{modify}</button>
+          <button type="button" onClick={() => handleEditClick("name")}>
+            {modify}
+          </button>
         </div>
       </div>
       <div className="profile-element">
