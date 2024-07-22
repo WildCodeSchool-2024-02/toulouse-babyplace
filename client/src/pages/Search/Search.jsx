@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./Search.scss";
 import { jwtDecode } from "jwt-decode";
 
@@ -10,12 +10,15 @@ function Search() {
   const token = localStorage.getItem("authToken");
   const { userId } = jwtDecode(token);
 
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
+  const options = useMemo(
+    () => ({
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }),
+    []
+  );
 
   const fetchSomeChildcare = () => {
     try {
@@ -31,20 +34,29 @@ function Search() {
     }
   };
 
-  const fetchAllChildcare = () => {
-    try {
-      fetch(`${import.meta.env.VITE_API_URL}/api/childcare-center`, options)
-        .then((response) => response.json())
-        .then((data) => setResults(data))
-        .catch((error) => console.error(error));
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
+    const fetchAllChildcare = () => {
+      try {
+        fetch(`${import.meta.env.VITE_API_URL}/api/childcare-center`, options)
+          .then((response) => response.json())
+          .then((data) => setResults(data))
+          .catch((error) => console.error(error));
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     fetchAllChildcare();
-  }, [opening, closing]);
+  }, [options]);
+
+  const getInitials = (name) => {
+    const cleanName = name.replace(/[^a-zA-Z\s]/g, "");
+
+    const words = cleanName.split(" ").filter((word) => word.length > 0);
+    const initials = words.map((word) => word[0].toUpperCase());
+
+    return initials.slice(0, 2).join("");
+  };
 
   return (
     <div className="general-block-search">
@@ -90,15 +102,15 @@ function Search() {
           </svg>
         </button>
       </div>
-
       <div className="right-block-search">
         {results.length > 0 ? (
           results.map((result) => (
             <div key={result?.id} className="result-card">
+              <span className="avatar">{getInitials(result?.name)}</span>
               <p>{result?.name}</p>
               <p>{result?.address}</p>
               <p>
-                Ouvert de {result?.opening} à {result?.closing}
+                Disponible de {result?.opening} à {result?.closing}
               </p>
             </div>
           ))

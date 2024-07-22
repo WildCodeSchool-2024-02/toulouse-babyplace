@@ -1,3 +1,4 @@
+const jwt = require("jsonwebtoken");
 const tables = require("../../database/tables");
 
 const { childcare_center: childcareCenter } = tables;
@@ -53,9 +54,31 @@ const signUp = async (req, res) => {
   }
 };
 
+const signIn = async (req, res, next) => {
+  try {
+    const { email, id } = req.user;
+
+    const payload = { email, userId: id };
+    const token = jwt.sign(payload, process.env.APP_SECRET, {
+      expiresIn: "1h",
+    });
+
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.APP_SECRET,
+      maxAge: 3600000,
+    });
+
+    res.json({ token });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   browse,
   read,
   add,
   signUp,
+  signIn,
 };
