@@ -1,21 +1,33 @@
 @import "../../variables.scss";
 
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 table {
-  width: 100%;
+  border: solid;
+  border-color: $main-color;
+  width: 60vw;
   border-collapse: collapse;
 }
 
 th,
 td {
+  width: 100%;
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
 
 th {
+  color: $main-color;
   background-color: #f4f4f4;
 }
 
 tr:nth-child(even) {
+  color: $main-color;
   background-color: #f9f9f9;
 }
