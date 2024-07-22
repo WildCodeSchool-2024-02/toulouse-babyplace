@@ -24,18 +24,31 @@ $lighter-color: #fff;
   background-size: cover;
   min-height: 100vh;
 
+  @include mediaQ(768px) {
+    display: flex;
+    justify-content: start;
+  }
+
   .profile-card {
     color: $lighter-color;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
     @include mediaQ(768px) {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       margin: 2rem;
       height: 260px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     button {
@@ -116,10 +129,13 @@ $lighter-color: #fff;
     }
   }
   .profile-text {
+    display: flex;
     color: $lighter-color;
     margin: 1rem;
     text-align: center;
     @include mediaQ(768px) {
+      justify-content: center;
+      padding: 5rem;
       font-size: 2rem;
       margin: 0;
     }
@@ -139,55 +155,5 @@ $lighter-color: #fff;
     flex-wrap: wrap;
     gap: 4rem;
     padding: 2rem;
-  }
-
-  .dossier-enfant {
-    color: $lighter-color;
-    background-color: #00f2fe;
-    border-radius: 30px;
-    height: 6vh;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-
-    @include mediaQ(768px) {
-      min-width: 600px;
-      font-size: 1.3rem;
-    }
-  }
-  .dossier-parent {
-    background-color: #8ddad5;
-    color: $lighter-color;
-    border-radius: 30px;
-    height: 6vh;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-    @include mediaQ(768px) {
-      min-width: 600px;
-      font-size: 1.3rem;
-    }
-  }
-  .dossier-inscription {
-    background-color: #ffafbd;
-    color: $lighter-color;
-    border-radius: 30px;
-    height: 6vh;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.1);
-    }
-    @include mediaQ(768px) {
-      min-width: 600px;
-      font-size: 1.3rem;
-    }
   }
 }

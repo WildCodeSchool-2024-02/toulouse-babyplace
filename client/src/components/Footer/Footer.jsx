@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Footer.scss";
 
 function Footer() {
@@ -17,10 +18,18 @@ function Footer() {
       <div>
         <p>Lumen</p>
         <ul>
-          <li>Accueil</li>
-          <li>Aide</li>
-          <li>Lumen Pro</li>
-          <li>S'inscrire</li>
+          <NavLink to="/">
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink to="/help">
+            <li>Aide</li>
+          </NavLink>
+          <NavLink to="/sign-in-pro">
+            <li>Lumen Pro</li>
+          </NavLink>
+          <NavLink to="/sign-in">
+            <li>Se connecter</li>
+          </NavLink>
         </ul>
       </div>
       <p id="p">© 2024 | Tous droits réservés</p>

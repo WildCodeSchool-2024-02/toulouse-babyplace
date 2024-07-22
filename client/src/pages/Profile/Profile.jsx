@@ -44,23 +44,11 @@ function Profile() {
           </Link>
         </div>
       </div>
-      <p className="profile-text">
-        Mettez toutes les chances de votre côté. <br />
-        Un profil complet est nécessaire pour un accueil chez une nourrisse!
-      </p>
-      <div className="documents">
-        <div className="dossier-enfant">
-          Dossier <br />
-          Enfants
-        </div>
-        <div className="dossier-parent">
-          Dossier <br />
-          Parents
-        </div>
-        <div className="dossier-inscription">
-          Dossier <br />
-          d'inscription
-        </div>
+      <div className="text">
+        <p className="profile-text">
+          Mettez toutes les chances de votre côté. <br />
+          Un profil complet est nécessaire pour un accueil chez une nourrisse!
+        </p>
       </div>
       <NavBarProfile />
     </div>
