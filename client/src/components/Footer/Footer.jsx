@@ -16,9 +16,11 @@ function Footer() {
           <NavLink to="/help">
             <li>Aide</li>
           </NavLink>
-          <NavLink to="/sign-in-pro">
-            <li>Lumen Pro</li>
-          </NavLink>
+          {!isSearchPage && (
+            <NavLink to="/sign-in-pro">
+              <li>Lumen Pro</li>
+            </NavLink>
+          )}
           {!isSearchPage && (
             <NavLink to="/sign-in">
               <li>Se connecter</li>
