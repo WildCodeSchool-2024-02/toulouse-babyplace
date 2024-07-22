@@ -35,7 +35,7 @@ function Profile() {
           <p>{user?.name}</p>
         </div>{" "}
         <Link to="/Search">
-          <button type="button">je cherche ma nourrisse</button>
+          <button type="button">je cherche ma nourrice</button>
         </Link>
         <div className="profile-input">
           <div>🔔</div>
@@ -47,7 +47,7 @@ function Profile() {
       <div className="text">
         <p className="profile-text">
           Mettez toutes les chances de votre côté. <br />
-          Un profil complet est nécessaire pour un accueil chez une nourrisse!
+          Un profil complet est nécessaire pour un accueil chez une nourrice!
         </p>
       </div>
       <NavBarProfile />
