@@ -9,7 +9,7 @@ class ChildcareCenterSeeder extends AbstractSeeder {
   }
 
   run() {
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 30; i += 1) {
       const fakeChildcareCenter = {
         name: this.faker.company.name(),
         description: this.faker.lorem.sentence(),

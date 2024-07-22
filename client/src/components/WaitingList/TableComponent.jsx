@@ -2,25 +2,13 @@ import { useState, useEffect } from "react";
 import "./TableComponent.scss";
 
 function TableComponent() {
-  const [acceptanceResponses, setAcceptanceResponses] = useState([]);
-
+  const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `${import.meta.env.VITE_API_URL}/api/childcare-center`
-        );
-        const fetchedData = await response.json();
-        const filteredData = fetchedData.filter(
-          (item) => item.responseType === "acceptance"
-        );
-        setAcceptanceResponses(filteredData);
-      } catch (error) {
-        console.error("Erreur lors de la récupération des données:", error);
-      }
-    };
-
-    fetchData();
+    fetch("http://localhost:3310/api/childcare-center")
+      .then((response) => response.json())
+      .then((data) => {
+        setCardData(data);
+      });
   }, []);
 
   return (
@@ -34,12 +22,14 @@ function TableComponent() {
         </tr>
       </thead>
       <tbody>
-        {acceptanceResponses.map((item) => (
+        {cardData.map((item) => (
           <tr key={item.name}>
-            <td>{item.id}</td>
-            <td>{item.status}</td>
-            <td>{item.date}</td>
-            <td>{item.timeSlot}</td>
+            <td>{item.name}</td>
+            <td>{item.street_adress}</td>
+            <td>{item.phone}</td>
+            <td>
+              {item.opening}/{item.closing}
+            </td>
           </tr>
         ))}
       </tbody>

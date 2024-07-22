@@ -1,7 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import NavBarProfile from "../../components/NavBarProfile/NavBarProfile";
+
 import "./Profile.scss";
 
 function Profile() {
@@ -34,32 +34,27 @@ function Profile() {
           <p>{user?.firstname}</p>
           <p>{user?.name}</p>
         </div>{" "}
-        <input type="text" placeholder="Recherche" />
         <div className="profile-input">
-          <div>🔔</div>
+          <div>📩</div>
           <Link to="/reservation">
             <div>📆</div>
           </Link>
         </div>
       </div>
-      <p className="profile-text">
-        Mettez toutes les chances de votre côté. <br />
-        Un profil complet est nécessaire pour un accueil en crèche !
-      </p>
-      <div className="documents">
-        <div className="dossier-enfant">
-          Dossier <br />
-          Enfants
-        </div>
-
-        <div className="dossier-inscription">
-          <Link to="/childcare-center-page">
-            {" "}
-            Voir les Assistantes Maternelle{" "}
-          </Link>
-        </div>
+      <div className="text">
+        <p className="profile-text">
+          Mettez toutes les chances de votre côté. <br />
+          Un profil complet est nécessaire pour un accueil chez une nourrice!
+        </p>
       </div>
-      <NavBarProfile />
+      <div className="profile-line">
+        <Link to="/personal-profile">
+          <button type="button">j'accède à mes reservations</button>
+        </Link>
+        <Link to="/Search">
+          <button type="button">je cherche ma nourrice</button>
+        </Link>
+      </div>
     </div>
   );
 }

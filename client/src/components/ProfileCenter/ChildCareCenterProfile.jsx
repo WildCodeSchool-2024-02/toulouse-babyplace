@@ -41,6 +41,7 @@ function ChildCareCenterProfile() {
               Bienvenue sur le profil de : <br /> {user.name}
               {/* on va recuperer le nom de la creche ici */}
             </h1>
+
             <p>{user.description}</p>
             <div className="profile-line">
               <h2>Conditions d'accueil </h2>
