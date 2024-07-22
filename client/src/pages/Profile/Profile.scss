@@ -29,6 +29,33 @@ $lighter-color: #fff;
     justify-content: start;
   }
 
+  .profile-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  button {
+    background-color: $main-color;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      box-shadow 0.3s;
+    border-radius: 50px;
+    padding-inline: 1rem;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $darker-color;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   .profile-card {
     color: $lighter-color;
     display: flex;
@@ -49,25 +76,6 @@ $lighter-color: #fff;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-
-    button {
-      background-color: $main-color;
-      border: 1px solid #ccc;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition:
-        background-color 0.3s,
-        box-shadow 0.3s;
-      border-radius: 50px;
-      padding-inline: 1rem;
-      color: #fff;
-      &:hover {
-        background-color: #fff;
-        color: $darker-color;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
     }
 
     input {
