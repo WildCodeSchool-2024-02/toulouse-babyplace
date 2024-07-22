@@ -34,7 +34,9 @@ function Profile() {
           <p>{user?.firstname}</p>
           <p>{user?.name}</p>
         </div>{" "}
-        <input type="text" placeholder="Recherche" />
+        <Link to="/Search">
+          <button type="button">je cherche ma nourrisse</button>
+        </Link>
         <div className="profile-input">
           <div>🔔</div>
           <Link to="/reservation">
@@ -44,7 +46,7 @@ function Profile() {
       </div>
       <p className="profile-text">
         Mettez toutes les chances de votre côté. <br />
-        Un profil complet est nécessaire pour un accueil en crèche !
+        Un profil complet est nécessaire pour un accueil chez une nourrisse!
       </p>
       <div className="documents">
         <div className="dossier-enfant">
