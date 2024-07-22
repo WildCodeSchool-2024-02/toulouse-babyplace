@@ -7,6 +7,9 @@ function Search() {
   const [closing, setClosing] = useState("");
   const [results, setResults] = useState([]);
 
+  const token = localStorage.getItem("authToken");
+  const { userId } = jwtDecode(token);
+
   const options = {
     method: "GET",
     headers: {
@@ -15,9 +18,6 @@ function Search() {
   };
 
   const fetchSomeChildcare = () => {
-    const token = localStorage.getItem("authToken");
-    const { userId } = jwtDecode(token);
-
     try {
       fetch(
         `${import.meta.env.VITE_API_URL}/api/childcare-center?opening=${opening}&closing=${closing}/${userId}`,
@@ -44,7 +44,7 @@ function Search() {
 
   useEffect(() => {
     fetchAllChildcare();
-  }, [opening, closing, fetchAllChildcare]);
+  }, [opening, closing]);
 
   return (
     <div className="general-block-search">
