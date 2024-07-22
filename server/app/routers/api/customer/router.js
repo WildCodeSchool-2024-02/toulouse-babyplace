@@ -14,6 +14,7 @@ const {
   signIn,
   signUp,
   deleteProfile,
+  updateUser,
 } = require("../../../controllers/customerActions");
 const {
   hashPassword,
@@ -35,8 +36,11 @@ router.post("/sign-in", verifyPassword, signIn);
 // route to register a new user
 router.post("/sign-up", hashPassword, signUp);
 
-// route to delete a user
+// route to delete an user
 router.delete("/", deleteProfile);
+
+// route to modify an user
+router.put("/", updateUser);
 
 /* ************************************************************************* */
 

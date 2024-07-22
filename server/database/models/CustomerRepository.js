@@ -39,6 +39,16 @@ class CustomerRepository extends AbstractRepository {
 
     return result.affectedRows > 0;
   }
+
+  async update(id, updateData) {
+    const fields = Object.keys(updateData)
+      .map((key) => `${key} = ?`)
+      .join(", ");
+    const values = Object.values(updateData);
+    const query = `UPDATE ${this.table} SET ${fields} WHERE id = ?`;
+    const [result] = await this.database.query(query, [...values, id]);
+    return result.affectedRows > 0;
+  }
 }
 
 module.exports = CustomerRepository;

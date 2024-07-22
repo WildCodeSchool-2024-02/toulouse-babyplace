@@ -89,6 +89,25 @@ const deleteProfile = async (req, res, next) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    const { id, name, firstname } = req.body;
+    const updateData = {};
+    if (name !== undefined) updateData.name = name;
+    if (firstname !== undefined) updateData.firstname = firstname;
+
+    const result = await tables.customer.update(id, updateData);
+    if (result) {
+      const updatedUser = await tables.customer.read(id);
+      return res.status(200).json(updatedUser);
+    }
+    return res.status(404).json({ message: "User not found" });
+  } catch (error) {
+    console.error("Error updating user:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = {
   signIn,
   signUp,
@@ -96,4 +115,5 @@ module.exports = {
   read,
   add,
   deleteProfile,
+  updateUser,
 };
