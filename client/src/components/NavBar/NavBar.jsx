@@ -1,7 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 
 function NavBar() {
+  const location = useLocation();
+  const isSearchPage = location.pathname === "/Search";
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    navigate("/");
+  };
+
   return (
     <div id="nav-bar">
       <nav>
@@ -18,13 +27,26 @@ function NavBar() {
           >
             <li>Aide</li>
           </NavLink>
-          <NavLink to="/sign-in-pro">
-            <li>Lumen Pro</li>
-          </NavLink>
+          {!isSearchPage && (
+            <NavLink
+              to="/sign-in-pro"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              <li>Lumen Pro</li>
+            </NavLink>
+          )}
         </ul>
-        <NavLink to="/sign-in">
-          <p>Se connecter</p>
-        </NavLink>
+        {isSearchPage ? (
+          <button type="button" onClick={handleLogout} className="nav-button">
+            Se déconnecter
+          </button>
+        ) : (
+          <NavLink to="/sign-in">
+            <button type="button" className="nav-button">
+              Se connecter
+            </button>
+          </NavLink>
+        )}
       </nav>
     </div>
   );
