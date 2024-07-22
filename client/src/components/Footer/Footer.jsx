@@ -1,7 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Footer.scss";
 
 function Footer() {
+  const location = useLocation();
+  const isSearchPage = location.pathname.toLowerCase() === "/search";
+
   return (
     <div id="footer">
       <div>
@@ -16,9 +19,11 @@ function Footer() {
           <NavLink to="/sign-in-pro">
             <li>Lumen Pro</li>
           </NavLink>
-          <NavLink to="/sign-in">
-            <li>Se connecter</li>
-          </NavLink>
+          {!isSearchPage && (
+            <NavLink to="/sign-in">
+              <li>Se connecter</li>
+            </NavLink>
+          )}
         </ul>
       </div>
       <p id="p">© 2024 | Tous droits réservés</p>
