@@ -1,5 +1,5 @@
 import { jwtDecode } from "jwt-decode";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Profile.scss";
 
@@ -7,6 +7,7 @@ function Profile() {
   const [user, setUser] = useState();
   const token = localStorage.getItem("authToken");
   const { userId } = jwtDecode(token);
+  const navigate = useNavigate();
 
   const modify = (
     <svg
@@ -38,22 +39,22 @@ function Profile() {
     fetchUser();
   }, [userId]);
 
-  const deleteOptions = {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-
   const deleteUser = async () => {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/customer/${userId}`,
-        deleteOptions
+        `${import.meta.env.VITE_API_URL}/api/customer`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ id: userId }),
+        }
       );
       if (response.ok) {
         localStorage.removeItem("authToken");
-        window.location.href = "/";
+        navigate("/");
       } else {
         console.error("Failed to delete user");
       }
