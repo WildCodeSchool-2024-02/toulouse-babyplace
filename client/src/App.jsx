@@ -24,7 +24,6 @@ function App() {
                 <li>Communication directe et simplifiée avec les parents.</li>
               </ul>
             </div>
-            <button type="button">En savoir plus</button>
           </div>
           <img src={intro} alt="intro img" id="img-intro" />
         </div>
@@ -54,7 +53,6 @@ function App() {
             Équipez-vous du logiciel de gestion de place d&apos;accueil de
             jeunes enfants le plus complet
           </h3>
-          <p>Cliquez sur l&apos;une de nos solutions pour en savoir plus.</p>
         </div>
         <div id="case-middle">
           <div id="case-grid">
@@ -68,9 +66,6 @@ function App() {
                   téléphone.
                 </p>
               </div>
-              <button type="button">
-                En savoir plus <span> &#10140;</span>
-              </button>
             </div>
             <div id="alert" className="case">
               <div>
@@ -80,9 +75,6 @@ function App() {
                   au plus vite des annulations et des demandes de réservation.
                 </p>
               </div>
-              <button type="button">
-                En savoir plus <span>&#10140;</span>
-              </button>
             </div>
             <div id="activity" className="case">
               <div>
@@ -92,9 +84,6 @@ function App() {
                   permettre aux parents de votre quartier de vous découvrir.
                 </p>
               </div>
-              <button type="button">
-                En savoir plus <span>&#10140;</span>
-              </button>
             </div>
             <div id="communication" className="case">
               <div>
@@ -106,9 +95,6 @@ function App() {
                   Babyplace.
                 </p>
               </div>
-              <button type="button">
-                En savoir plus <span>&#10140;</span>
-              </button>
             </div>
           </div>
         </div>
