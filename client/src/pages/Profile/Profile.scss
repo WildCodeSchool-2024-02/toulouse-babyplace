@@ -18,19 +18,39 @@ $lighter-color: #fff;
   );
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-size: cover;
   min-height: 100vh;
+
+  button {
+    margin: 1rem;
+  }
+
+  .profile-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      margin-inline: 1rem;
+    }
+  }
+
+  .profile-element {
+    display: flex;
+    flex-direction: column;
+  }
 
   .profile-card {
     color: $lighter-color;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    margin: 1rem;
     @include mediaQ(768px) {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       margin: 2rem;
       height: 260px;
@@ -47,32 +67,6 @@ $lighter-color: #fff;
         color: $grey-color;
       }
     }
-    .profile-input {
-      display: none;
-      @include mediaQ(768px) {
-        display: flex;
-        gap: 2rem;
-        height: 100%;
-        a {
-          font-size: 30px;
-          transition: transform 0.3s ease;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2);
-          }
-        }
-        div {
-          font-size: 30px;
-          transition: transform 0.3s ease;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2);
-          }
-        }
-      }
-    }
     p {
       display: flex;
       justify-content: center;
@@ -82,24 +76,29 @@ $lighter-color: #fff;
     }
   }
   img {
-    border: solid;
-    border-color: $lighter-color;
+    border: 1px solid $lighter-color;
     margin: 1rem;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 8rem;
+    border-radius: 100px;
     @include mediaQ(768px) {
       margin: 0;
       margin-bottom: 1rem;
     }
   }
-  .profile-text {
-    color: $lighter-color;
-    margin: 1rem;
+  .text {
     text-align: center;
-    @include mediaQ(768px) {
-      font-size: 2rem;
-      margin: 0;
+    margin: 1rem;
+
+    p {
+      margin: 1rem;
+    }
+
+    .profile-text {
+      color: $lighter-color;
+      margin: 1rem;
+      @include mediaQ(768px) {
+        font-size: 1.5rem;
+      }
     }
   }
 }
