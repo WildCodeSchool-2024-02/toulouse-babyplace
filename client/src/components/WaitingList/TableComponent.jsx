@@ -12,7 +12,7 @@ function TableComponent() {
   }, []);
 
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
           <th>Nourice</th>
@@ -24,8 +24,8 @@ function TableComponent() {
       <tbody>
         {cardData.map((item) => (
           <tr key={item.name}>
+            <td>{item.name}</td>
             <td>{item.city}</td>
-            <td>{item.street_adress}</td>
             <td>{item.phone}</td>
             <td>
               {item.opening}/{item.closing}
