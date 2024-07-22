@@ -75,14 +75,17 @@ const signIn = async (req, res, next) => {
 const deleteProfile = async (req, res, next) => {
   try {
     const { id } = req.body;
+    if (!id) {
+      return res.status(400).json({ error: "User ID is required" });
+    }
     const result = await tables.customer.delete(id);
     if (result) {
-      res.sendStatus(204);
-    } else {
-      res.sendStatus(404);
+      return res.sendStatus(204);
     }
+    return res.sendStatus(404);
   } catch (error) {
-    next(error);
+    console.error("Erreur lors de la suppression :", error);
+    return next(error);
   }
 };
 
