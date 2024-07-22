@@ -32,7 +32,7 @@ function ChildCareCenterProfile() {
           <div className="childcare-center-profile">
             <div className="img">
               <img
-                src="../src/assets/images/nounou.jpg"
+                src="../src/assets/images/2.png"
                 alt="creche-img"
                 className="creche-img"
               />
