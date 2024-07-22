@@ -41,6 +41,10 @@ class CustomerRepository extends AbstractRepository {
   }
 
   async update(id, updateData) {
+    if (Object.keys(updateData).length === 0) {
+      return false;
+    }
+
     const fields = Object.keys(updateData)
       .map((key) => `${key} = ?`)
       .join(", ");
