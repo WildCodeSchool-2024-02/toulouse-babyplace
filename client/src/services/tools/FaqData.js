@@ -7,19 +7,19 @@ const FaqData = [
         id: 1,
         question: "Qu'est-ce que Lumen ?",
         answer:
-          "Lumen est une application conçue pour faciliter la mise en relation entre les crèches et les parents à la recherche de places pour leurs enfants. Notre objectif est de simplifier le processus de recherche et d'inscription en centralisant toutes les informations pertinentes.",
+          "Lumen est une application conçue pour faciliter la mise en relation entre les assistantes maternelles et les parents à la recherche de places pour leurs enfants. Notre objectif est de simplifier le processus de recherche et d'inscription en centralisant toutes les informations pertinentes.",
       },
       {
         id: 2,
         question: "Comment fonctionne Lumen ?",
         answer:
-          "Les crèches inscrivent leurs établissements sur Lumen, y indiquant leurs disponibilités, services et critères d'admission. Les parents peuvent alors rechercher des crèches, comparer les options disponibles et soumettre des demandes d'inscription directement via l'application.",
+          "Les assistantes maternelles inscrivent leurs établissements sur Lumen, y indiquant leurs disponibilités, services et critères d'admission. Les parents peuvent alors rechercher des assistantes maternelles, comparer les options disponibles et soumettre des demandes d'inscription directement via l'application.",
       },
       {
         id: 3,
         question: "Lumen est-elle gratuite ?",
         answer:
-          "L'utilisation de Lumen est gratuite pour les parents. Les crèches peuvent avoir des options payantes pour des fonctionnalités avancées et une meilleure visibilité.",
+          "L'utilisation de Lumen est gratuite pour les parents. Les assistantes maternelles peuvent avoir des options payantes pour des fonctionnalités avancées et une meilleure visibilité.",
       },
       {
         id: 4,
@@ -41,21 +41,21 @@ const FaqData = [
       },
       {
         id: 6,
-        question: "Comment rechercher une crèche ?",
+        question: "Comment rechercher une assistante maternelle ?",
         answer:
           "Utilisez la barre de recherche sur la page d'accueil pour entrer vos critères (localisation, type de service, horaires, etc.). Vous pouvez ensuite parcourir les résultats et utiliser les filtres pour affiner votre recherche.",
       },
       {
         id: 7,
-        question: "Comment puis-je contacter une crèche ?",
+        question: "Comment puis-je contacter une assistante maternelle ?",
         answer:
-          "Vous pouvez contacter une crèche directement via l'application en utilisant la fonction de messagerie intégrée. Chaque crèche a une page de profil avec un bouton pour envoyer un message.",
+          "Vous pouvez contacter une assistante maternelle directement via l'application en utilisant la fonction de messagerie intégrée. Chaque assistante maternelle a une page de profil avec un bouton pour envoyer un message.",
       },
       {
         id: 8,
         question: "Comment soumettre une demande d'inscription ?",
         answer:
-          "Lorsque vous trouvez une crèche qui vous intéresse, cliquez sur le bouton 'Soumettre une demande'. Vous devrez remplir un formulaire avec les informations nécessaires et la crèche sera notifiée de votre demande.",
+          "Lorsque vous trouvez une assistante maternelle qui vous intéresse, cliquez sur le bouton 'Soumettre une demande'. Vous devrez remplir un formulaire avec les informations nécessaires et l'assistante maternelle sera notifiée de votre demande.",
       },
       {
         id: 9,
@@ -65,33 +65,33 @@ const FaqData = [
       },
       {
         id: 10,
-        question: "Puis-je évaluer une crèche sur Lumen ?",
+        question: "Puis-je évaluer une assistante maternelle sur Lumen ?",
         answer:
-          "Oui, après avoir utilisé les services d'une crèche, vous pouvez laisser une évaluation et un commentaire sur sa page de profil. Cela aide d'autres parents à faire leur choix.",
+          "Oui, après avoir utilisé les services d'une assistante maternelle, vous pouvez laisser une évaluation et un commentaire sur sa page de profil. Cela aide d'autres parents à faire leur choix.",
       },
     ],
   },
   {
     id: 3,
-    category: "Pour les crèches",
+    category: "Pour les assistantes maternelles",
     questions: [
       {
         id: 11,
-        question: "Comment inscrire ma crèche sur Lumen ?",
+        question: "Comment inscrire mon service sur Lumen ?",
         answer:
-          "Téléchargez l'application Lumen, créez un compte crèche, et suivez les étapes pour inscrire votre établissement. Vous devrez fournir des informations détaillées sur votre crèche, y compris les services offerts, les disponibilités et les critères d'admission.",
+          "Téléchargez l'application Lumen, créez un compte assistante maternelle, et suivez les étapes pour inscrire votre service. Vous devrez fournir des informations détaillées sur votre service, y compris les services offerts, les disponibilités et les critères d'admission.",
       },
       {
         id: 12,
-        question: "Quels sont les avantages d'inscrire ma crèche sur Lumen ?",
+        question: "Quels sont les avantages d'inscrire mon service sur Lumen ?",
         answer:
-          "En inscrivant votre crèche sur Lumen, vous augmentez votre visibilité auprès des parents à la recherche de places. Vous pouvez également gérer les demandes d'inscription de manière centralisée et communiquer facilement avec les parents.",
+          "En inscrivant votre service sur Lumen, vous augmentez votre visibilité auprès des parents à la recherche de places. Vous pouvez également gérer les demandes d'inscription de manière centralisée et communiquer facilement avec les parents.",
       },
       {
         id: 13,
-        question: "L'inscription de ma crèche est-elle payante ?",
+        question: "L'inscription de mon service est-elle payante ?",
         answer:
-          "L'inscription de base de votre crèche est gratuite. Nous offrons également des options payantes pour des fonctionnalités avancées et une meilleure visibilité.",
+          "L'inscription de base de votre service est gratuite. Nous offrons également des options payantes pour des fonctionnalités avancées et une meilleure visibilité.",
       },
       {
         id: 14,
@@ -101,9 +101,9 @@ const FaqData = [
       },
       {
         id: 15,
-        question: "Puis-je mettre à jour les informations de ma crèche ?",
+        question: "Puis-je mettre à jour les informations de mon service ?",
         answer:
-          "Oui, vous pouvez mettre à jour les informations de votre crèche à tout moment depuis votre compte. Cela inclut les disponibilités, les services offerts et les critères d'admission.",
+          "Oui, vous pouvez mettre à jour les informations de votre service à tout moment depuis votre compte. Cela inclut les disponibilités, les services offerts et les critères d'admission.",
       },
     ],
   },
