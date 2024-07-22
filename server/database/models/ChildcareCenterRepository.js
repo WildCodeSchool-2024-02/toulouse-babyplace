@@ -7,7 +7,7 @@ class ChildcareCenterRepository extends AbstractRepository {
 
   async create(childcareCenter) {
     const [result] = await this.database.query(
-      `insert into ${this.table} (name, description, phone, street_address, city, zip_code, mail, password, url, opening, closing, capacity) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (name, description, phone, street_address, city, zip_code, email, hashed_password, url, opening, closing, capacity) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         childcareCenter.name,
         childcareCenter.description,
@@ -15,7 +15,7 @@ class ChildcareCenterRepository extends AbstractRepository {
         childcareCenter.street_address,
         childcareCenter.city,
         childcareCenter.zip_code,
-        childcareCenter.mail,
+        childcareCenter.email,
         childcareCenter.hashed_password,
         childcareCenter.url,
         childcareCenter.opening,
@@ -36,6 +36,15 @@ class ChildcareCenterRepository extends AbstractRepository {
 
     // Return the array of ChildcareCenters
     return rows;
+  }
+
+  async readByEmail(email) {
+    const [rows] = await this.database.query(
+      `select * from ${this.table} where email = ?`,
+      [email]
+    );
+
+    return rows[0];
   }
 }
 

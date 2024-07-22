@@ -134,6 +134,14 @@ function Profile() {
           Supprimer mon compte
         </button>
       </div>
+      <div className="profile-line">
+        <Link to="/personal-profile">
+          <button type="button">j'accède à mes reservations</button>
+        </Link>
+        <Link to="/Search">
+          <button type="button">je cherche ma nourrice</button>
+        </Link>
+      </div>
     </div>
   );
 }
