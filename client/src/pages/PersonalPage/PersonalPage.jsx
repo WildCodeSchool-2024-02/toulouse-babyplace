@@ -1,11 +1,12 @@
 import TableComponent from "../../components/WaitingList/TableComponent";
-import Card from "../../components/Cards/Card";
+import "./PersonalPage.scss";
 
 function PersonalPage() {
   return (
-    <div>
-      <TableComponent />
-      <Card />
+    <div className="personal-page">
+      <div className="table-component-container">
+        <TableComponent />
+      </div>
     </div>
   );
 }

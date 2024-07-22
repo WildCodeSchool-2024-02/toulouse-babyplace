@@ -22,7 +22,7 @@ function TableComponent() {
     <table>
       <thead>
         <tr>
-          <th>Nounou</th>
+          <th>Nourice</th>
           <th>Status</th>
           <th>Date</th>
           <th>Créneau Horaire</th>
