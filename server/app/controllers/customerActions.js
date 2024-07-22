@@ -72,12 +72,25 @@ const signIn = async (req, res, next) => {
   }
 };
 
+const deleteProfile = async (req, res, next) => {
+  try {
+    const { id } = req.body;
+    const result = await tables.customer.delete(id);
+    if (result) {
+      res.sendStatus(204);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   signIn,
   signUp,
   browse,
   read,
-  // edit,
   add,
-  // destroy,
+  deleteProfile,
 };

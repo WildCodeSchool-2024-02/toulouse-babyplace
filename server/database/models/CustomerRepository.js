@@ -30,6 +30,15 @@ class CustomerRepository extends AbstractRepository {
 
     return rows[0];
   }
+
+  async delete(id) {
+    const [result] = await this.database.query(
+      `delete from ${this.table} where id = ?`,
+      [id]
+    );
+
+    return result.affectedRows > 0;
+  }
 }
 
 module.exports = CustomerRepository;
