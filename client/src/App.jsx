@@ -10,18 +10,25 @@ function App() {
           <div id="lumen-grid">
             <div id="lumen">
               <h1>Lumen</h1>
-              <p>Gagnez du temps en optimisant votre agenda au quotidien.</p>
               <p>
-                Installez le logiciel Lumen maintenant pour saisir toutes les
-                opportunités autour de chez vous.
+                Découvrez la solution idéale pour trouver la nourrice parfaite
+                pour vos enfants.
+              </p>
+              <p>
+                Créez un profil sur Lumen et accédez à une communauté de
+                nourrices disponibles près de chez vous.
               </p>
               <ul>
-                <li>Souscription au logiciel Lumen sans engagement.</li>
                 <li>
-                  Logiciel facile à utiliser pour vous permettre
-                  d&apos;optimiser vos rendez-vous.
+                  Créez un compte gratuitement pour vous ou votre nourrice.
                 </li>
-                <li>Communication directe et simplifiée avec les parents.</li>
+                <li>
+                  Service facile à utiliser pour simplifier la recherche de
+                  nourrices selon vos horaires.
+                </li>
+                <li>
+                  Profils détaillés pour une meilleure visibilité et confiance.
+                </li>
               </ul>
             </div>
           </div>
@@ -33,15 +40,13 @@ function App() {
           <img src={easyLife} alt="easy-life images" />
           <div id="reservation">
             <h3>
-              Simplifiez-vous la vie en choisissant un système de réservation
-              moderne et efficace.
+              Facilitez vos recherches de nourrices grâce à une plateforme
+              intuitive.
             </h3>
             <p>
-              Gérez vos réservations directement depuis votre agenda que vous
-              pouvez consulter sur votre téléphone, ordinateur ou tablette.
-              Soyez prévenu en temps réel des annulations vous permettant ainsi
-              de remplacer les places vacantes. Remplacez facilement les
-              absences grâce aux “waiting lists” des parents.
+              Consultez les profils des nourrices disponibles en fonction de vos
+              besoins et horaires. Trouvez rapidement et facilement une nourrice
+              de confiance.
             </p>
           </div>
         </div>
@@ -50,49 +55,47 @@ function App() {
       <div id="managment">
         <div id="logiciel">
           <h3>
-            Équipez-vous du logiciel de gestion de place d&apos;accueil de
-            jeunes enfants le plus complet
+            Profitez du meilleur service de mise en relation avec des nourrices
+            qualifiées
           </h3>
         </div>
         <div id="case-middle">
           <div id="case-grid">
             <div id="diary" className="case">
               <div>
-                <h4>Agenda en ligne</h4>
+                <h4>Créez votre profil</h4>
                 <p>
-                  Consultez en temps réel votre agenda et modifiez-le en
-                  quelques clics afin d&apos;optimiser votre temps et votre
-                  rentabilité. Accessible depuis votre smartphone, tablette ou
-                  téléphone.
+                  Inscrivez-vous et créez un profil détaillé pour augmenter
+                  votre visibilité auprès des parents à la recherche de
+                  nourrices.
                 </p>
               </div>
             </div>
             <div id="alert" className="case">
               <div>
-                <h4>Soyez alerté</h4>
+                <h4>Recherchez facilement</h4>
                 <p>
-                  Choisissez le mode de notifications afin d&apos;être informé
-                  au plus vite des annulations et des demandes de réservation.
+                  Utilisez nos filtres de recherche pour trouver des nourrices
+                  disponibles selon vos horaires et besoins spécifiques.
                 </p>
               </div>
             </div>
             <div id="activity" className="case">
               <div>
-                <h4>Marketing de votre activité</h4>
+                <h4>Optimisez votre visibilité</h4>
                 <p>
-                  Optimisez votre page profil pour vous rendre plus visible et
-                  permettre aux parents de votre quartier de vous découvrir.
+                  Améliorez votre profil pour vous rendre plus visible et
+                  permettre aux parents de vous découvrir facilement.
                 </p>
               </div>
             </div>
             <div id="communication" className="case">
               <div>
-                <h4>Communiquez avec les parents</h4>
+                <h4>Informations claires</h4>
                 <p>
-                  Les parents doivent avoir pré-rempli leur liste de documents
-                  pour pouvoir faire des réservations. Les parents peuvent vous
-                  soumettre les contrats déjà validés par les équipes légales de
-                  Babyplace.
+                  Les parents peuvent consulter des profils détaillés pour faire
+                  un choix éclairé et trouver la nourrice idéale pour leurs
+                  enfants.
                 </p>
               </div>
             </div>
