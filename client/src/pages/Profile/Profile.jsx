@@ -34,7 +34,9 @@ function Profile() {
           <p>{user?.firstname}</p>
           <p>{user?.name}</p>
         </div>{" "}
-        <input type="text" placeholder="Recherche" />
+        <Link to="/Search">
+          <button type="button">je cherche ma nourrice</button>
+        </Link>
         <div className="profile-input">
           <div>🔔</div>
           <Link to="/reservation">
@@ -42,23 +44,11 @@ function Profile() {
           </Link>
         </div>
       </div>
-      <p className="profile-text">
-        Mettez toutes les chances de votre côté. <br />
-        Un profil complet est nécessaire pour un accueil en crèche !
-      </p>
-      <div className="documents">
-        <div className="dossier-enfant">
-          Dossier <br />
-          Enfants
-        </div>
-        <div className="dossier-parent">
-          Dossier <br />
-          Parents
-        </div>
-        <div className="dossier-inscription">
-          Dossier <br />
-          d'inscription
-        </div>
+      <div className="text">
+        <p className="profile-text">
+          Mettez toutes les chances de votre côté. <br />
+          Un profil complet est nécessaire pour un accueil chez une nourrice!
+        </p>
       </div>
       <NavBarProfile />
     </div>
