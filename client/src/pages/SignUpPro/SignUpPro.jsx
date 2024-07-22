@@ -44,7 +44,7 @@ function SignUpPro() {
             street_address: street,
             zip_code: zipCode,
             city,
-            mail: email,
+            email,
             password,
             url: avatar,
             opening,

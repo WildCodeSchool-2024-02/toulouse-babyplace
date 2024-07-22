@@ -4,6 +4,7 @@ import "./Footer.scss";
 function Footer() {
   const location = useLocation();
   const isSearchPage = location.pathname.toLowerCase() === "/search";
+  const isLoggedIn = Boolean(localStorage.getItem("authToken"));
 
   return (
     <div id="footer">
@@ -16,10 +17,12 @@ function Footer() {
           <NavLink to="/help">
             <li>Aide</li>
           </NavLink>
-          <NavLink to="/sign-in-pro">
-            <li>Lumen Pro</li>
-          </NavLink>
           {!isSearchPage && (
+            <NavLink to="/sign-in-pro">
+              <li>Lumen Pro</li>
+            </NavLink>
+          )}
+          {!isSearchPage && !isLoggedIn && (
             <NavLink to="/sign-in">
               <li>Se connecter</li>
             </NavLink>

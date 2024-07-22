@@ -18,6 +18,7 @@ import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 import { SignUpProProvider } from "./context/SignUpPro";
 import Search from "./pages/Search/Search";
 import PersonalPage from "./pages/PersonalPage/PersonalPage";
+import ProfilePro from "./pages/ProfilePro/ProfilePro";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/profile-pro",
+    element: <ProfilePro />,
   },
   {
     path: "/reservation",
