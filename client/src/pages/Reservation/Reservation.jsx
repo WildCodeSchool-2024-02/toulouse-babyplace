@@ -11,7 +11,6 @@ function Reservation() {
         <p>Selectionnez la date et l'heure qui vous convient</p>{" "}
       </div>
       <Calendar />
-      
     </div>
   );
 }
