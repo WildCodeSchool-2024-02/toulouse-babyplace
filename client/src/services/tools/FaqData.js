@@ -41,13 +41,13 @@ const FaqData = [
       },
       {
         id: 6,
-        question: "Comment rechercher une crèche ?",
+        question: "Comment rechercher une assistante maternelle ?",
         answer:
           "Utilisez la barre de recherche sur la page d'accueil pour entrer vos critères (localisation, type de service, horaires, etc.). Vous pouvez ensuite parcourir les résultats et utiliser les filtres pour affiner votre recherche.",
       },
       {
         id: 7,
-        question: "Comment puis-je contacter une crèche ?",
+        question: "Comment puis-je contacter une assistante maternelle ?",
         answer:
           "Vous pouvez contacter une nourrice directement via l'application en utilisant la fonction de messagerie intégrée. Chaque nourrice a une page de profil avec un bouton pour envoyer un message.",
       },
