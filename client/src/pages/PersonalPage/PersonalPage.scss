@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, $main-color, $secondary-color);
+  background: $lighter-color;
   height: 100vh;
 
   .table-component-container {
@@ -49,6 +49,7 @@
 
     &:hover {
       background-color: #7171c6;
+      color: $lighter-color;
     }
   }
 

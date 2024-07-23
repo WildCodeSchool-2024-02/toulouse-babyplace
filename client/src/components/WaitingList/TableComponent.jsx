@@ -15,10 +15,10 @@ function TableComponent() {
     <table className="table">
       <thead>
         <tr>
-          <th>Nourice</th>
-          <th>Status</th>
-          <th>Date</th>
+          <th>Assistante maternel</th>
           <th>Créneau Horaire</th>
+          <th>Date</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
