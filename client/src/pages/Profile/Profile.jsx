@@ -5,6 +5,7 @@ import "./Profile.scss";
 
 function Profile() {
   const [user, setUser] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   const [editingField, setEditingField] = useState(null);
   const [newValue, setNewValue] = useState("");
   const token = localStorage.getItem("authToken");
@@ -14,13 +15,13 @@ function Profile() {
   const modify = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="2em"
-      height="2em"
+      width="1.2em"
+      height="1.2em"
       viewBox="0 0 24 24"
     >
       <path
         fill="none"
-        stroke="#fff"
+        stroke="#000"
         d="m14.36 4.079l.927-.927a3.932 3.932 0 0 1 5.561 5.561l-.927.927m-5.56-5.561s.115 1.97 1.853 3.707C17.952 9.524 19.92 9.64 19.92 9.64m-5.56-5.561l-8.522 8.52c-.577.578-.866.867-1.114 1.185a6.556 6.556 0 0 0-.749 1.211c-.173.364-.302.752-.56 1.526l-1.094 3.281m17.6-10.162L11.4 18.16c-.577.577-.866.866-1.184 1.114a6.554 6.554 0 0 1-1.211.749c-.364.173-.751.302-1.526.56l-3.281 1.094m0 0l-.802.268a1.06 1.06 0 0 1-1.342-1.342l.268-.802m1.876 1.876l-1.876-1.876"
       />
     </svg>
@@ -36,6 +37,8 @@ function Profile() {
         setUser(data);
       } catch (error) {
         console.error("Error fetching user data:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchUser();
@@ -105,42 +108,51 @@ function Profile() {
     }
   };
 
+  const getInitials = (name) => {
+    const cleanName = name.replace(/[^a-zA-Z\s]/g, "");
+
+    const words = cleanName.split(" ").filter((word) => word.length > 0);
+    const initials = words.map((word) => word[0].toUpperCase());
+
+    return initials.slice(0, 2).join("");
+  };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="profile">
       <div className="profile-card">
-        <img src="../src/assets/images/2.png" alt="" />
-        <div className="profile-name">
-          <p>{user?.firstname}</p>
-          <button type="button" onClick={() => handleEditClick("firstname")}>
-            {modify}
-          </button>
-        </div>
-        <div className="profile-name">
-          <p>{user?.name}</p>
-          <button type="button" onClick={() => handleEditClick("name")}>
-            {modify}
-          </button>
+        <span className="avatar">{getInitials(user?.name)}</span>
+        <div className="profile-name-firstname">
+          <div className="profile-name">
+            <p>{user?.firstname}</p>
+            <button type="button" onClick={() => handleEditClick("firstname")}>
+              {modify}
+            </button>
+          </div>
+          <div className="profile-name">
+            <p>{user?.name}</p>
+            <button type="button" onClick={() => handleEditClick("name")}>
+              {modify}
+            </button>
+          </div>
         </div>
       </div>
-      <div className="profile-element">
-        <div className="text">
-          <p className="profile-text">
-            Mettez toutes les chances de votre côté. <br />
-            Un profil complet est nécessaire pour un accueil chez une nourrisse!
-          </p>
-          <Link to="/search">Je recherche une nourrisse</Link>
+      <div className="profile-line">
+        <p className="profile-text">
+          Mettez toutes les chances de votre côté. <br />
+          Un profil complet est nécessaire pour un accueil chez une assistante
+          maternelle !
+        </p>
+        <div className="profile-buttons">
+          <Link to="/personal-profile">J'accède à mes reservations</Link>
+          <Link to="/Search">Je cherche mon assistante maternelle</Link>
         </div>
         <button type="button" onClick={deleteUser}>
           Supprimer mon compte
         </button>
-      </div>
-      <div className="profile-line">
-        <Link to="/personal-profile">
-          <button type="button">j'accède à mes reservations</button>
-        </Link>
-        <Link to="/Search">
-          <button type="button">je cherche ma nourrice</button>
-        </Link>
       </div>
     </div>
   );
