@@ -12,32 +12,29 @@ function TableComponent() {
   }, []);
 
   return (
-    <div className="table-container">
-      <table>
-        <div className="table">
-          <thead>
-            <tr>
-              <th>Nounou</th>
-              <th>Status</th>
-              <th>Date</th>
-              <th>Créneau Horaire</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cardData.map((item) => (
-              <tr key={item.name}>
-                <td>{item.name}</td>
-                <td>{item.street_adress}</td>
-                <td>{item.phone}</td>
-                <td>
-                  {item.opening}/{item.closing}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </div>
-      </table>{" "}
-    </div>
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Assistante maternelle</th>
+          <th>Créneau Horaire</th>
+          <th>Ville</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cardData.map((item) => (
+          <tr key={item.name}>
+            <td>{item.name}</td>
+            <td>{item.city}</td>
+            <td>{item.phone}</td>
+
+            <td>
+              {item.opening}/{item.closing}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
