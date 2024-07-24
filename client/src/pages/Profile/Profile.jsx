@@ -1,6 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Modal from "../../components/modification/Modal";
 import "./Profile.scss";
 
 function Profile() {
@@ -44,7 +45,7 @@ function Profile() {
     fetchUser();
   }, [userId]);
 
-  const updateUserInfo = async (field) => {
+  const updateUserInfo = async () => {
     try {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/customer`,
@@ -54,7 +55,7 @@ function Profile() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ id: userId, [field]: newValue }),
+          body: JSON.stringify({ id: userId, [editingField]: newValue }),
         }
       );
       if (response.ok) {
@@ -68,12 +69,6 @@ function Profile() {
       console.error("Error updating user info:", error);
     }
   };
-
-  useEffect(() => {
-    if (editingField) {
-      updateUserInfo(editingField);
-    }
-  }, [editingField, updateUserInfo]);
 
   const deleteUser = async () => {
     try {
@@ -100,12 +95,11 @@ function Profile() {
   };
 
   const handleEditClick = (field) => {
-    const updatedValue = prompt(`Modifiez votre ${field}:`);
-    if (updatedValue) {
-      setNewValue(updatedValue);
-      setEditingField(field);
-      updateUserInfo(field);
-    }
+    setEditingField(field);
+  };
+
+  const handleModalClose = () => {
+    setEditingField(null);
   };
 
   const getInitials = (name) => {
@@ -137,6 +131,16 @@ function Profile() {
             <button type="button" onClick={() => handleEditClick("name")}>
               {modify}
             </button>
+          </div>
+          <div>
+            <Modal
+              show={Boolean(editingField)}
+              handleClose={handleModalClose}
+              handleSave={updateUserInfo}
+              field={editingField}
+              newValue={newValue}
+              setNewValue={setNewValue}
+            />
           </div>
         </div>
       </div>
