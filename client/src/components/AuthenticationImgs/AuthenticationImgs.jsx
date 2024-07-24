@@ -10,10 +10,16 @@ function AuthenticationImgs() {
       <div className="autentication-text">
         <div className="first-line">
           <h1>Lumen</h1>
-          {path !== "/sign-in" && <p>Pro</p>}
+          {path !== "/sign-in" && (
+            <div className="pro">
+              <p>Pro</p>
+            </div>
+          )}
+          <p className="slogan">
+            Connectez-vous à des assistantes maternelles de confiance,
+            facilement et rapidement
+          </p>
         </div>
-        <p className="second-line">Gérer votre agenda</p>
-        <p>24h/24 7jours/7</p>
       </div>
       <div className="container-img">
         <img className="img" src="../src/assets/images/img_login.svg" alt="" />
