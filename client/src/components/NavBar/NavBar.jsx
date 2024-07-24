@@ -1,15 +1,31 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./NavBar.scss";
 import logo from "../../assets/images/logo.png";
 
 function NavBar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const isSignInPage = location.pathname.toLowerCase() === "/sign-in";
+  const isSignInPage = location.pathname.toLowerCase() === "/profile";
+  const isSignInProPage = location.pathname.toLowerCase() === "/profile-pro";
   const isLoggedIn = Boolean(localStorage.getItem("authToken"));
+  const [isProUser, setIsProUser] = useState(false);
+
+  useEffect(() => {
+    if (isSignInProPage && isLoggedIn) {
+      setIsProUser(true);
+    }
+  }, [isSignInProPage, isLoggedIn]);
+
+  useEffect(() => {
+    if (isSignInPage && isLoggedIn) {
+      setIsProUser(false);
+    }
+  }, [isSignInPage, isLoggedIn]);
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
+    setIsProUser(false);
     navigate("/");
   };
 
@@ -17,7 +33,7 @@ function NavBar() {
     <div id="nav-bar">
       <nav>
         <ul>
-          <img src={logo} width={64} height={64} alt="" />
+          <img src={logo} width={64} height={64} alt="Lumen Logo" />
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active-link" : "")}
@@ -42,7 +58,7 @@ function NavBar() {
 
           {isLoggedIn && (
             <NavLink
-              to="/profile"
+              to={isProUser ? "/profile-pro" : "/profile"}
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
               <li>Profil</li>

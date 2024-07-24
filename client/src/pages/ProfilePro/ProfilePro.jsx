@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./ProfilePro.scss";
 
+import TableComponentAssmat from "../../components/WaitingList/TableComponentAssmat";
+
 function ProfilePro() {
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -122,17 +124,17 @@ function ProfilePro() {
   }
 
   return (
-    <div className="profile">
-      <div className="profile-card">
+    <div className="profile-pro">
+      <div className="profile-card-pro">
         <span className="avatar">{getInitials(user?.name)}</span>
-        <div className="profile-name-firstname">
-          <div className="profile-name">
+        <div className="profile-name-firstname-pro">
+          <div className="profile-name-pro">
             <p>{user?.firstname}</p>
             <button type="button" onClick={() => handleEditClick("firstname")}>
               {modify}
             </button>
           </div>
-          <div className="profile-name">
+          <div className="profile-name-pro">
             <p>{user?.name}</p>
             <button type="button" onClick={() => handleEditClick("name")}>
               {modify}
@@ -140,14 +142,21 @@ function ProfilePro() {
           </div>
         </div>
       </div>
-      <div className="profile-line">
-        <p className="profile-text">
+      <div className="profile-line-pro">
+        <p className="profile-text-pro">
           Maximisez vos opportunités. <br />
           Un profil complet est essentiel pour accueillir les enfants !
         </p>
-        <button type="button" onClick={deleteUser}>
-          Supprimer mon compte
-        </button>
+        <div className="personal-page">
+          <div className="table-component-container">
+            <TableComponentAssmat />
+          </div>
+        </div>
+        <div className="profile-button-pro">
+          <button type="button" onClick={deleteUser}>
+            Supprimer mon compte
+          </button>
+        </div>
       </div>
     </div>
   );

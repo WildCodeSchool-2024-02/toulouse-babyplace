@@ -1,0 +1,234 @@
+@import "../../variables.scss";
+
+@mixin mediaQ($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.profile-pro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  .profile-card-pro {
+    max-width: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    @include mediaQ(768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+      background: linear-gradient(
+        to bottom right,
+        $main-color,
+        $secondary-color
+      );
+      color: $lighter-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  .profile-name-pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      margin-inline: 1rem;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .profile-line-pro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+
+    button,
+    a {
+      border-radius: 50px;
+      padding-inline: 1rem;
+      padding-block: 0.8rem;
+      margin: 1rem;
+      font-size: 0.7rem;
+    }
+
+    a {
+      background-color: $main-color;
+      text-decoration: none;
+      color: $lighter-color;
+      border: 1px solid $main-color;
+    }
+    a:hover {
+      background: $lighter-color;
+      color: $main-color;
+    }
+
+    button {
+      background-color: #d90429;
+      border: 1px solid #d90429;
+      color: $lighter-color;
+      max-width: fit-content;
+    }
+
+    button:hover {
+      background-color: $lighter-color;
+      color: #d90429;
+    }
+
+    .profile-text-pro {
+      color: $main-color;
+    }
+
+    .profile-buttons-pro {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    border: 1px solid $lighter-color;
+    margin: 1rem;
+    width: 8rem;
+    border-radius: 100px;
+    @include mediaQ(768px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .profile-text-pro {
+    margin: 1rem;
+    @include mediaQ(768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .profile-pro {
+    .profile-line-pro {
+      .profile-buttons-pro {
+        flex-direction: row;
+
+        button,
+        a {
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.personal-page {
+  display: flex;
+  justify-content: center;
+  background: $lighter-color;
+  height: 100vh;
+
+  .table-component-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 20px;
+  }
+
+  thead {
+    background-color: $main-color;
+    color: #ffffff;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+
+  tbody tr {
+    &:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    &:hover {
+      background-color: #7171c6;
+      color: $lighter-color;
+    }
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 15px;
+    }
+
+    td {
+      padding-left: 50%;
+      position: relative;
+      text-align: right;
+    }
+
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}
