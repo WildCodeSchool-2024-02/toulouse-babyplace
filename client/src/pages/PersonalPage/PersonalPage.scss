@@ -6,10 +6,16 @@
   box-sizing: 100%;
 }
 
-.personal-page {
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
+}
+
+.personal-page {
+  display: flex;
+  justify-content: center;
   background: $lighter-color;
   height: 100vh;
 
@@ -20,6 +26,7 @@
     background: white;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
   }
 
   table {
