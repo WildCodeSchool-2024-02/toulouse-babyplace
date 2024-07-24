@@ -17,7 +17,7 @@ function Footer() {
           <NavLink to="/help">
             <li>Aide</li>
           </NavLink>
-          {!isSearchPage && (
+          {!isSearchPage && isLoggedIn && (
             <NavLink to="/sign-in-pro">
               <li>Lumen Pro</li>
             </NavLink>

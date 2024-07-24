@@ -1,11 +1,5 @@
 @import "../../variables.scss";
 
-$grey-color: #878787;
-$primary-color: #474fff;
-$secondary-color: #e37acc;
-$darker-color: #000;
-$lighter-color: #fff;
-
 @mixin mediaQ($breakpoint: 768px) {
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -13,155 +7,135 @@ $lighter-color: #fff;
 }
 
 .profile {
-  background: linear-gradient(
-    to bottom right,
-    $primary-color,
-    $secondary-color
-  );
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
   background-size: cover;
   min-height: 100vh;
 
-  @include mediaQ(768px) {
+  .profile-card {
+    max-width: 10rem;
+    text-align: center;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    @include mediaQ(768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      width: 4rem;
+      height: 4rem;
+      margin: 1rem;
+      background: linear-gradient(
+        to bottom right,
+        $main-color,
+        $secondary-color
+      );
+      color: $lighter-color;
+      font-size: 1.5rem;
+    }
+  }
+
+  .profile-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      margin-inline: 1rem;
+
+      p {
+        font-size: 1rem;
+      }
+    }
   }
 
   .profile-line {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     align-items: center;
-    gap: 2rem;
-  }
+    justify-content: space-around;
+    height: 30rem;
 
-  button {
-    background-color: $main-color;
-    border: 1px solid #ccc;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition:
-      background-color 0.3s,
-      box-shadow 0.3s;
-    border-radius: 50px;
-    padding-inline: 1rem;
-    color: #fff;
-    &:hover {
-      background-color: #fff;
-      color: $darker-color;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  .profile-card {
-    color: $lighter-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem;
-    @include mediaQ(768px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      margin: 2rem;
-      height: 260px;
+    button,
+    a {
+      border-radius: 50px;
+      padding-inline: 1rem;
+      padding-block: 0.8rem;
+      margin: 1rem;
+      font-size: 0.7rem;
     }
 
-    .text {
+    a {
+      background-color: $main-color;
+      text-decoration: none;
+      color: $lighter-color;
+      border: 1px solid $main-color;
+    }
+    a:hover {
+      background: $lighter-color;
+      color: $main-color;
+    }
+
+    button {
+      background-color: red;
+      border: 1px solid red;
+      color: $lighter-color;
+      max-width: fit-content;
+      border-radius: 20px;
+    }
+
+    button:hover {
+      background-color: $lighter-color;
+      color: red;
+    }
+
+    .profile-text {
+      color: $main-color;
+    }
+
+    .profile-buttons {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    input {
-      display: none;
-      @include mediaQ(768px) {
-        display: flex;
-        border-radius: 10px;
-        padding: 0.5rem;
-        border: $grey-color 1px solid;
-        width: 80dvw;
-        max-width: 18rem;
-        color: $grey-color;
-      }
-    }
-    .profile-input {
-      display: none;
-      @include mediaQ(768px) {
-        display: flex;
-        gap: 2rem;
-        height: 100%;
-        a {
-          font-size: 30px;
-          transition: transform 0.3s ease;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2);
-          }
-        }
-        div {
-          font-size: 30px;
-          transition: transform 0.3s ease;
-
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2);
-          }
-        }
-      }
-    }
-    p {
-      display: flex;
-      justify-content: center;
-      @include mediaQ(768px) {
-        font-size: 1.5rem;
-      }
     }
   }
+
+  p {
+    display: flex;
+    justify-content: center;
+  }
+
   img {
-    border: solid;
-    border-color: $lighter-color;
+    border: 1px solid $lighter-color;
     margin: 1rem;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
+    width: 8rem;
+    border-radius: 100px;
     @include mediaQ(768px) {
-      margin: 0;
       margin-bottom: 1rem;
     }
   }
+
   .profile-text {
-    display: flex;
     color: $lighter-color;
     margin: 1rem;
-    text-align: center;
     @include mediaQ(768px) {
-      justify-content: center;
-      padding: 5rem;
-      font-size: 2rem;
-      margin: 0;
+      font-size: 1.5rem;
     }
   }
 }
 
-.documents {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  @include mediaQ(768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 4rem;
-    padding: 2rem;
+@media screen and (min-width: 500px) {
+  .profile {
+    .profile-line {
+      .profile-buttons {
+        flex-direction: row;
+      }
+    }
   }
 }
