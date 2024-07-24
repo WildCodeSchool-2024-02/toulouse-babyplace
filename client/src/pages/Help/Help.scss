@@ -2,8 +2,8 @@
 
 .block-help {
   background: linear-gradient(45deg, $main-color, $secondary-color);
-  padding: 6rem 6rem;
   display: flex;
+  padding: 1.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,13 @@
 .infos-link-help {
   display: flex;
   gap: 2rem;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 625px) {
+  .infos-link-help {
+    flex-direction: row;
+  }
 }
 
 .block-questions {
@@ -34,6 +41,10 @@
   max-width: 60rem;
   margin: 0 auto;
   margin-top: 2rem;
+
+  h2 {
+    margin: 1rem;
+  }
 }
 
 .block-max-width {
@@ -44,7 +55,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 1rem;
 }
 
 .flex-category-block {
