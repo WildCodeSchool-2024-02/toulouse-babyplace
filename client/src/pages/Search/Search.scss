@@ -24,7 +24,7 @@
   .right-block-search {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 5rem;
+    gap: 3rem;
     margin-top: 2rem;
   }
 
@@ -73,7 +73,8 @@
   background-color: #00000030;
   padding: 1rem;
   border-radius: 100%;
-  width: 10%;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
