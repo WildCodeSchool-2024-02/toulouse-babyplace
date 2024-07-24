@@ -42,6 +42,10 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       { path: "/personal-profile", element: <PersonalPage /> },
+      {
+        path: "/profile-pro",
+        element: <ProfilePro />,
+      },
     ],
   },
 
@@ -49,10 +53,7 @@ const router = createBrowserRouter([
     path: "/profile",
     element: <Profile />,
   },
-  {
-    path: "/profile-pro",
-    element: <ProfilePro />,
-  },
+
   {
     path: "/reservation",
     element: <Reservation />,

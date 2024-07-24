@@ -121,7 +121,7 @@ function Profile() {
         <span className="avatar">{getInitials(user?.name)}</span>
         <div className="profile-name-firstname">
           <div className="profile-name">
-            <p>{user?.firstname}</p>
+            <p className="profile-firstname">{user?.firstname}</p>
             <button type="button" onClick={() => handleEditClick("firstname")}>
               {modify}
             </button>
