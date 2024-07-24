@@ -17,7 +17,7 @@ function TableComponent() {
         <tr>
           <th>Assistante maternel</th>
           <th>Créneau Horaire</th>
-          <th>Date</th>
+          <th>Ville</th>
           <th>Status</th>
         </tr>
       </thead>
