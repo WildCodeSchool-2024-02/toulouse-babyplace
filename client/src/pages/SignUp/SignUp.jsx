@@ -88,7 +88,7 @@ function SignUp() {
       );
 
       if (response.status === 201) {
-        navigate("/sign-up-done");
+        navigate("/sign-in");
       } else {
         console.info(response);
       }
