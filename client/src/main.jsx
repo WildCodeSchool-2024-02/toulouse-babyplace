@@ -14,7 +14,6 @@ import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
-import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 import { SignUpProProvider } from "./context/SignUpPro";
 import Search from "./pages/Search/Search";
 import PersonalPage from "./pages/PersonalPage/PersonalPage";
@@ -82,10 +81,6 @@ const router = createBrowserRouter([
   {
     path: "/sign-up",
     element: <SignUp />,
-  },
-  {
-    path: "/sign-up-done",
-    element: <SignUpDone />,
   },
 ]);
 
