@@ -19,6 +19,11 @@ $lighter-color: #fff;
     align-items: end;
     margin: 1rem;
     width: 90%;
+    gap: 0.5rem;
+    & a {
+      text-decoration: none;
+      color: $main-color;
+    }
   }
 }
 .authentication-input {
