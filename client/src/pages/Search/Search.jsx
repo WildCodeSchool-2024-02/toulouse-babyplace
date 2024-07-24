@@ -108,10 +108,13 @@ function Search() {
             <div key={result?.id} className="result-card">
               <span className="avatar">{getInitials(result?.name)}</span>
               <p>{result?.name}</p>
-              <p>{result?.address}</p>
               <p>
                 Disponible de {result?.opening} à {result?.closing}
               </p>
+              <p>{result?.email}</p>
+              <p>{result?.address}</p>
+              <p>{result?.phone}</p>
+              <p>{result?.description}</p>
             </div>
           ))
         ) : (

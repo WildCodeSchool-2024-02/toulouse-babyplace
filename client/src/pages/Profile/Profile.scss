@@ -84,16 +84,15 @@
     }
 
     button {
-      background-color: red;
-      border: 1px solid red;
+      background-color: #d90429;
+      border: 1px solid #d90429;
       color: $lighter-color;
       max-width: fit-content;
-      border-radius: 20px;
     }
 
     button:hover {
       background-color: $lighter-color;
-      color: red;
+      color: #d90429;
     }
 
     .profile-text {
@@ -135,6 +134,15 @@
     .profile-line {
       .profile-buttons {
         flex-direction: row;
+
+        button,
+        a {
+          font-size: 0.9rem;
+        }
+      }
+
+      button {
+        font-size: 0.9rem;
       }
     }
   }

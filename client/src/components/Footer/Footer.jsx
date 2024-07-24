@@ -8,27 +8,25 @@ function Footer() {
 
   return (
     <div id="footer">
-      <div>
-        <p>Lumen</p>
-        <ul>
-          <NavLink to="/">
-            <li>Accueil</li>
+      <h2>Lumen</h2>
+      <ul>
+        <NavLink to="/">
+          <li>Accueil</li>
+        </NavLink>
+        <NavLink to="/help">
+          <li>Aide</li>
+        </NavLink>
+        {!isLoggedIn && (
+          <NavLink to="/sign-in">
+            <li>Se connecter</li>
           </NavLink>
-          <NavLink to="/help">
-            <li>Aide</li>
+        )}
+        {!isLoggedIn && !isSignInPage && (
+          <NavLink to="/sign-in-pro">
+            <li>Lumen Pro</li>
           </NavLink>
-          {!isLoggedIn && (
-            <NavLink to="/sign-in">
-              <li>Se connecter</li>
-            </NavLink>
-          )}
-          {!isLoggedIn && !isSignInPage && (
-            <NavLink to="/sign-in-pro">
-              <li>Lumen Pro</li>
-            </NavLink>
-          )}
-        </ul>
-      </div>
+        )}
+      </ul>
       <p id="p">© 2024 | Tous droits réservés</p>
     </div>
   );
