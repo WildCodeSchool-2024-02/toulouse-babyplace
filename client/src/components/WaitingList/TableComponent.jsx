@@ -15,7 +15,7 @@ function TableComponent() {
     <table className="table">
       <thead>
         <tr>
-          <th>Assistante maternel</th>
+          <th>Assistante maternelle</th>
           <th>Créneau Horaire</th>
           <th>Ville</th>
           <th>Status</th>
