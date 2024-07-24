@@ -43,9 +43,9 @@ function TableComponentAssmat() {
                 value={item.status}
                 onChange={(e) => handleStatusChange(index, e.target.value)}
               >
-                <option value="Validé">Valider</option>
-                <option value="En attente">En attente</option>
-                <option value="Annulé">Annuler</option>
+                <option value="Valider">Valider 🟢</option>
+                <option value="En attente">En attente 🟠</option>
+                <option value="Annuler">Annuler 🔴</option>
               </select>
             </td>
           </tr>

@@ -8,7 +8,7 @@ function TableComponent() {
     fetch("http://localhost:3310/api/childcare-center")
       .then((response) => response.json())
       .then((data) => {
-        const statuses = ["Annulé", "En attente", "Accepté"];
+        const statuses = ["Annulé 🔴", "En attente 🟠", "Accepté 🟢"];
         const updatedData = data.map((item) => ({
           ...item,
           status: statuses[Math.floor(Math.random() * statuses.length)],
