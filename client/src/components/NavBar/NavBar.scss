@@ -61,10 +61,16 @@
   #nav-bar {
     nav {
       flex-direction: row;
+      padding: 1rem;
     }
 
     ul {
       font-size: 1rem;
+      & img {
+        position: absolute;
+        left: 3%;
+        top: 1.5%;
+      }
     }
   }
 }

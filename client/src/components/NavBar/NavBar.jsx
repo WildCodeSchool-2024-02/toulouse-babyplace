@@ -1,5 +1,6 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
+import logo from "../../assets/images/logo.png";
 
 function NavBar() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function NavBar() {
     <div id="nav-bar">
       <nav>
         <ul>
+          <img src={logo} width={64} height={64} alt="" />
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "active-link" : "")}
