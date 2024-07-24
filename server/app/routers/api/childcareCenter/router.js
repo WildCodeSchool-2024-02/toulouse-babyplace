@@ -12,6 +12,8 @@ const {
   read,
   signUp,
   signIn,
+  deleteProfile,
+  updateUser,
 } = require("../../../controllers/childcareCenterActions");
 const {
   hashPassword,
@@ -29,6 +31,12 @@ router.post("/sign-in", verifyPassword, signIn);
 
 // Route to add a new item
 router.post("/sign-up-pro", hashPassword, signUp);
+
+// route to delete an user
+router.delete("/", deleteProfile);
+
+// route to modify an user
+router.put("/", updateUser);
 
 /* ************************************************************************* */
 
