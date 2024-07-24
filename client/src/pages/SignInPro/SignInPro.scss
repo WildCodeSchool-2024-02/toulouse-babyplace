@@ -26,3 +26,13 @@
     }
   }
 }
+
+.pro {
+  display: flex;
+  align-items: center;
+  & p {
+    border: solid 3px white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
