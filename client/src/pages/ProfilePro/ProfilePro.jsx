@@ -127,12 +127,6 @@ function ProfilePro() {
         <span className="avatar">{getInitials(user?.name)}</span>
         <div className="profile-name-firstname">
           <div className="profile-name">
-            <p>{user?.firstname}</p>
-            <button type="button" onClick={() => handleEditClick("firstname")}>
-              {modify}
-            </button>
-          </div>
-          <div className="profile-name">
             <p>{user?.name}</p>
             <button type="button" onClick={() => handleEditClick("name")}>
               {modify}
