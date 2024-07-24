@@ -27,6 +27,7 @@ function TableComponent() {
             <td>{item.name}</td>
             <td>{item.city}</td>
             <td>{item.phone}</td>
+
             <td>
               {item.opening}/{item.closing}
             </td>
