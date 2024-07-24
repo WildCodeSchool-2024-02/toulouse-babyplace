@@ -4,7 +4,7 @@ import "./PersonalPage.scss";
 function PersonalPage() {
   return (
     <div>
-      <h1>Votre liste d'attente</h1>
+      <h1 className="title">Votre liste d'attente</h1>
       <div className="personal-page">
         <div className="table-component-container">
           <TableComponent />
