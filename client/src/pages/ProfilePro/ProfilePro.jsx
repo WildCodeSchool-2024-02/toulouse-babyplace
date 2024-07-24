@@ -1,6 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Modal from "../../components/modification/Modal";
 import "./ProfilePro.scss";
 
 import TableComponentAssmat from "../../components/WaitingList/TableComponentAssmat";
@@ -46,7 +47,7 @@ function ProfilePro() {
     fetchUser();
   }, [userId]);
 
-  const updateUserInfo = async (field) => {
+  const updateUserInfo = async () => {
     try {
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/childcare-center`,
@@ -56,7 +57,7 @@ function ProfilePro() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ id: userId, [field]: newValue }),
+          body: JSON.stringify({ id: userId, [editingField]: newValue }),
         }
       );
       if (response.ok) {
@@ -70,12 +71,6 @@ function ProfilePro() {
       console.error("Error updating user info:", error);
     }
   };
-
-  useEffect(() => {
-    if (editingField) {
-      updateUserInfo(editingField);
-    }
-  }, [editingField, updateUserInfo]);
 
   const deleteUser = async () => {
     try {
@@ -102,12 +97,11 @@ function ProfilePro() {
   };
 
   const handleEditClick = (field) => {
-    const updatedValue = prompt(`Modifiez votre ${field}:`);
-    if (updatedValue) {
-      setNewValue(updatedValue);
-      setEditingField(field);
-      updateUserInfo(field);
-    }
+    setEditingField(field);
+  };
+
+  const handleModalClose = () => {
+    setEditingField(null);
   };
 
   const getInitials = (name) => {
@@ -133,6 +127,16 @@ function ProfilePro() {
             <button type="button" onClick={() => handleEditClick("name")}>
               {modify}
             </button>
+          </div>
+          <div>
+            <Modal
+              show={Boolean(editingField)}
+              handleClose={handleModalClose}
+              handleSave={updateUserInfo}
+              field={editingField}
+              newValue={newValue}
+              setNewValue={setNewValue}
+            />
           </div>
         </div>
       </div>
