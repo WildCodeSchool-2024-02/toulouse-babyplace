@@ -22,7 +22,7 @@ function AuthenticationImgs() {
         </div>
       </div>
       <div className="container-img">
-        <img className="img" src="../src/assets/images/img_login.svg" alt="" />
+        <img className="img" src="../src/public/images/img_login.svg" alt="" />
       </div>
     </div>
   );
