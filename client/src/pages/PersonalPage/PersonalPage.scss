@@ -1,0 +1,101 @@
+@import "../../variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.personal-page {
+  display: flex;
+  justify-content: center;
+  background: $lighter-color;
+  height: 100vh;
+
+  .table-component-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: px 0;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 20px;
+  }
+
+  thead {
+    background-color: $main-color;
+    color: #ffffff;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+
+  tbody tr {
+    &:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    &:hover {
+      background-color: #7171c6;
+      color: $lighter-color;
+    }
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 768px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+
+    thead tr {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 15px;
+    }
+
+    td {
+      padding-left: 50%;
+      position: relative;
+      text-align: right;
+    }
+
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}

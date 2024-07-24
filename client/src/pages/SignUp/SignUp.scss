@@ -1,49 +1,47 @@
+@import "../../variables.scss";
+
 .inscriptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .formulaire {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 400px;
-    display: grid;
+    gap: 1rem;
+    max-width: 35rem;
     h2 {
       display: flex;
       justify-content: center;
       color: #1d0042;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
     input {
-      border-radius: 8px;
-      background-color: #dfdede;
-      width: 300px;
-      height: 40px;
-      opacity: 50%;
+      border-radius: 10px;
+      padding: 0.5rem;
+      border: $grey-color 1px solid;
+    }
+
+    label {
+      margin-top: 1rem;
     }
 
     .btnReg {
-      background-color: #882bff;
-      color: var(--lighter-color);
-      border: var(--main-color) 1px solid;
-      border-radius: 50px;
-      padding-inline: 1rem;
-      padding-block: 0.6rem;
+      color: $lighter-color;
+      padding: 0.5rem;
+      background-color: $main-color;
+      border-radius: 20px;
+      border: $main-color 1px solid;
       margin-block: 1rem;
-      height: 70px;
-      font-size: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
     }
+
     .btnReg:hover {
-      background-color: var(--lighter-color);
-      color: var(--main-color);
-      border: var(--main-color) 1px solid;
+      color: $main-color;
+      background-color: $lighter-color;
+      border: $main-color 1px solid;
     }
     .champ {
       min-width: 80%;
-      text-align: center;
     }
   }
 }
@@ -60,12 +58,27 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    max-width: 9rem;
   }
   .btnReg:hover {
     background-color: var(--lighter-color);
     color: var(--main-color);
     border: var(--main-color) 1px solid;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .inscriptions {
+    .formulaire {
+      width: 22rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .inscriptions {
+    .formulaire {
+      width: 25rem;
+    }
   }
 }
 
