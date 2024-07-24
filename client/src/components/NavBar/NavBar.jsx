@@ -3,8 +3,9 @@ import "./NavBar.scss";
 
 function NavBar() {
   const location = useLocation();
-  const isSearchPage = location.pathname === "/Search";
   const navigate = useNavigate();
+  const isSignInPage = location.pathname.toLowerCase() === "/sign-in";
+  const isLoggedIn = Boolean(localStorage.getItem("authToken"));
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -21,13 +22,14 @@ function NavBar() {
           >
             <li>Accueil</li>
           </NavLink>
+
           <NavLink
             to="/help"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
             <li>Aide</li>
           </NavLink>
-          {!isSearchPage && (
+          {!isLoggedIn && !isSignInPage && (
             <NavLink
               to="/sign-in-pro"
               className={({ isActive }) => (isActive ? "active-link" : "")}
@@ -35,8 +37,17 @@ function NavBar() {
               <li>Lumen Pro</li>
             </NavLink>
           )}
+
+          {isLoggedIn && (
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              <li>Profil</li>
+            </NavLink>
+          )}
         </ul>
-        {isSearchPage ? (
+        {isLoggedIn ? (
           <button type="button" onClick={handleLogout} className="nav-button">
             Se déconnecter
           </button>
