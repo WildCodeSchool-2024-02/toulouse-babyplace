@@ -4,7 +4,7 @@ import "./NavBar.scss";
 function NavBar() {
   const location = useLocation();
   const navigate = useNavigate();
-  const isSearchPage = location.pathname.toLowerCase() === "/search";
+  const isSignInPage = location.pathname.toLowerCase() === "/sign-in";
   const isLoggedIn = Boolean(localStorage.getItem("authToken"));
 
   const handleLogout = () => {
@@ -29,7 +29,7 @@ function NavBar() {
           >
             <li>Aide</li>
           </NavLink>
-          {!isSearchPage && (
+          {!isLoggedIn && !isSignInPage && (
             <NavLink
               to="/sign-in-pro"
               className={({ isActive }) => (isActive ? "active-link" : "")}
