@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./ProfilePro.scss";
 
-function Profile() {
+function ProfilePro() {
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [editingField, setEditingField] = useState(null);
@@ -153,4 +153,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfilePro;
