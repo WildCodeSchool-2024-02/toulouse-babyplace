@@ -19,6 +19,10 @@ $lighter-color: #fff;
     }
   }
 
+  a {
+    text-decoration: none;
+  }
+
   @include mediaQ(768px) {
     background: linear-gradient(
       to bottom right,

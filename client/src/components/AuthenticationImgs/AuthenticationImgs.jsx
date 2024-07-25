@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./AuthenticationImgs.scss";
 import imgLogin from "../../public/images/img_login.svg";
 
@@ -10,7 +10,9 @@ function AuthenticationImgs() {
     <div className="authentication-imgs">
       <div className="autentication-text">
         <div className="first-line">
-          <h1>Lumen</h1>
+          <NavLink to="/">
+            <h1>Lumen</h1>
+          </NavLink>
           {path !== "/sign-in" && (
             <div className="pro">
               <p>Pro</p>
