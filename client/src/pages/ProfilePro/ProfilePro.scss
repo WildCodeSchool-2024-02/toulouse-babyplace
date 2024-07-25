@@ -25,6 +25,24 @@
       flex-direction: column;
     }
 
+    .profile-name {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      .profile-name-firstname {
+        justify-content: space-between;
+        display: flex;
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: 0.5rem;
+      }
+    }
+
     span {
       width: 4rem;
       height: 4rem;

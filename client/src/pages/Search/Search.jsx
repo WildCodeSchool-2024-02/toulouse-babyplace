@@ -111,9 +111,12 @@ function Search() {
               <p>
                 Disponible de {result?.opening} à {result?.closing}
               </p>
-              <p>{result?.email}</p>
-              <p>{result?.address}</p>
-              <p>{result?.phone}</p>
+              <p>Mail : {result?.email}</p>
+              <p>
+                Adresse : {result?.street_address} {result?.zip_code}{" "}
+                {result?.city}
+              </p>
+              <p>Téléphone : {result?.phone}</p>
               <p>{result?.description}</p>
             </div>
           ))
