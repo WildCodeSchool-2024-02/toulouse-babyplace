@@ -58,6 +58,20 @@ function Search() {
     return initials.slice(0, 2).join("");
   };
 
+  const generateRandomDays = () => {
+    const days = ["lundis", "mardis", "mercredis", "jeudis", "vendredis"];
+    const numDays = Math.floor(Math.random() * 3) + 3;
+    const randomDays = [];
+    while (randomDays.length < numDays) {
+      const day = days[Math.floor(Math.random() * days.length)];
+      if (!randomDays.includes(day)) {
+        randomDays.push(day);
+      }
+    }
+    randomDays.sort((a, b) => days.indexOf(a) - days.indexOf(b));
+    return randomDays.join(", ");
+  };
+
   return (
     <div className="general-block-search">
       <h3>Je cherche ma future assistante maternelle : </h3>
@@ -111,6 +125,7 @@ function Search() {
               <p>
                 Disponible de {result?.opening} à {result?.closing}
               </p>
+              <p>Les {generateRandomDays()}</p>
               <p>Mail : {result?.email}</p>
               <p>
                 Adresse : {result?.street_address} {result?.zip_code}{" "}
