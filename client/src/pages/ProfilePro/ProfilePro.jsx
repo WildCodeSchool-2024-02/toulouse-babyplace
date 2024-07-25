@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Modal from "../../components/modification/Modal";
 import "./ProfilePro.scss";
-
 import TableComponentAssmat from "../../components/WaitingList/TableComponentAssmat";
 
 function ProfilePro() {
@@ -49,6 +48,7 @@ function ProfilePro() {
 
   const updateUserInfo = async () => {
     try {
+      const fieldKey = editingField === "nom" ? "name" : "firstname";
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/childcare-center`,
         {
@@ -57,7 +57,7 @@ function ProfilePro() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ id: userId, [editingField]: newValue }),
+          body: JSON.stringify({ id: userId, [fieldKey]: newValue }),
         }
       );
       if (response.ok) {
@@ -124,7 +124,7 @@ function ProfilePro() {
         <div className="profile-name-firstname">
           <div className="profile-name">
             <p>{user?.name}</p>
-            <button type="button" onClick={() => handleEditClick("name")}>
+            <button type="button" onClick={() => handleEditClick("nom")}>
               {modify}
             </button>
           </div>
