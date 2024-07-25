@@ -9,7 +9,7 @@ class CustomerSeeder extends AbstractSeeder {
   }
 
   async run() {
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 30; i += 1) {
       const fakeCustomer = {
         name: this.faker.person.lastName(),
         firstname: this.faker.person.firstName(),

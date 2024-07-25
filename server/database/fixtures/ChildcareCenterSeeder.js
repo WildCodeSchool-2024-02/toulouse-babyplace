@@ -9,7 +9,7 @@ class ChildcareCenterSeeder extends AbstractSeeder {
   }
 
   run() {
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 30; i += 1) {
       const fakeChildcareCenter = {
         name: this.faker.company.name(),
         description: this.faker.lorem.sentence(),
@@ -17,8 +17,8 @@ class ChildcareCenterSeeder extends AbstractSeeder {
         street_address: this.faker.location.streetAddress(),
         zip_code: this.faker.location.zipCode(),
         city: this.faker.location.city(),
-        mail: this.faker.internet.email(),
-        password: this.faker.internet.password(),
+        email: this.faker.internet.email(),
+        hashed_password: this.faker.internet.password(),
         opening: this.faker.date.anytime(),
         closing: this.faker.date.anytime(),
         capacity: this.faker.number.int({ max: 10 }),

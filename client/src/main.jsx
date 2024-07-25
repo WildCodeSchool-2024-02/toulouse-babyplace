@@ -14,9 +14,10 @@ import Profile from "./pages/Profile/Profile";
 import Reservation from "./pages/Reservation/Reservation";
 import ChildCareCenterPage from "./pages/ChildCareCenterProfile/ChildCareCenterPage";
 import SignUpPro from "./pages/SignUpPro/SignUpPro";
-import SignUpDone from "./pages/SignUp/SignUp-Done/SignUpDone";
 import { SignUpProProvider } from "./context/SignUpPro";
 import Search from "./pages/Search/Search";
+import PersonalPage from "./pages/PersonalPage/PersonalPage";
+import ProfilePro from "./pages/ProfilePro/ProfilePro";
 
 const router = createBrowserRouter([
   {
@@ -36,12 +37,23 @@ const router = createBrowserRouter([
         path: "/search",
         element: <Search />,
       },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      { path: "/personal-profile", element: <PersonalPage /> },
+      {
+        path: "/profile-pro",
+        element: <ProfilePro />,
+      },
     ],
   },
+
   {
     path: "/profile",
     element: <Profile />,
   },
+
   {
     path: "/reservation",
     element: <Reservation />,
@@ -70,10 +82,6 @@ const router = createBrowserRouter([
   {
     path: "/sign-up",
     element: <SignUp />,
-  },
-  {
-    path: "/sign-up-done",
-    element: <SignUpDone />,
   },
 ]);
 

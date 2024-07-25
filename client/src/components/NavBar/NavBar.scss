@@ -31,7 +31,7 @@
     align-items: center;
   }
 
-  p {
+  button {
     background-color: $lighter-color;
     color: $main-color;
     border: $main-color 1px solid;
@@ -40,14 +40,13 @@
     padding-block: 0.6rem;
     margin: 0.5rem;
     max-height: 3.75rem;
-    max-width: 7.25rem;
     text-decoration: none;
     transition:
       0.5s ease,
       transform 0.5s ease;
   }
 
-  p:hover {
+  button:hover {
     background-color: $main-color;
     color: $lighter-color;
   }
@@ -62,10 +61,22 @@
   #nav-bar {
     nav {
       flex-direction: row;
+      padding: 1rem;
     }
 
     ul {
       font-size: 1rem;
+      & img {
+        position: absolute;
+        left: 3%;
+        top: 1.5%;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #nav-bar nav {
+    flex-direction: column;
   }
 }
