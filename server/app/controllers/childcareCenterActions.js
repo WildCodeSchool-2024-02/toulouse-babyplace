@@ -99,9 +99,9 @@ const updateUser = async (req, res) => {
     if (name !== undefined) updateData.name = name;
     if (firstname !== undefined) updateData.firstname = firstname;
 
-    const result = await tables.customer.update(id, updateData);
+    const result = await tables.childcare_center.update(id, updateData);
     if (result) {
-      const updatedUser = await tables.customer.read(id);
+      const updatedUser = await tables.childcare_center.read(id);
       return res.status(200).json(updatedUser);
     }
     return res.status(404).json({ message: "User not found" });
