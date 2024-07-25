@@ -4,8 +4,6 @@ import { useEffect, useState } from "react";
 import Modal from "../../components/modification/Modal";
 import "./ProfilePro.scss";
 
-import TableComponentAssmat from "../../components/WaitingList/TableComponentAssmat";
-
 function ProfilePro() {
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -145,11 +143,6 @@ function ProfilePro() {
           Maximisez vos opportunités. <br />
           Un profil complet est essentiel pour accueillir les enfants !
         </p>
-        <div className="personal-page">
-          <div className="table-component-container">
-            <TableComponentAssmat />
-          </div>
-        </div>
         <div className="profile-button-pro">
           <button type="button" onClick={deleteUser}>
             Supprimer mon compte

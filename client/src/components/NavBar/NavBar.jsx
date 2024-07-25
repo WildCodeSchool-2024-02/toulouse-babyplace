@@ -1,7 +1,7 @@
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./NavBar.scss";
-import logo from "../../assets/images/logo.png";
+import logo from "../../public/images/logo.png";
 
 function NavBar() {
   const location = useLocation();

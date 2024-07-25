@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./AuthenticationImgs.scss";
+import imgLogin from "../../public/images/img_login.svg";
 
 function AuthenticationImgs() {
   const location = useLocation();
@@ -24,7 +25,7 @@ function AuthenticationImgs() {
         </div>
       </div>
       <div className="container-img">
-        <img className="img" src="../src/public/images/img_login.svg" alt="" />
+        <img className="img" src={imgLogin} alt="" />
       </div>
     </div>
   );
