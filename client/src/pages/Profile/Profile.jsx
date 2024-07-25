@@ -47,6 +47,7 @@ function Profile() {
 
   const updateUserInfo = async () => {
     try {
+      const fieldKey = editingField === "nom" ? "name" : "firstname";
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/api/customer`,
         {
@@ -55,7 +56,7 @@ function Profile() {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
           },
-          body: JSON.stringify({ id: userId, [editingField]: newValue }),
+          body: JSON.stringify({ id: userId, [fieldKey]: newValue }),
         }
       );
       if (response.ok) {
@@ -122,13 +123,13 @@ function Profile() {
         <div className="profile-name-firstname">
           <div className="profile-name">
             <p className="profile-firstname">{user?.firstname}</p>
-            <button type="button" onClick={() => handleEditClick("firstname")}>
+            <button type="button" onClick={() => handleEditClick("prénom")}>
               {modify}
             </button>
           </div>
           <div className="profile-name">
             <p>{user?.name}</p>
-            <button type="button" onClick={() => handleEditClick("name")}>
+            <button type="button" onClick={() => handleEditClick("nom")}>
               {modify}
             </button>
           </div>
